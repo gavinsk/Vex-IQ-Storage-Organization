@@ -156,7 +156,7 @@ A part record:
 
 - `extraLocations` (optional): more bins holding the same part. Search, cards, the poster, the RETURN TO block, the mini map, and bin views all use every bin. Leave it out for single-bin parts.
 - `binLabel` should be identical for every part sharing a location (the bin view uses the first one). A part in several bins uses one label for all of them.
-- `use`: 1–3 student-friendly sentences on what the part does and how it connects, shown as **How it's used** in the part popup (replaced the Section line, Oct 2026). Drafted by Claude from general VEX knowledge (Shaft Bushing text is Gavin's); Gavin is reviewing — his wording wins.
+- `use`: 1–3 student-friendly sentences on what the part does and how it connects, shown as **How it's used** in the part popup (replaced the Section line, Oct 2026). Drafted by Claude (Shaft Bushing text is Gavin's); **Gavin reviewed and approved all 162 (Oct 9, 2026)**. Write new parts' descriptions in the same style; Gavin's wording wins on any edit.
 - `section` is from the original storage plan and no longer matches the Oct 2026 layout. It is no longer displayed; ask Gavin before relying on it.
 - `type` is the Part Finder subgroup within a category (e.g. 1x Beams, Idler Pins). A new type appears automatically; add it to that category's `types` in `categories.json` to control its order.
 - `storage` is the storage type (`Rolling - Small`, `Rolling - Medium`, `Akro-Mils Drawer`, `Vertical Hanger`, `Vertical Cable Hanger`, `External / …`, `Tool Storage`).
