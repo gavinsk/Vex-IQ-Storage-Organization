@@ -372,7 +372,7 @@
       "228-2500-112",
       "228-3201-112"
     ],
-    "location": "AK03",
+    "location": "AK02",
     "storage": "Akro-Mils Drawer",
     "binLabel": "Washers",
     "quantity": 536,
@@ -386,7 +386,10 @@
     "partNumbers": [
       "228-2500-143"
     ],
-    "location": "AK04",
+    "location": "AK06",
+    "extraLocations": [
+      "AK07"
+    ],
     "storage": "Akro-Mils Drawer",
     "binLabel": "Rubber Shaft Collars",
     "quantity": 472,
@@ -825,28 +828,15 @@
     "image": "images/cables/cable-anchor.webp"
   },
   {
-    "name": "Elastic Band Anchor Plate",
-    "partNumbers": [
-      "228-3616-157"
-    ],
-    "location": "AK01",
-    "storage": "Akro-Mils Drawer",
-    "binLabel": "Elastic Band Anchor Plate",
-    "quantity": 8,
-    "category": "Beams & Plates",
-    "section": "Elastic Systems",
-    "type": "Plates & Panels",
-    "image": "images/beams-plates/elastic-band-anchor-plate.png"
-  },
-  {
     "name": "Rubber Band Anchor",
     "partNumbers": [
-      "228-2500-157"
+      "228-2500-157",
+      "228-3616-157"
     ],
     "location": "B3-8",
     "storage": "Rolling - Small",
     "binLabel": "Rubber Bands + Anchors",
-    "quantity": 33,
+    "quantity": 41,
     "category": "Specialty",
     "section": "Elastic Systems",
     "type": "Rubber Bands",
@@ -1615,7 +1605,7 @@
     "partNumbers": [
       "228-2500-328"
     ],
-    "location": "AK13",
+    "location": "AK21",
     "storage": "Akro-Mils Drawer",
     "binLabel": "1x Plastic Motor Shaft",
     "quantity": 55,
@@ -1629,9 +1619,9 @@
     "partNumbers": [
       "228-2500-078"
     ],
-    "location": "AK14",
+    "location": "AK22",
     "storage": "Akro-Mils Drawer",
-    "binLabel": "2x Plastic Motor Shaft",
+    "binLabel": "2x Motor Shafts (plastic + metal)",
     "quantity": 66,
     "category": "Shafts & Rotation",
     "section": "Shaft Types",
@@ -1643,9 +1633,9 @@
     "partNumbers": [
       "228-2500-094"
     ],
-    "location": "AK15",
+    "location": "AK23",
     "storage": "Akro-Mils Drawer",
-    "binLabel": "3x Plastic Motor Shaft",
+    "binLabel": "3x Motor Shafts (plastic + metal)",
     "quantity": 66,
     "category": "Shafts & Rotation",
     "section": "Shaft Types",
@@ -1657,9 +1647,9 @@
     "partNumbers": [
       "228-2500-079"
     ],
-    "location": "AK16",
+    "location": "AK24",
     "storage": "Akro-Mils Drawer",
-    "binLabel": "4x Plastic Motor Shaft",
+    "binLabel": "4x Motor Shafts (plastic + metal)",
     "quantity": 66,
     "category": "Shafts & Rotation",
     "section": "Shaft Types",
@@ -1671,9 +1661,9 @@
     "partNumbers": [
       "228-2500-081"
     ],
-    "location": "AK17",
+    "location": "AK18",
     "storage": "Akro-Mils Drawer",
-    "binLabel": "3x Capped Plastic Shaft",
+    "binLabel": "3x Capped Shafts (plastic + metal)",
     "quantity": 66,
     "category": "Shafts & Rotation",
     "section": "Shaft Types",
@@ -1685,9 +1675,9 @@
     "partNumbers": [
       "228-2500-083"
     ],
-    "location": "AK18",
+    "location": "AK20",
     "storage": "Akro-Mils Drawer",
-    "binLabel": "5x Capped Plastic Shaft",
+    "binLabel": "5x Capped Shafts (metal + plastic)",
     "quantity": 44,
     "category": "Shafts & Rotation",
     "section": "Shaft Types",
@@ -1699,7 +1689,7 @@
     "partNumbers": [
       "228-2500-2219"
     ],
-    "location": "AK19",
+    "location": "AK17",
     "storage": "Akro-Mils Drawer",
     "binLabel": "2x Capped Shaft",
     "quantity": 33,
@@ -1713,9 +1703,9 @@
     "partNumbers": [
       "228-2500-2221"
     ],
-    "location": "AK20",
+    "location": "AK18",
     "storage": "Akro-Mils Drawer",
-    "binLabel": "3x Capped Shaft",
+    "binLabel": "3x Capped Shafts (plastic + metal)",
     "quantity": 33,
     "category": "Shafts & Rotation",
     "section": "Shaft Types",
@@ -1727,7 +1717,7 @@
     "partNumbers": [
       "228-2500-2223"
     ],
-    "location": "AK21",
+    "location": "AK19",
     "storage": "Akro-Mils Drawer",
     "binLabel": "4x Capped Shaft",
     "quantity": 33,
@@ -1741,9 +1731,9 @@
     "partNumbers": [
       "228-2500-2225"
     ],
-    "location": "AK22",
+    "location": "AK20",
     "storage": "Akro-Mils Drawer",
-    "binLabel": "5x Capped Shaft",
+    "binLabel": "5x Capped Shafts (metal + plastic)",
     "quantity": 22,
     "category": "Shafts & Rotation",
     "section": "Shaft Types",
@@ -1755,9 +1745,9 @@
     "partNumbers": [
       "228-2500-2234"
     ],
-    "location": "AK23",
+    "location": "AK22",
     "storage": "Akro-Mils Drawer",
-    "binLabel": "2x Motor Shaft",
+    "binLabel": "2x Motor Shafts (plastic + metal)",
     "quantity": 44,
     "category": "Shafts & Rotation",
     "section": "Shaft Types",
@@ -1769,9 +1759,9 @@
     "partNumbers": [
       "228-2500-2236"
     ],
-    "location": "AK24",
+    "location": "AK23",
     "storage": "Akro-Mils Drawer",
-    "binLabel": "3x Motor Shaft",
+    "binLabel": "3x Motor Shafts (plastic + metal)",
     "quantity": 44,
     "category": "Shafts & Rotation",
     "section": "Shaft Types",
@@ -1783,9 +1773,9 @@
     "partNumbers": [
       "228-2500-2238"
     ],
-    "location": "AK25",
+    "location": "AK24",
     "storage": "Akro-Mils Drawer",
-    "binLabel": "4x Motor Shaft",
+    "binLabel": "4x Motor Shafts (plastic + metal)",
     "quantity": 44,
     "category": "Shafts & Rotation",
     "section": "Shaft Types",
@@ -1825,7 +1815,7 @@
     "partNumbers": [
       "228-2500-073"
     ],
-    "location": "AK28",
+    "location": "AK30",
     "storage": "Akro-Mils Drawer",
     "binLabel": "1x1 Idler Pin",
     "quantity": 77,
@@ -1840,7 +1830,7 @@
       "228-2500-084",
       "228-3944-084"
     ],
-    "location": "AK29",
+    "location": "AK28",
     "storage": "Akro-Mils Drawer",
     "binLabel": "0x2 Idler Pin",
     "quantity": 161,
@@ -1854,7 +1844,7 @@
     "partNumbers": [
       "228-3944-097"
     ],
-    "location": "AK30",
+    "location": "AK29",
     "storage": "Akro-Mils Drawer",
     "binLabel": "0x3 Idler Pin",
     "quantity": 44,
@@ -1882,7 +1872,7 @@
     "partNumbers": [
       "228-2500-114"
     ],
-    "location": "AK32",
+    "location": "AK03",
     "storage": "Akro-Mils Drawer",
     "binLabel": "0.25x Spacer",
     "quantity": 308,
@@ -1896,7 +1886,7 @@
     "partNumbers": [
       "228-3201-114"
     ],
-    "location": "AK33",
+    "location": "AK04",
     "storage": "Akro-Mils Drawer",
     "binLabel": "0.5x Spacer",
     "quantity": 208,
@@ -1910,7 +1900,7 @@
     "partNumbers": [
       "228-3201-125"
     ],
-    "location": "AK34",
+    "location": "AK01",
     "storage": "Akro-Mils Drawer",
     "binLabel": "Shaft Bushing",
     "quantity": 32,
@@ -1924,7 +1914,7 @@
     "partNumbers": [
       "228-2500-063"
     ],
-    "location": "AK35",
+    "location": "AK33",
     "storage": "Akro-Mils Drawer",
     "binLabel": "0.25x Standoff",
     "quantity": 121,
@@ -1939,7 +1929,7 @@
       "228-2500-064",
       "228-3201-064"
     ],
-    "location": "AK36",
+    "location": "AK34",
     "storage": "Akro-Mils Drawer",
     "binLabel": "0.5x Standoff",
     "quantity": 191,
@@ -1954,7 +1944,7 @@
       "228-2500-065",
       "228-3201-065"
     ],
-    "location": "AK37",
+    "location": "AK35",
     "storage": "Akro-Mils Drawer",
     "binLabel": "1x Standoff",
     "quantity": 191,
@@ -1969,7 +1959,10 @@
       "228-2500-067",
       "228-3201-067"
     ],
-    "location": "AK38",
+    "location": "AK36",
+    "extraLocations": [
+      "AK37"
+    ],
     "storage": "Akro-Mils Drawer",
     "binLabel": "2x Standoff",
     "quantity": 221,
@@ -1984,7 +1977,7 @@
       "228-2500-070",
       "228-3201-070"
     ],
-    "location": "AK39",
+    "location": "AK38",
     "storage": "Akro-Mils Drawer",
     "binLabel": "4x Standoff",
     "quantity": 79,
@@ -1999,7 +1992,10 @@
       "228-2500-072",
       "228-3201-072"
     ],
-    "location": "AK40",
+    "location": "AK39",
+    "extraLocations": [
+      "AK40"
+    ],
     "storage": "Akro-Mils Drawer",
     "binLabel": "6x Standoff",
     "quantity": 90,
@@ -2013,7 +2009,7 @@
     "partNumbers": [
       "228-2500-109"
     ],
-    "location": "AK41",
+    "location": "AK42",
     "storage": "Akro-Mils Drawer",
     "binLabel": "0.5x Standoff Extender",
     "quantity": 121,

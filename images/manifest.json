@@ -168,11 +168,13 @@
   {
     "name": "Rubber Band Anchor",
     "partNumbers": [
-      "228-2500-157"
+      "228-2500-157",
+      "228-3616-157"
     ],
     "image": "images/specialty/rubber-band-anchor.svg",
     "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/specialty-parts-rubber-band-anchor.svg?ver=1635529898064",
-    "sourceType": "exact VEX SVG"
+    "sourceType": "exact VEX SVG",
+    "note": "Also covers the EES 'Elastic Band Anchor Plate' (228-3616-157): same part, different color (Gavin, Oct 2026)."
   },
   {
     "name": "Silicone Rubber Band #32",
@@ -1429,16 +1431,6 @@
     ],
     "image": "images/beams-plates/1x3-center-lock-plate.png",
     "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 5 (row 228-3201-141)",
-    "sourceType": "EES kit PDF picture",
-    "note": "matched by table row (part number in same row)"
-  },
-  {
-    "name": "Elastic Band Anchor Plate",
-    "partNumbers": [
-      "228-3616-157"
-    ],
-    "image": "images/beams-plates/elastic-band-anchor-plate.png",
-    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 5 (row 228-3616-157)",
     "sourceType": "EES kit PDF picture",
     "note": "matched by table row (part number in same row)"
   },

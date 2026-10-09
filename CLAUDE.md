@@ -11,7 +11,9 @@
 - Bin-assignment spreadsheet: `tools/bin-assignments.xlsx` + `tools/apply_bin_sheet.py`
 - **Cart re-layout (Oct 9, 2026)**, from Gavin's edited sheet: corner connectors moved to Side A rows 1–2, beams to rows 3–5, plates and angle/special beams to Side A medium bins; lock parts, shafts, belts, rubber bands, and magnetic beams moved to Side B row 3–4; pulleys to B7-3/B7-4. Gavin confirmed all of this, including the combined sensor bin and the four shafts sharing one bin.
 - **Parts in more than one bin**: `extraLocations` (e.g. 1x1 Connector Pin in B4-5 + B4-6). The site shows every bin, and the spreadsheet allows a part in several rows.
-- All 163 parts have images (see **Images** below)
+- **Akro-Mils re-layout (Oct 9, 2026)** from Gavin's sheet: washers/spacers/collars/bushing in AK01–AK07, capped shafts AK17–AK20 and motor shafts AK21–AK24 (plastic + metal of the same length share a drawer — Gavin's choice), connector/idler pins AK26–AK31, standoffs AK33–AK42. Rubber Shaft Collar, 2x and 6x Standoff each use 2 drawers.
+- **Merged** the EES "Elastic Band Anchor Plate" (228-3616-157) into **Rubber Band Anchor** (same part, different color, per Gavin): qty 41, B3-8, VEX image.
+- All 162 parts have images (see **Images** below)
 - Reference files moved into `docs/`
 
 **Next**
@@ -59,7 +61,7 @@ Owner: Gavin, a high school engineering/science teacher. Students use the site o
 
 Based on **11 × VEX IQ Robotics Kits + 4 × PLTW EES VEX IQ Kits + 4 × PLTW EES Supplemental Kits + 6 × Linear Motion Packs (228-7887)**. Do not revert to a one-kit assumption.
 
-**163 normalized physical parts.** Sanity-check totals: 1x1 Connector Pin 3,391 · 1x2 Connector Pin 823 · 2x2 Connector Pin 311 · 12T Gear 234 · Washer 536 · Rubber Shaft Collar 472 · Chain Link 1,383 · each sensor 11.
+**162 normalized physical parts.** Sanity-check totals: 1x1 Connector Pin 3,391 · 1x2 Connector Pin 823 · 2x2 Connector Pin 311 · 12T Gear 234 · Washer 536 · Rubber Shaft Collar 472 · Chain Link 1,383 · each sensor 11.
 
 If a quantity looks suspicious, verify it against `docs/VEX_IQ_Storage_Plan_Physical_Cart_Layout.xlsx` before changing it. (The workbook still uses the old `BM`/`A##` location IDs; the website doesn't read it.)
 
@@ -121,7 +123,7 @@ A location doesn't guarantee the whole quantity fits (1x1 Connector Pins: 3,391)
 index.html              page structure only — no data
 css/style.css
 js/app.js               search, cards, bin views, storage map, deep links
-data/parts.json         source of truth (163 parts)
+data/parts.json         source of truth (162 parts)
 data/storage-layout.json  physical geometry only (cart rows/cols, Akro-Mils count, zones)
 data/categories.json    Part Finder: panel order, panel width (span), order of types
 images/sizes.json       true-scale image sizes for the poster (regenerate: python3 tools/measure_images.py)
@@ -176,12 +178,12 @@ A part record:
 
 ## Images
 
-All 163 parts have images; provenance for each is in `images/manifest.json`.
+All 162 parts have images; provenance for each is in `images/manifest.json`.
 
 - **120 official VEX SVGs** from the VEX IQ Gen 2 parts catalog (https://www.vexrobotics.com/parts/228-7755) — individual SVGs or parts cropped out of VEX composite SVGs.
   - Composite crops were identified by **measured geometry** (hole count, length, gear/sprocket diameter, bend angle), then cross-checked against VEX's own "listed top-down" kit-page order. The image-source CSV's composite positions were often wrong — don't trust them.
   - Corner-connector naming is easy to swap: in VEX's composites, **1x2** connectors are 2 rows of pins with stacked holes; **2x1** connectors are single-row with holes extending outward.
-- **34 PNGs** extracted from the EES kit PDFs (`docs/ees-parts-lists/`, 228-7340 and 228-7341), matched to parts by table row. Low resolution (~100–220 px). Pulley pictures are scaled to fit their rows, so their sizes couldn't be cross-checked.
+- **33 PNGs** extracted from the EES kit PDFs (`docs/ees-parts-lists/`, 228-7340 and 228-7341), matched to parts by table row. Low resolution (~100–220 px). Pulley pictures are scaled to fit their rows, so their sizes couldn't be cross-checked.
 - **Cable Anchor**: VEX product render (WebP) supplied by Gavin.
 - **Linear Motion Pack (8 parts, `images/linear-motion/`)**: 5 cropped from VEX Library Competition Kit diagrams (`docs/Linear Motion 1X Pictures_files/image12.png`, `docs/Gears Image with 1x Rack Gear.png`); the 1x20 rack, 1x6 rack, and 1x5 beam are cropped from the 228-7887 product photo (identified by group count and length). Replace with VEX SVGs if they become available.
 

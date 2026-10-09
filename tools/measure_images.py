@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parent.parent
 ESTIMATED_WIDTH = {
     "2x Pitch Shaft": 75, "8x Pitch Shaft": 285,
     "3x3 Plus Gusset Beam": 110, "1x3 Beam": 110, "1x3 Center Lock Plate": 110, "2x2 Lock Plate": 76,
-    "4x12 Plate": 300, "Elastic Band Anchor Plate": 100,
+    "4x12 Plate": 300,
     "North Pole Magnetic Beam": 150, "South Pole Magnetic Beam": 150,
     "XL Turntable 36 Tooth Ring Gear Bushing": 260, "XL Turntable Outer Housing": 280, "XL Turntable Plain Bushing": 240,
     "Linear Slide Bracket": 85, "Rack Gear": 200, "Cable Anchor": 75,
