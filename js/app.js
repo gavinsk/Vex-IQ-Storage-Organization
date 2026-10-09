@@ -504,7 +504,7 @@ function renderPart(p) {
           <div class="fact"><small>Bin / drawer label</small><b>${esc(p.binLabel || "—")}</b></div>
           <div class="fact"><small>Classroom quantity</small><b>${Number(p.quantity || 0).toLocaleString()}</b></div>
           <div class="fact"><small>VEX part number(s)</small><b>${esc(p.partNumbers.join(", ") || "—")}</b></div>
-          <div class="fact"><small>Section</small><b>${esc(p.section || "—")}</b></div>
+          ${p.use ? `<div class="fact use"><small>How it's used</small><p>${esc(p.use)}</p></div>` : ""}
         </div>
         ${miniMap(locationsOf(p))}
       </div>

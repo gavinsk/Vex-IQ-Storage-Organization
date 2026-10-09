@@ -11,6 +11,7 @@
     "category": "Beams & Plates",
     "section": "Structure + Shafts",
     "type": "1x Beams",
+    "use": "A 1x2 beam is the basic building block of a VEX IQ robot: a single row of 2 holes used to build frames, arms, and supports. Pins snap into the holes to connect it to other beams, plates, and connectors, and shafts can pass through the round holes to spin.",
     "image": "images/beams-plates/1x2-beam.svg"
   },
   {
@@ -25,6 +26,7 @@
     "category": "Shafts & Rotation",
     "section": "Structure + Shafts",
     "type": "Shafts",
+    "use": "A 2x pitch shaft is a square metal axle 2 holes long. It carries rotation from a motor to gears, wheels, and sprockets, which lock onto its square shape. Hold it in place with rubber shaft collars, and let it spin freely through round holes in beams.",
     "image": "images/shafts-rotation/2x-pitch-shaft.png"
   },
   {
@@ -40,6 +42,7 @@
     "category": "Beams & Plates",
     "section": "Structure + Shafts",
     "type": "1x Beams",
+    "use": "A 1x4 beam is the basic building block of a VEX IQ robot: a single row of 4 holes used to build frames, arms, and supports. Pins snap into the holes to connect it to other beams, plates, and connectors, and shafts can pass through the round holes to spin.",
     "image": "images/beams-plates/1x4-beam.svg"
   },
   {
@@ -54,6 +57,7 @@
     "category": "Shafts & Rotation",
     "section": "Structure + Shafts",
     "type": "Shafts",
+    "use": "A 4x pitch shaft is a square metal axle 4 holes long. It carries rotation from a motor to gears, wheels, and sprockets, which lock onto its square shape. Hold it in place with rubber shaft collars, and let it spin freely through round holes in beams.",
     "image": "images/shafts-rotation/4x-pitch-shaft.svg"
   },
   {
@@ -69,6 +73,7 @@
     "category": "Beams & Plates",
     "section": "Structure + Shafts",
     "type": "1x Beams",
+    "use": "A 1x6 beam is the basic building block of a VEX IQ robot: a single row of 6 holes used to build frames, arms, and supports. Pins snap into the holes to connect it to other beams, plates, and connectors, and shafts can pass through the round holes to spin.",
     "image": "images/beams-plates/1x6-beam.svg"
   },
   {
@@ -83,6 +88,7 @@
     "category": "Shafts & Rotation",
     "section": "Structure + Shafts",
     "type": "Shafts",
+    "use": "A 6x pitch shaft is a square metal axle 6 holes long. It carries rotation from a motor to gears, wheels, and sprockets, which lock onto its square shape. Hold it in place with rubber shaft collars, and let it spin freely through round holes in beams.",
     "image": "images/shafts-rotation/6x-pitch-shaft.svg"
   },
   {
@@ -101,6 +107,7 @@
     "category": "Beams & Plates",
     "section": "Structure + Shafts",
     "type": "1x Beams",
+    "use": "A 1x8 beam is the basic building block of a VEX IQ robot: a single row of 8 holes used to build frames, arms, and supports. Pins snap into the holes to connect it to other beams, plates, and connectors, and shafts can pass through the round holes to spin.",
     "image": "images/beams-plates/1x8-beam.svg"
   },
   {
@@ -115,6 +122,7 @@
     "category": "Shafts & Rotation",
     "section": "Structure + Shafts",
     "type": "Shafts",
+    "use": "A 8x pitch shaft is a square metal axle 8 holes long. It carries rotation from a motor to gears, wheels, and sprockets, which lock onto its square shape. Hold it in place with rubber shaft collars, and let it spin freely through round holes in beams.",
     "image": "images/shafts-rotation/8x-pitch-shaft.png"
   },
   {
@@ -133,6 +141,7 @@
     "category": "Beams & Plates",
     "section": "Structure",
     "type": "1x Beams",
+    "use": "A 1x10 beam is the basic building block of a VEX IQ robot: a single row of 10 holes used to build frames, arms, and supports. Pins snap into the holes to connect it to other beams, plates, and connectors, and shafts can pass through the round holes to spin.",
     "image": "images/beams-plates/1x10-beam.svg"
   },
   {
@@ -148,6 +157,7 @@
     "category": "Beams & Plates",
     "section": "Structure",
     "type": "2x Beams",
+    "use": "A 2x10 beam is a double-wide beam (10 holes long) that is stiffer than a 1x beam, making it good for chassis rails, towers, and long arms that must not bend. Connect it to other parts with connector pins.",
     "image": "images/beams-plates/2x10-beam.svg"
   },
   {
@@ -163,6 +173,7 @@
     "category": "Beams & Plates",
     "section": "Structure",
     "type": "2x Beams",
+    "use": "A 2x2 beam is a small square block of four holes used to join two beams side by side, add a mounting point, or build compact brackets. Connect it with connector pins.",
     "image": "images/beams-plates/2x2-beam.svg"
   },
   {
@@ -181,6 +192,7 @@
     "category": "Beams & Plates",
     "section": "Structure",
     "type": "2x Beams",
+    "use": "A 2x4 beam is a double-wide beam (4 holes long) that is stiffer than a 1x beam, making it good for chassis rails, towers, and long arms that must not bend. Connect it to other parts with connector pins.",
     "image": "images/beams-plates/2x4-beam.svg"
   },
   {
@@ -199,6 +211,7 @@
     "category": "Beams & Plates",
     "section": "Structure",
     "type": "2x Beams",
+    "use": "A 2x6 beam is a double-wide beam (6 holes long) that is stiffer than a 1x beam, making it good for chassis rails, towers, and long arms that must not bend. Connect it to other parts with connector pins.",
     "image": "images/beams-plates/2x6-beam.svg"
   },
   {
@@ -213,6 +226,7 @@
     "category": "Beams & Plates",
     "section": "Structure",
     "type": "2x Beams",
+    "use": "A 2x7 beam is a double-wide beam (7 holes long) that is stiffer than a 1x beam, making it good for chassis rails, towers, and long arms that must not bend. Connect it to other parts with connector pins.",
     "image": "images/beams-plates/2x7-beam.svg"
   },
   {
@@ -231,6 +245,7 @@
     "category": "Beams & Plates",
     "section": "Structure",
     "type": "2x Beams",
+    "use": "A 2x8 beam is a double-wide beam (8 holes long) that is stiffer than a 1x beam, making it good for chassis rails, towers, and long arms that must not bend. Connect it to other parts with connector pins.",
     "image": "images/beams-plates/2x8-beam.svg"
   },
   {
@@ -245,6 +260,7 @@
     "category": "Beams & Plates",
     "section": "Structure",
     "type": "Plates & Panels",
+    "use": "The smooth panel is a flat piece with a smooth surface, used for walls, scoops, ramps, and guides where game pieces need to slide without catching on holes.",
     "image": "images/beams-plates/2x8-smooth-panel.svg"
   },
   {
@@ -260,6 +276,7 @@
     "category": "Beams & Plates",
     "section": "Special Structure",
     "type": "Angle & Special Beams",
+    "use": "A right angle beam is bent at 90° to make L-shaped corners, brackets, and arms without needing a separate corner connector.",
     "image": "images/beams-plates/2x3-right-angle-beam.svg"
   },
   {
@@ -275,6 +292,7 @@
     "category": "Beams & Plates",
     "section": "Special Structure",
     "type": "Angle & Special Beams",
+    "use": "A tee beam is T-shaped, used to join three directions at once, such as a cross-brace or the top of a support tower.",
     "image": "images/beams-plates/3x4-tee-beam.svg"
   },
   {
@@ -290,6 +308,7 @@
     "category": "Beams & Plates",
     "section": "Special Structure",
     "type": "Angle & Special Beams",
+    "use": "A right angle beam is bent at 90° to make L-shaped corners, brackets, and arms without needing a separate corner connector.",
     "image": "images/beams-plates/3x5-right-angle-beam.svg"
   },
   {
@@ -305,6 +324,7 @@
     "category": "Beams & Plates",
     "section": "Special Structure",
     "type": "Angle & Special Beams",
+    "use": "An offset right angle beam is an L-shaped beam whose arms are shifted, useful for brackets and arms that need to step around another part.",
     "image": "images/beams-plates/4x4-offset-right-angle-beam.svg"
   },
   {
@@ -320,6 +340,7 @@
     "category": "Beams & Plates",
     "section": "Special Structure",
     "type": "Angle & Special Beams",
+    "use": "A 30° angle beam is bent at 30° for building slanted arms, ramps, and triangle braces that make a structure stronger.",
     "image": "images/beams-plates/3x3-30-degree-angle-beam.svg"
   },
   {
@@ -335,6 +356,7 @@
     "category": "Beams & Plates",
     "section": "Special Structure",
     "type": "Angle & Special Beams",
+    "use": "A 45° angle beam is bent at 45° for building slanted arms, ramps, and triangle braces that make a structure stronger.",
     "image": "images/beams-plates/3x3-45-degree-angle-beam.svg"
   },
   {
@@ -350,6 +372,7 @@
     "category": "Beams & Plates",
     "section": "Special Structure",
     "type": "Angle & Special Beams",
+    "use": "A 60° angle beam is bent at 60° for building slanted arms, ramps, and triangle braces that make a structure stronger.",
     "image": "images/beams-plates/3x3-60-degree-angle-beam.svg"
   },
   {
@@ -364,6 +387,7 @@
     "category": "Beams & Plates",
     "section": "Special Structure",
     "type": "Angle & Special Beams",
+    "use": "A plus gusset beam is a cross (+) shaped piece used to join beams coming from four directions or to brace a joint so it doesn't flex.",
     "image": "images/beams-plates/3x3-plus-gusset-beam.png"
   },
   {
@@ -379,6 +403,7 @@
     "category": "Shafts & Rotation",
     "section": "Pins + Rotation Hardware",
     "type": "Collars, Washers & Spacers",
+    "use": "A washer is a thin ring that slides onto a shaft between a spinning part and a beam. It reduces rubbing (friction) and adds a tiny bit of spacing so parts turn smoothly.",
     "image": "images/shafts-rotation/washer.svg"
   },
   {
@@ -396,6 +421,7 @@
     "category": "Shafts & Rotation",
     "section": "Pins + Rotation Hardware",
     "type": "Collars, Washers & Spacers",
+    "use": "A rubber shaft collar grips a shaft tightly to keep it from sliding out of a build and to hold gears, wheels, and spacers in place along the shaft. Slide one on each end of a shaft.",
     "image": "images/shafts-rotation/rubber-shaft-collar.svg"
   },
   {
@@ -414,6 +440,7 @@
     "category": "Pins & Standoffs",
     "section": "Pins + Fasteners",
     "type": "Connector Pins",
+    "use": "The 1x1 connector pin is the most common way to join two parts: push it through one hole in each piece to lock two single-thickness parts together.",
     "image": "images/pins-standoffs/1x1-connector-pin.svg"
   },
   {
@@ -429,6 +456,7 @@
     "category": "Pins & Standoffs",
     "section": "Pins + Fasteners",
     "type": "Connector Pins",
+    "use": "A 1x2 connector pin joins one part on one side to two stacked parts on the other side, for example a beam to a pair of beams.",
     "image": "images/pins-standoffs/1x2-connector-pin.svg"
   },
   {
@@ -444,6 +472,7 @@
     "category": "Pins & Standoffs",
     "section": "Pins + Fasteners",
     "type": "Connector Pins",
+    "use": "A 2x2 connector pin joins two stacked parts on one side to two stacked parts on the other, making a strong, thick connection.",
     "image": "images/pins-standoffs/2x2-connector-pin.svg"
   },
   {
@@ -459,6 +488,7 @@
     "category": "Connectors",
     "section": "Structural Connectors",
     "type": "Chassis Corner Connectors",
+    "use": "The large chassis corner connector joins beams at the corners of a robot base (chassis), making a strong, square frame.",
     "image": "images/connectors/large-chassis-corner-connector.svg"
   },
   {
@@ -474,6 +504,7 @@
     "category": "Connectors",
     "section": "Structural Connectors",
     "type": "Chassis Corner Connectors",
+    "use": "The small chassis corner connector joins beams at the corners of a smaller frame or chassis, keeping it square and rigid.",
     "image": "images/connectors/small-chassis-corner-connector.svg"
   },
   {
@@ -489,6 +520,7 @@
     "category": "Connectors",
     "section": "Structural Connectors",
     "type": "1x Wide Corner Connectors",
+    "use": "The 1x Wide, 1x1 Offset Corner Connector joins single-width (1x) beams and plates at a 90° angle to build boxes, frames, and towers. Offset versions shift where the connected part sits, which helps line up parts that would otherwise be one hole off.",
     "image": "images/connectors/1x-wide-1x1-offset-corner-connector.svg"
   },
   {
@@ -504,6 +536,7 @@
     "category": "Connectors",
     "section": "Structural Connectors",
     "type": "2x Wide Corner Connectors",
+    "use": "The 2x Wide, 1x2 Corner Connector joins double-wide (2x) beams and plates at a 90° angle to build boxes, frames, and towers.",
     "image": "images/connectors/2x-wide-1x2-corner-connector.svg"
   },
   {
@@ -519,6 +552,7 @@
     "category": "Connectors",
     "section": "Structural Connectors",
     "type": "2x Wide Corner Connectors",
+    "use": "The 2x Wide, 1x2 Offset Corner Connector joins double-wide (2x) beams and plates at a 90° angle to build boxes, frames, and towers. Offset versions shift where the connected part sits, which helps line up parts that would otherwise be one hole off.",
     "image": "images/connectors/2x-wide-1x2-offset-corner-connector.svg"
   },
   {
@@ -537,6 +571,7 @@
     "category": "Connectors",
     "section": "Structural Connectors",
     "type": "2x Wide Corner Connectors",
+    "use": "The 2x Wide, 2x2 Corner Connector joins double-wide (2x) beams and plates at a 90° angle to build boxes, frames, and towers.",
     "image": "images/connectors/2x-wide-2x2-corner-connector.svg"
   },
   {
@@ -551,6 +586,7 @@
     "category": "Connectors",
     "section": "Structural Connectors",
     "type": "1x Wide Corner Connectors",
+    "use": "The 1x Wide, 1x1 Corner Connector joins single-width (1x) beams and plates at a 90° angle to build boxes, frames, and towers.",
     "image": "images/connectors/1x-wide-1x1-corner-connector.svg"
   },
   {
@@ -566,6 +602,7 @@
     "category": "Connectors",
     "section": "Structural Connectors",
     "type": "2x Wide Corner Connectors",
+    "use": "The 2x Wide, 1x1 Offset Corner Connector joins double-wide (2x) beams and plates at a 90° angle to build boxes, frames, and towers. Offset versions shift where the connected part sits, which helps line up parts that would otherwise be one hole off.",
     "image": "images/connectors/2x-wide-1x1-offset-corner-connector.svg"
   },
   {
@@ -581,6 +618,7 @@
     "category": "Connectors",
     "section": "Structural Connectors",
     "type": "2x Wide Corner Connectors",
+    "use": "The 2x Wide, 2x1 Corner Connector joins double-wide (2x) beams and plates at a 90° angle to build boxes, frames, and towers.",
     "image": "images/connectors/2x-wide-2x1-corner-connector.svg"
   },
   {
@@ -596,6 +634,7 @@
     "category": "Connectors",
     "section": "Structural Connectors",
     "type": "2x Wide Corner Connectors",
+    "use": "The 2x Wide, 2x1 Offset Corner Connector joins double-wide (2x) beams and plates at a 90° angle to build boxes, frames, and towers. Offset versions shift where the connected part sits, which helps line up parts that would otherwise be one hole off.",
     "image": "images/connectors/2x-wide-2x1-offset-corner-connector.svg"
   },
   {
@@ -610,6 +649,7 @@
     "category": "Connectors",
     "section": "Structural Connectors",
     "type": "2x Wide Corner Connectors",
+    "use": "The 2x Wide, 2x2 Offset Corner Connector joins double-wide (2x) beams and plates at a 90° angle to build boxes, frames, and towers. Offset versions shift where the connected part sits, which helps line up parts that would otherwise be one hole off.",
     "image": "images/connectors/2x-wide-2x2-offset-corner-connector.svg"
   },
   {
@@ -624,6 +664,7 @@
     "category": "Connectors",
     "section": "Structural Connectors",
     "type": "2x Wide Corner Connectors",
+    "use": "The 2x Wide, 3x2 Corner Connector joins double-wide (2x) beams and plates at a 90° angle to build boxes, frames, and towers.",
     "image": "images/connectors/2x-wide-3x2-corner-connector.svg"
   },
   {
@@ -638,6 +679,7 @@
     "category": "Connectors",
     "section": "Structural Connectors",
     "type": "2x Wide Corner Connectors",
+    "use": "This corner connector joins parts at a 60° angle instead of 90°, for building slanted frames, triangle supports, and angled arms.",
     "image": "images/connectors/2x-wide-60-degree-omni-1x2-corner-connector.svg"
   },
   {
@@ -652,6 +694,7 @@
     "category": "Pins & Standoffs",
     "section": "Structural Connectors",
     "type": "Standoff Connectors",
+    "use": "A 90° standoff connector joins standoffs or beams at a right angle, letting a structure turn a corner.",
     "image": "images/pins-standoffs/90-degree-standoff-connector.svg"
   },
   {
@@ -666,6 +709,7 @@
     "category": "Connectors",
     "section": "Structural Connectors",
     "type": "Double & Triple Corner Connectors",
+    "use": "The Double 2x Wide, 1x2 Corner Connector connects beams or plates on two sides at 90° angles, making strong box corners for chassis and towers in one piece.",
     "image": "images/connectors/double-2x-wide-1x2-corner-connector.svg"
   },
   {
@@ -680,6 +724,7 @@
     "category": "Connectors",
     "section": "Structural Connectors",
     "type": "Double & Triple Corner Connectors",
+    "use": "The Double 2x Wide, 2x2 Corner Connector connects beams or plates on two sides at 90° angles, making strong box corners for chassis and towers in one piece.",
     "image": "images/connectors/double-2x-wide-2x2-corner-connector.svg"
   },
   {
@@ -694,6 +739,7 @@
     "category": "Connectors",
     "section": "Structural Connectors",
     "type": "Double & Triple Corner Connectors",
+    "use": "The Double 2x Wide, 2x2 Double Offset Corner Connector connects beams or plates on two sides at 90° angles, making strong box corners for chassis and towers in one piece.",
     "image": "images/connectors/double-2x-wide-2x2-double-offset-corner-connector.svg"
   },
   {
@@ -711,6 +757,7 @@
     "category": "Connectors",
     "section": "Structural Connectors",
     "type": "Double & Triple Corner Connectors",
+    "use": "The Triple 2x Wide, 2x2 Corner Connector connects beams or plates on three sides at 90° angles, making strong box corners for chassis and towers in one piece.",
     "image": "images/connectors/triple-2x-wide-2x2-corner-connector.svg"
   },
   {
@@ -726,6 +773,7 @@
     "category": "Pins & Standoffs",
     "section": "Standoffs + Connectors",
     "type": "Standoff Connectors",
+    "use": "A mini standoff connector is a small connector for attaching standoffs to beams or to each other in tight spaces.",
     "image": "images/pins-standoffs/mini-standoff-connector.svg"
   },
   {
@@ -741,6 +789,7 @@
     "category": "Pins & Standoffs",
     "section": "Standoffs + Connectors",
     "type": "Standoff Connectors",
+    "use": "An end standoff connector attaches to the end of a standoff so another part can be connected there, capping off or extending a standoff structure.",
     "image": "images/pins-standoffs/end-standoff-connector.svg"
   },
   {
@@ -755,6 +804,7 @@
     "category": "Wheels & Intake",
     "section": "Wheels + Intake",
     "type": "Intake & Traction",
+    "use": "A medium intake flap attaches to a chain to build an intake or conveyor that grabs and pulls in larger game pieces.",
     "image": "images/wheels-intake/medium-intake-flap.svg"
   },
   {
@@ -769,6 +819,7 @@
     "category": "Wheels & Intake",
     "section": "Wheels + Intake",
     "type": "Intake & Traction",
+    "use": "An intake flap attaches to a chain to build an intake or conveyor that grabs and pulls in game pieces.",
     "image": "images/wheels-intake/short-intake-flap.svg"
   },
   {
@@ -783,6 +834,7 @@
     "category": "Wheels & Intake",
     "section": "Wheels + Intake",
     "type": "Intake & Traction",
+    "use": "Traction links snap into a chain to make a rubbery tank tread or conveyor belt surface that grips the ground or game pieces.",
     "image": "images/wheels-intake/traction-link.svg"
   },
   {
@@ -797,6 +849,7 @@
     "category": "Specialty",
     "section": "Rope + Anchoring",
     "type": "Rope & Spool",
+    "use": "A spool winds up rope when it turns, making a winch to pull something up, like a lift or a drawbridge.",
     "image": "images/specialty/1x-wide-spool.svg"
   },
   {
@@ -811,6 +864,7 @@
     "category": "Specialty",
     "section": "Rope + Anchoring",
     "type": "Rope & Spool",
+    "use": "The rope winds onto a spool to make a winch, pulling arms and lifts up or holding things in place.",
     "image": "images/specialty/24x-pitch-rope.svg"
   },
   {
@@ -825,6 +879,7 @@
     "category": "Cables",
     "section": "Rope + Anchoring",
     "type": "Other Cables & Anchors",
+    "use": "A cable anchor holds Smart Cables against the robot so they don't snag on moving parts or get pulled out.",
     "image": "images/cables/cable-anchor.webp"
   },
   {
@@ -840,6 +895,7 @@
     "category": "Specialty",
     "section": "Elastic Systems",
     "type": "Rubber Bands",
+    "use": "A rubber band anchor gives a rubber band a place to hook onto a beam, so the band can pull an arm back, hold a claw closed, or help a lift.",
     "image": "images/specialty/rubber-band-anchor.svg"
   },
   {
@@ -854,6 +910,7 @@
     "category": "Specialty",
     "section": "Elastic Systems",
     "type": "Rubber Bands",
+    "use": "Rubber bands add spring force: they pull parts back to a position, keep claws closed, or help a motor lift an arm.",
     "image": "images/specialty/silicone-rubber-band-32.svg"
   },
   {
@@ -868,6 +925,7 @@
     "category": "Beams & Plates",
     "section": "Specialty",
     "type": "Angle & Special Beams",
+    "use": "A magnetic beam has a magnet built in. The north pole beam attracts the south pole beam, so they can be used for magnetic latches, grabbers, or parts that snap together and release.",
     "image": "images/beams-plates/north-pole-magnetic-beam.png"
   },
   {
@@ -882,6 +940,7 @@
     "category": "Beams & Plates",
     "section": "Specialty",
     "type": "Angle & Special Beams",
+    "use": "A magnetic beam has a magnet built in. The south pole beam attracts the north pole beam, so they can be used for magnetic latches, grabbers, or parts that snap together and release.",
     "image": "images/beams-plates/south-pole-magnetic-beam.png"
   },
   {
@@ -897,6 +956,7 @@
     "category": "Beams & Plates",
     "section": "Structure",
     "type": "1x Beams",
+    "use": "A 1x12 beam is the basic building block of a VEX IQ robot: a single row of 12 holes used to build frames, arms, and supports. Pins snap into the holes to connect it to other beams, plates, and connectors, and shafts can pass through the round holes to spin.",
     "image": "images/beams-plates/1x12-beam.svg"
   },
   {
@@ -912,6 +972,7 @@
     "category": "Beams & Plates",
     "section": "Structure",
     "type": "2x Beams",
+    "use": "A 2x12 beam is a double-wide beam (12 holes long) that is stiffer than a 1x beam, making it good for chassis rails, towers, and long arms that must not bend. Connect it to other parts with connector pins.",
     "image": "images/beams-plates/2x12-beam.svg"
   },
   {
@@ -926,6 +987,7 @@
     "category": "Beams & Plates",
     "section": "Long Structure",
     "type": "1x Beams",
+    "use": "A 1x16 beam is the basic building block of a VEX IQ robot: a single row of 16 holes used to build frames, arms, and supports. Pins snap into the holes to connect it to other beams, plates, and connectors, and shafts can pass through the round holes to spin.",
     "image": "images/beams-plates/1x16-beam.svg"
   },
   {
@@ -941,6 +1003,7 @@
     "category": "Beams & Plates",
     "section": "Long Structure",
     "type": "2x Beams",
+    "use": "A 2x16 beam is a double-wide beam (16 holes long) that is stiffer than a 1x beam, making it good for chassis rails, towers, and long arms that must not bend. Connect it to other parts with connector pins.",
     "image": "images/beams-plates/2x16-beam.svg"
   },
   {
@@ -955,6 +1018,7 @@
     "category": "Beams & Plates",
     "section": "Plates",
     "type": "Plates & Panels",
+    "use": "A 3x3 plate is a small flat piece used as a base, a cover, or to brace a frame so it doesn't bend. Pins connect it to beams and connectors.",
     "image": "images/beams-plates/3x3-plate.svg"
   },
   {
@@ -970,6 +1034,7 @@
     "category": "Beams & Plates",
     "section": "Plates",
     "type": "Plates & Panels",
+    "use": "A 4x4 plate is a flat square piece used as a base, a mounting surface, or to stiffen a frame. Pins connect it to beams and connectors.",
     "image": "images/beams-plates/4x4-plate.svg"
   },
   {
@@ -984,6 +1049,7 @@
     "category": "Beams & Plates",
     "section": "Plates",
     "type": "Plates & Panels",
+    "use": "A 4x12 plate is a long flat piece used as a robot base or platform, or to make a wide, rigid surface.",
     "image": "images/beams-plates/4x12-plate.png"
   },
   {
@@ -998,6 +1064,7 @@
     "category": "Beams & Plates",
     "section": "Plates",
     "type": "Plates & Panels",
+    "use": "A 4x8 plate is a large flat piece used as a robot base, a platform, or a mounting surface for the Brain and battery.",
     "image": "images/beams-plates/4x8-plate.svg"
   },
   {
@@ -1013,6 +1080,7 @@
     "category": "Sprockets & Chain",
     "section": "Chain + Sprockets",
     "type": "Chain",
+    "use": "Chain links snap together to make a loop of chain that wraps around sprockets, carrying rotation over a distance. Intake flaps and traction links can attach to the chain.",
     "image": "images/sprockets-chain/chain-link.svg"
   },
   {
@@ -1027,6 +1095,7 @@
     "category": "Gears",
     "section": "Specialty Mechanisms",
     "type": "Specialty Gears",
+    "use": "Part of the XL Turntable system. This ring has gear teeth, so a motor-driven gear can turn the turntable to rotate a large platform such as an arm base or turret.",
     "image": "images/gears/xl-turntable-36-tooth-ring-gear-bushing.png"
   },
   {
@@ -1041,6 +1110,7 @@
     "category": "Specialty",
     "section": "Specialty Mechanisms",
     "type": "XL Turntable",
+    "use": "Part of the XL Turntable system. The outer housing holds the turntable bushings together and attaches the turntable to the rest of the robot.",
     "image": "images/specialty/xl-turntable-outer-housing.png"
   },
   {
@@ -1055,6 +1125,7 @@
     "category": "Shafts & Rotation",
     "section": "Specialty Mechanisms",
     "type": "Bushings",
+    "use": "Part of the XL Turntable system. The plain bushing is the smooth bearing ring that lets the turntable spin easily, so a large platform (like a robot arm base) can rotate.",
     "image": "images/shafts-rotation/xl-turntable-plain-bushing.png"
   },
   {
@@ -1069,6 +1140,7 @@
     "category": "Wheels & Intake",
     "section": "Wheels + Hubs",
     "type": "Wheels, Tires & Hubs",
+    "use": "A wheel hub is the center of a wheel; it locks onto a shaft and holds a tire. This 44mm hub pairs with the 200mm travel tire.",
     "image": "images/wheels-intake/small-wheel-hub-44mm.svg"
   },
   {
@@ -1083,6 +1155,7 @@
     "category": "Wheels & Intake",
     "section": "Wheels + Hubs",
     "type": "Wheels, Tires & Hubs",
+    "use": "A rubber tire that fits on a wheel hub to make a drive wheel with good grip. One full turn moves the robot about 200mm.",
     "image": "images/wheels-intake/tire-200-mm-travel.svg"
   },
   {
@@ -1097,6 +1170,7 @@
     "category": "Wheels & Intake",
     "section": "Wheels + Hubs",
     "type": "Wheels, Tires & Hubs",
+    "use": "A wide, smooth balloon tire for the 48.5mm hub. It gives lots of grip and a smooth ride, good for drive wheels.",
     "image": "images/wheels-intake/2x-wide-5x-pitch-diameter-balloon-tire-racing-slick-tread.svg"
   },
   {
@@ -1111,6 +1185,7 @@
     "category": "Wheels & Intake",
     "section": "Wheels + Hubs",
     "type": "Wheels, Tires & Hubs",
+    "use": "A wider wheel hub that locks onto a shaft and holds the balloon tire, for a sturdier, wider wheel.",
     "image": "images/wheels-intake/2x-wide-48-5mm-diameter-hub.svg"
   },
   {
@@ -1125,6 +1200,7 @@
     "category": "Wheels & Intake",
     "section": "Wheels + Hubs",
     "type": "Wheels, Tires & Hubs",
+    "use": "Omni wheels have small rollers around the edge, so they roll forward like a normal wheel but also slide sideways. They make robots turn more easily.",
     "image": "images/wheels-intake/omni-wheels.svg"
   },
   {
@@ -1139,6 +1215,7 @@
     "category": "Specialty",
     "section": "Gears + Linear Motion",
     "type": "Linear Motion",
+    "use": "A linear slide bracket rides along a beam so a part can slide back and forth in a straight line, often driven by a rack gear.",
     "image": "images/specialty/linear-slide-bracket.png"
   },
   {
@@ -1153,6 +1230,7 @@
     "category": "Gears",
     "section": "Gears + Linear Motion",
     "type": "Worm & Rack Gears",
+    "use": "A rack gear is a straight row of teeth. A gear turning against it pushes it in a straight line, turning rotation into sliding motion (for lifts, grabbers, and pushers).",
     "image": "images/gears/rack-gear.png"
   },
   {
@@ -1167,6 +1245,7 @@
     "category": "Beams & Plates",
     "section": "Small Structure",
     "type": "1x Beams",
+    "use": "A 1x1 beam is a single-hole block used as a small spacer, a filler, or a tiny connection point where a full beam won't fit. Pins snap through its hole to join it to other parts.",
     "image": "images/beams-plates/1x1-beam.svg"
   },
   {
@@ -1181,6 +1260,7 @@
     "category": "Beams & Plates",
     "section": "Small Structure",
     "type": "1x Beams",
+    "use": "A 1x3 beam is the basic building block of a VEX IQ robot: a single row of 3 holes used to build frames, arms, and supports. Pins snap into the holes to connect it to other beams, plates, and connectors, and shafts can pass through the round holes to spin.",
     "image": "images/beams-plates/1x3-beam.png"
   },
   {
@@ -1195,6 +1275,7 @@
     "category": "Beams & Plates",
     "section": "Small Structure",
     "type": "1x Beams",
+    "use": "A 1x5 beam is the basic building block of a VEX IQ robot: a single row of 5 holes used to build frames, arms, and supports. Pins snap into the holes to connect it to other beams, plates, and connectors, and shafts can pass through the round holes to spin.",
     "image": "images/beams-plates/1x5-beam.svg"
   },
   {
@@ -1209,6 +1290,7 @@
     "category": "Beams & Plates",
     "section": "Locking Structure",
     "type": "Lock Beams & Plates",
+    "use": "The 1x3 Center Lock Beam locks onto a shaft. Lock pieces have square holes that grip a shaft, so the beam turns together with the shaft instead of spinning freely on it. Use them to attach arms, levers, and claws to a motor-driven shaft.",
     "image": "images/beams-plates/1x3-center-lock-beam.svg"
   },
   {
@@ -1223,6 +1305,7 @@
     "category": "Beams & Plates",
     "section": "Locking Structure",
     "type": "Lock Beams & Plates",
+    "use": "The 1x3 Center Lock Plate locks onto a shaft. Lock pieces have square holes that grip a shaft, so the beam turns together with the shaft instead of spinning freely on it. Use them to attach arms, levers, and claws to a motor-driven shaft.",
     "image": "images/beams-plates/1x3-center-lock-plate.png"
   },
   {
@@ -1237,6 +1320,7 @@
     "category": "Beams & Plates",
     "section": "Locking Structure",
     "type": "Lock Beams & Plates",
+    "use": "The 1x4 Low-Profile End Lock Beam locks onto a shaft. Lock pieces have square holes that grip a shaft, so the beam turns together with the shaft instead of spinning freely on it. Use them to attach arms, levers, and claws to a motor-driven shaft.",
     "image": "images/beams-plates/1x4-low-profile-end-lock-beam.svg"
   },
   {
@@ -1251,6 +1335,7 @@
     "category": "Beams & Plates",
     "section": "Locking Structure",
     "type": "Lock Beams & Plates",
+    "use": "The 2x2 Center Offset Round Lock Beam locks onto a shaft. Lock pieces have square holes that grip a shaft, so the beam turns together with the shaft instead of spinning freely on it. Use them to attach arms, levers, and claws to a motor-driven shaft.",
     "image": "images/beams-plates/2x2-center-offset-round-lock-beam.svg"
   },
   {
@@ -1265,6 +1350,7 @@
     "category": "Beams & Plates",
     "section": "Locking Structure",
     "type": "Lock Beams & Plates",
+    "use": "The 2x2 Lock Plate locks onto a shaft. Lock pieces have square holes that grip a shaft, so the beam turns together with the shaft instead of spinning freely on it. Use them to attach arms, levers, and claws to a motor-driven shaft.",
     "image": "images/beams-plates/2x2-lock-plate.png"
   },
   {
@@ -1280,6 +1366,7 @@
     "category": "Gears",
     "section": "Gears + Shafts",
     "type": "Spur Gears",
+    "use": "A 12-tooth gear transfers rotation from one shaft to another. Pair gears of different sizes to trade speed for strength: a small gear driving a big gear turns slower but stronger, a big gear driving a small one turns faster.",
     "image": "images/gears/12-tooth-gear.svg"
   },
   {
@@ -1294,6 +1381,7 @@
     "category": "Gears",
     "section": "Gears + Shafts",
     "type": "Spur Gears",
+    "use": "A 24-tooth gear transfers rotation from one shaft to another. Pair gears of different sizes to trade speed for strength: a small gear driving a big gear turns slower but stronger, a big gear driving a small one turns faster.",
     "image": "images/gears/24-tooth-gear.svg"
   },
   {
@@ -1312,6 +1400,7 @@
     "category": "Gears",
     "section": "Gears + Shafts",
     "type": "Spur Gears",
+    "use": "A 36-tooth gear transfers rotation from one shaft to another. Pair gears of different sizes to trade speed for strength: a small gear driving a big gear turns slower but stronger, a big gear driving a small one turns faster.",
     "image": "images/gears/36-tooth-gear.svg"
   },
   {
@@ -1326,6 +1415,7 @@
     "category": "Gears",
     "section": "Gears + Shafts",
     "type": "Spur Gears",
+    "use": "A 48-tooth gear transfers rotation from one shaft to another. Pair gears of different sizes to trade speed for strength: a small gear driving a big gear turns slower but stronger, a big gear driving a small one turns faster.",
     "image": "images/gears/48-tooth-gear.svg"
   },
   {
@@ -1343,6 +1433,7 @@
     "category": "Gears",
     "section": "Gears + Shafts",
     "type": "Spur Gears",
+    "use": "A 60-tooth gear transfers rotation from one shaft to another. Pair gears of different sizes to trade speed for strength: a small gear driving a big gear turns slower but stronger, a big gear driving a small one turns faster.",
     "image": "images/gears/60-tooth-gear.png"
   },
   {
@@ -1357,6 +1448,7 @@
     "category": "Gears",
     "section": "Gears + Shafts",
     "type": "Specialty Gears",
+    "use": "A crown gear has teeth on its face, so it meshes with a regular gear at a 90° angle to change the direction of rotation.",
     "image": "images/gears/36-tooth-crown-gear.png"
   },
   {
@@ -1371,6 +1463,7 @@
     "category": "Gears",
     "section": "Gears + Shafts",
     "type": "Worm & Rack Gears",
+    "use": "The worm bracket holds a worm gear in the right spot next to the gear it drives, so the two mesh correctly.",
     "image": "images/gears/worm-bracket.png"
   },
   {
@@ -1385,6 +1478,7 @@
     "category": "Gears",
     "section": "Gears + Shafts",
     "type": "Worm & Rack Gears",
+    "use": "A worm gear is a screw-shaped gear that drives a regular gear very slowly with a lot of strength. It also holds its position when the motor stops, which is great for lifts and arms.",
     "image": "images/gears/worm-gear.png"
   },
   {
@@ -1399,6 +1493,7 @@
     "category": "Gears",
     "section": "Gears + Shafts",
     "type": "Specialty Gears",
+    "use": "A crank arm is a short arm with a built-in gear, so a gear can turn the arm to make a crank, lever, or rotating mechanism.",
     "image": "images/gears/1x4-crank-arm-with-23-tooth-gear.svg"
   },
   {
@@ -1414,6 +1509,7 @@
     "category": "Sprockets & Chain",
     "section": "Chain + Sprockets",
     "type": "Sprockets",
+    "use": "A 8-tooth sprocket works with chain to transfer rotation between shafts that are far apart, like a bicycle. Different sprocket sizes change speed and strength the same way gears do.",
     "image": "images/sprockets-chain/8-tooth-sprocket.svg"
   },
   {
@@ -1429,6 +1525,7 @@
     "category": "Sprockets & Chain",
     "section": "Chain + Sprockets",
     "type": "Sprockets",
+    "use": "A 16-tooth sprocket works with chain to transfer rotation between shafts that are far apart, like a bicycle. Different sprocket sizes change speed and strength the same way gears do.",
     "image": "images/sprockets-chain/16-tooth-sprocket.svg"
   },
   {
@@ -1444,6 +1541,7 @@
     "category": "Sprockets & Chain",
     "section": "Chain + Sprockets",
     "type": "Sprockets",
+    "use": "A 24-tooth sprocket works with chain to transfer rotation between shafts that are far apart, like a bicycle. Different sprocket sizes change speed and strength the same way gears do.",
     "image": "images/sprockets-chain/24-tooth-sprocket.svg"
   },
   {
@@ -1458,6 +1556,7 @@
     "category": "Sprockets & Chain",
     "section": "Chain + Sprockets",
     "type": "Sprockets",
+    "use": "A 32-tooth sprocket works with chain to transfer rotation between shafts that are far apart, like a bicycle. Different sprocket sizes change speed and strength the same way gears do.",
     "image": "images/sprockets-chain/32-tooth-sprocket.png"
   },
   {
@@ -1472,6 +1571,7 @@
     "category": "Sprockets & Chain",
     "section": "Chain + Sprockets",
     "type": "Sprockets",
+    "use": "A 40-tooth sprocket works with chain to transfer rotation between shafts that are far apart, like a bicycle. Different sprocket sizes change speed and strength the same way gears do.",
     "image": "images/sprockets-chain/40-tooth-sprocket.png"
   },
   {
@@ -1486,6 +1586,7 @@
     "category": "Pulleys & Belts",
     "section": "Pulleys + Belts",
     "type": "Pulleys",
+    "use": "A 10mm pulley works with a rubber belt to transfer rotation between shafts. Belts can slip, which protects motors, so pulleys are good for light loads and intakes.",
     "image": "images/pulleys-belts/10mm-pulley.png"
   },
   {
@@ -1500,6 +1601,7 @@
     "category": "Pulleys & Belts",
     "section": "Pulleys + Belts",
     "type": "Pulleys",
+    "use": "A 20mm pulley works with a rubber belt to transfer rotation between shafts. Belts can slip, which protects motors, so pulleys are good for light loads and intakes.",
     "image": "images/pulleys-belts/20mm-pulley.png"
   },
   {
@@ -1514,6 +1616,7 @@
     "category": "Pulleys & Belts",
     "section": "Pulleys + Belts",
     "type": "Pulleys",
+    "use": "This rubber tire fits around a 20mm pulley to turn it into a small wheel or roller, for example for an intake that grips game pieces.",
     "image": "images/pulleys-belts/20mm-pulley-tire-add-on.png"
   },
   {
@@ -1528,6 +1631,7 @@
     "category": "Pulleys & Belts",
     "section": "Pulleys + Belts",
     "type": "Pulleys",
+    "use": "A 30mm pulley works with a rubber belt to transfer rotation between shafts. Belts can slip, which protects motors, so pulleys are good for light loads and intakes.",
     "image": "images/pulleys-belts/30mm-pulley.png"
   },
   {
@@ -1542,6 +1646,7 @@
     "category": "Pulleys & Belts",
     "section": "Pulleys + Belts",
     "type": "Pulleys",
+    "use": "A 40mm pulley works with a rubber belt to transfer rotation between shafts. Belts can slip, which protects motors, so pulleys are good for light loads and intakes.",
     "image": "images/pulleys-belts/40mm-pulley.png"
   },
   {
@@ -1556,6 +1661,7 @@
     "category": "Pulleys & Belts",
     "section": "Pulleys + Belts",
     "type": "Belts",
+    "use": "A rubber belt loops around two pulleys to transfer rotation between shafts. Pick a belt size (30mm) that is snug but not too tight for the distance between pulleys.",
     "image": "images/pulleys-belts/belt-2mm-thick-x-30mm-dia.png"
   },
   {
@@ -1570,6 +1676,7 @@
     "category": "Pulleys & Belts",
     "section": "Pulleys + Belts",
     "type": "Belts",
+    "use": "A rubber belt loops around two pulleys to transfer rotation between shafts. Pick a belt size (40mm) that is snug but not too tight for the distance between pulleys.",
     "image": "images/pulleys-belts/belt-2mm-thick-x-40mm-dia.png"
   },
   {
@@ -1584,6 +1691,7 @@
     "category": "Pulleys & Belts",
     "section": "Pulleys + Belts",
     "type": "Belts",
+    "use": "A rubber belt loops around two pulleys to transfer rotation between shafts. Pick a belt size (50mm) that is snug but not too tight for the distance between pulleys.",
     "image": "images/pulleys-belts/belt-2mm-thick-x-50mm-dia.png"
   },
   {
@@ -1598,6 +1706,7 @@
     "category": "Pulleys & Belts",
     "section": "Pulleys + Belts",
     "type": "Belts",
+    "use": "A rubber belt loops around two pulleys to transfer rotation between shafts. Pick a belt size (60mm) that is snug but not too tight for the distance between pulleys.",
     "image": "images/pulleys-belts/belt-2mm-thick-x-60mm-dia.png"
   },
   {
@@ -1612,6 +1721,7 @@
     "category": "Shafts & Rotation",
     "section": "Shaft Types",
     "type": "Motor Shafts",
+    "use": "A 1x pitch plastic motor shaft plugs into a Smart Motor to drive a gear, wheel, or sprocket 1 hole away from the motor. The ring near one end stops it from sliding too far into the motor. Plastic shafts are fine for light loads; use a metal motor shaft for heavy loads that might twist it.",
     "image": "images/shafts-rotation/1x-pitch-plastic-motor-shaft.svg"
   },
   {
@@ -1626,6 +1736,7 @@
     "category": "Shafts & Rotation",
     "section": "Shaft Types",
     "type": "Motor Shafts",
+    "use": "A 2x pitch plastic motor shaft plugs into a Smart Motor to drive a gear, wheel, or sprocket 2 holes away from the motor. The ring near one end stops it from sliding too far into the motor. Plastic shafts are fine for light loads; use a metal motor shaft for heavy loads that might twist it.",
     "image": "images/shafts-rotation/2x-pitch-plastic-motor-shaft.svg"
   },
   {
@@ -1640,6 +1751,7 @@
     "category": "Shafts & Rotation",
     "section": "Shaft Types",
     "type": "Motor Shafts",
+    "use": "A 3x pitch plastic motor shaft plugs into a Smart Motor to drive a gear, wheel, or sprocket 3 holes away from the motor. The ring near one end stops it from sliding too far into the motor. Plastic shafts are fine for light loads; use a metal motor shaft for heavy loads that might twist it.",
     "image": "images/shafts-rotation/3x-pitch-plastic-motor-shaft.svg"
   },
   {
@@ -1654,6 +1766,7 @@
     "category": "Shafts & Rotation",
     "section": "Shaft Types",
     "type": "Motor Shafts",
+    "use": "A 4x pitch plastic motor shaft plugs into a Smart Motor to drive a gear, wheel, or sprocket 4 holes away from the motor. The ring near one end stops it from sliding too far into the motor. Plastic shafts are fine for light loads; use a metal motor shaft for heavy loads that might twist it.",
     "image": "images/shafts-rotation/4x-pitch-plastic-motor-shaft.svg"
   },
   {
@@ -1668,6 +1781,7 @@
     "category": "Shafts & Rotation",
     "section": "Shaft Types",
     "type": "Capped Shafts",
+    "use": "A 3x pitch capped plastic shaft is a lightweight axle with a built-in cap on one end, so it can't slide out in that direction. Good for light-duty pivots and wheels; use a metal capped shaft for heavy loads.",
     "image": "images/shafts-rotation/3x-pitch-capped-plastic-shaft.svg"
   },
   {
@@ -1682,6 +1796,7 @@
     "category": "Shafts & Rotation",
     "section": "Shaft Types",
     "type": "Capped Shafts",
+    "use": "A 5x pitch capped plastic shaft is a lightweight axle with a built-in cap on one end, so it can't slide out in that direction. Good for light-duty pivots and wheels; use a metal capped shaft for heavy loads.",
     "image": "images/shafts-rotation/5x-pitch-capped-plastic-shaft.svg"
   },
   {
@@ -1696,6 +1811,7 @@
     "category": "Shafts & Rotation",
     "section": "Shaft Types",
     "type": "Capped Shafts",
+    "use": "A 2x pitch capped shaft is a metal axle with a built-in cap on one end, so it can't slide out of a beam in that direction. Use it where a regular shaft plus a collar would be bulky, like the outside of a wheel or an arm pivot.",
     "image": "images/shafts-rotation/2x-pitch-capped-shaft.svg"
   },
   {
@@ -1710,6 +1826,7 @@
     "category": "Shafts & Rotation",
     "section": "Shaft Types",
     "type": "Capped Shafts",
+    "use": "A 3x pitch capped shaft is a metal axle with a built-in cap on one end, so it can't slide out of a beam in that direction. Use it where a regular shaft plus a collar would be bulky, like the outside of a wheel or an arm pivot.",
     "image": "images/shafts-rotation/3x-pitch-capped-shaft.svg"
   },
   {
@@ -1724,6 +1841,7 @@
     "category": "Shafts & Rotation",
     "section": "Shaft Types",
     "type": "Capped Shafts",
+    "use": "A 4x pitch capped shaft is a metal axle with a built-in cap on one end, so it can't slide out of a beam in that direction. Use it where a regular shaft plus a collar would be bulky, like the outside of a wheel or an arm pivot.",
     "image": "images/shafts-rotation/4x-pitch-capped-shaft.svg"
   },
   {
@@ -1738,6 +1856,7 @@
     "category": "Shafts & Rotation",
     "section": "Shaft Types",
     "type": "Capped Shafts",
+    "use": "A 5x pitch capped shaft is a metal axle with a built-in cap on one end, so it can't slide out of a beam in that direction. Use it where a regular shaft plus a collar would be bulky, like the outside of a wheel or an arm pivot.",
     "image": "images/shafts-rotation/5x-pitch-capped-shaft.svg"
   },
   {
@@ -1752,6 +1871,7 @@
     "category": "Shafts & Rotation",
     "section": "Shaft Types",
     "type": "Motor Shafts",
+    "use": "A 2x pitch metal motor shaft plugs into a Smart Motor to drive a gear, wheel, or sprocket. The colored ring near one end stops it from sliding too far into the motor and shows its length. Metal is stronger than plastic, so use it for drivetrains and heavy arms.",
     "image": "images/shafts-rotation/2x-pitch-motor-shaft.svg"
   },
   {
@@ -1766,6 +1886,7 @@
     "category": "Shafts & Rotation",
     "section": "Shaft Types",
     "type": "Motor Shafts",
+    "use": "A 3x pitch metal motor shaft plugs into a Smart Motor to drive a gear, wheel, or sprocket. The colored ring near one end stops it from sliding too far into the motor and shows its length. Metal is stronger than plastic, so use it for drivetrains and heavy arms.",
     "image": "images/shafts-rotation/3x-pitch-motor-shaft.svg"
   },
   {
@@ -1780,6 +1901,7 @@
     "category": "Shafts & Rotation",
     "section": "Shaft Types",
     "type": "Motor Shafts",
+    "use": "A 4x pitch metal motor shaft plugs into a Smart Motor to drive a gear, wheel, or sprocket. The colored ring near one end stops it from sliding too far into the motor and shows its length. Metal is stronger than plastic, so use it for drivetrains and heavy arms.",
     "image": "images/shafts-rotation/4x-pitch-motor-shaft.svg"
   },
   {
@@ -1794,6 +1916,7 @@
     "category": "Pins & Standoffs",
     "section": "Pins + Fasteners",
     "type": "Connector Pins",
+    "use": "A 0x2 connector pin has a flat head on one side and pins on the other. It locks two stacked parts together while staying flush on the outside, so nothing sticks out.",
     "image": "images/pins-standoffs/0x2-connector-pin.svg"
   },
   {
@@ -1808,6 +1931,7 @@
     "category": "Pins & Standoffs",
     "section": "Pins + Fasteners",
     "type": "Connector Pins",
+    "use": "A 0x3 connector pin has a flat head on one side and pins on the other. It locks three stacked parts together while staying flush on the outside.",
     "image": "images/pins-standoffs/0x3-connector-pin.svg"
   },
   {
@@ -1822,6 +1946,7 @@
     "category": "Pins & Standoffs",
     "section": "Pins + Fasteners",
     "type": "Idler Pins",
+    "use": "A 1x1 idler pin has a smooth round section, so a part can spin freely on it instead of being locked in place. Use it as an axle for idler gears, pulleys, or pivoting arms that don't need to be driven by a motor.",
     "image": "images/pins-standoffs/1x1-idler-pin.svg"
   },
   {
@@ -1837,6 +1962,7 @@
     "category": "Pins & Standoffs",
     "section": "Pins + Fasteners",
     "type": "Idler Pins",
+    "use": "A 0x2 idler pin has a smooth round section, so a part can spin freely on it instead of being locked in place. Use it as an axle for idler gears, pulleys, or pivoting arms that don't need to be driven by a motor.",
     "image": "images/pins-standoffs/0x2-idler-pin.svg"
   },
   {
@@ -1851,6 +1977,7 @@
     "category": "Pins & Standoffs",
     "section": "Pins + Fasteners",
     "type": "Idler Pins",
+    "use": "A 0x3 idler pin has a smooth round section, so a part can spin freely on it instead of being locked in place. Use it as an axle for idler gears, pulleys, or pivoting arms that don't need to be driven by a motor.",
     "image": "images/pins-standoffs/0x3-idler-pin.png"
   },
   {
@@ -1865,6 +1992,7 @@
     "category": "Pins & Standoffs",
     "section": "Pins + Fasteners",
     "type": "Idler Pins",
+    "use": "A 1x2 idler pin has a smooth round section, so a part can spin freely on it instead of being locked in place. Use it as an axle for idler gears, pulleys, or pivoting arms that don't need to be driven by a motor.",
     "image": "images/pins-standoffs/1x2-idler-pin.png"
   },
   {
@@ -1879,6 +2007,7 @@
     "category": "Shafts & Rotation",
     "section": "Spacing + Standoffs",
     "type": "Collars, Washers & Spacers",
+    "use": "A 0.25x pitch spacer is a thin spacer that slides onto a shaft to fill a small gap, lining up gears, wheels, or sprockets so they mesh correctly and don't rub.",
     "image": "images/shafts-rotation/0-25x-pitch-spacer.svg"
   },
   {
@@ -1893,6 +2022,7 @@
     "category": "Shafts & Rotation",
     "section": "Spacing + Standoffs",
     "type": "Collars, Washers & Spacers",
+    "use": "A 0.5x pitch spacer is a half-pitch spacer that slides onto a shaft to fill gaps, lining up gears, wheels, or sprockets so they mesh correctly and don't rub.",
     "image": "images/shafts-rotation/0-5x-pitch-spacer.png"
   },
   {
@@ -1907,6 +2037,7 @@
     "category": "Shafts & Rotation",
     "section": "Spacing + Standoffs",
     "type": "Bushings",
+    "use": "A VEX IQ shaft bushing is a structural connector used to support rotating shafts, prevent wobbling, and keep them from slipping or falling out of a build. It connects the end of a shaft to a beam or plate.",
     "image": "images/shafts-rotation/shaft-bushing.svg"
   },
   {
@@ -1921,6 +2052,7 @@
     "category": "Pins & Standoffs",
     "section": "Spacing + Standoffs",
     "type": "Standoffs",
+    "use": "A 0.25x pitch standoff holds two parts apart at an exact distance (0.25x pitch). The snap pins on each end lock into holes, so it's used to build layered structures, mount plates above beams, or space out two sides of a frame.",
     "image": "images/pins-standoffs/0-25x-pitch-standoff.svg"
   },
   {
@@ -1936,6 +2068,7 @@
     "category": "Pins & Standoffs",
     "section": "Spacing + Standoffs",
     "type": "Standoffs",
+    "use": "A 0.5x pitch standoff holds two parts apart at an exact distance (0.5x pitch). The snap pins on each end lock into holes, so it's used to build layered structures, mount plates above beams, or space out two sides of a frame.",
     "image": "images/pins-standoffs/0-5x-pitch-standoff.svg"
   },
   {
@@ -1951,6 +2084,7 @@
     "category": "Pins & Standoffs",
     "section": "Spacing + Standoffs",
     "type": "Standoffs",
+    "use": "A 1x pitch standoff holds two parts apart at an exact distance (1x pitch). The snap pins on each end lock into holes, so it's used to build layered structures, mount plates above beams, or space out two sides of a frame.",
     "image": "images/pins-standoffs/1x-pitch-standoff.svg"
   },
   {
@@ -1969,6 +2103,7 @@
     "category": "Pins & Standoffs",
     "section": "Spacing + Standoffs",
     "type": "Standoffs",
+    "use": "A 2x pitch standoff holds two parts apart at an exact distance (2x pitch). The snap pins on each end lock into holes, so it's used to build layered structures, mount plates above beams, or space out two sides of a frame.",
     "image": "images/pins-standoffs/2x-pitch-standoff.svg"
   },
   {
@@ -1984,6 +2119,7 @@
     "category": "Pins & Standoffs",
     "section": "Spacing + Standoffs",
     "type": "Standoffs",
+    "use": "A 4x pitch standoff holds two parts apart at an exact distance (4x pitch). The snap pins on each end lock into holes, so it's used to build layered structures, mount plates above beams, or space out two sides of a frame.",
     "image": "images/pins-standoffs/4x-pitch-standoff.svg"
   },
   {
@@ -2002,6 +2138,7 @@
     "category": "Pins & Standoffs",
     "section": "Spacing + Standoffs",
     "type": "Standoffs",
+    "use": "A 6x pitch standoff holds two parts apart at an exact distance (6x pitch). The snap pins on each end lock into holes, so it's used to build layered structures, mount plates above beams, or space out two sides of a frame.",
     "image": "images/pins-standoffs/6x-pitch-standoff.svg"
   },
   {
@@ -2016,6 +2153,7 @@
     "category": "Pins & Standoffs",
     "section": "Spacing + Standoffs",
     "type": "Standoffs",
+    "use": "A 0.5x pitch standoff extender snaps onto the end of a standoff to make it half a pitch longer, so you can get exactly the spacing you need.",
     "image": "images/pins-standoffs/0-5x-pitch-standoff-extender.svg"
   },
   {
@@ -2030,6 +2168,7 @@
     "category": "Beams & Plates",
     "section": "Long Structure",
     "type": "2x Beams",
+    "use": "A 2x18 beam is a double-wide beam (18 holes long) that is stiffer than a 1x beam, making it good for chassis rails, towers, and long arms that must not bend. Connect it to other parts with connector pins.",
     "image": "images/beams-plates/2x18-beam.svg"
   },
   {
@@ -2045,6 +2184,7 @@
     "category": "Beams & Plates",
     "section": "Long Structure",
     "type": "2x Beams",
+    "use": "A 2x20 beam is a double-wide beam (20 holes long) that is stiffer than a 1x beam, making it good for chassis rails, towers, and long arms that must not bend. Connect it to other parts with connector pins.",
     "image": "images/beams-plates/2x20-beam.svg"
   },
   {
@@ -2059,6 +2199,7 @@
     "category": "Cables",
     "section": "Cables",
     "type": "Smart Cables",
+    "use": "A 200mm Smart Cable connects a Smart Motor or sensor to the Robot Brain, carrying power and data. Pick the shortest cable that reaches so wires stay neat.",
     "image": "images/cables/200mm-cable.svg"
   },
   {
@@ -2073,6 +2214,7 @@
     "category": "Cables",
     "section": "Cables",
     "type": "Smart Cables",
+    "use": "A 300mm Smart Cable connects a Smart Motor or sensor to the Robot Brain, carrying power and data. Pick the shortest cable that reaches so wires stay neat.",
     "image": "images/cables/300mm-cable.svg"
   },
   {
@@ -2087,6 +2229,7 @@
     "category": "Cables",
     "section": "Cables",
     "type": "Smart Cables",
+    "use": "A 400mm Smart Cable connects a Smart Motor or sensor to the Robot Brain, carrying power and data. Pick the shortest cable that reaches so wires stay neat.",
     "image": "images/cables/400mm-cable.svg"
   },
   {
@@ -2101,6 +2244,7 @@
     "category": "Cables",
     "section": "Cables",
     "type": "Smart Cables",
+    "use": "A 600mm Smart Cable connects a Smart Motor or sensor to the Robot Brain, carrying power and data. Pick the shortest cable that reaches so wires stay neat.",
     "image": "images/cables/600mm-cable.svg"
   },
   {
@@ -2115,6 +2259,7 @@
     "category": "Cables",
     "section": "Cables",
     "type": "Other Cables & Anchors",
+    "use": "The USB cable connects the Robot Brain or Controller to a computer to download programs, and charges the battery and controller.",
     "image": "images/cables/usb-a-c-cable.svg"
   },
   {
@@ -2129,6 +2274,7 @@
     "category": "Electronics",
     "section": "Electronics + Control",
     "type": "Electronics",
+    "use": "The Robot Brain is the robot's computer. It runs your program and controls the motors and sensors plugged into its 12 Smart Ports.",
     "image": "images/electronics/robot-brain-2nd-generation.svg"
   },
   {
@@ -2143,6 +2289,7 @@
     "category": "Electronics",
     "section": "Electronics + Control",
     "type": "Electronics",
+    "use": "The Controller lets you drive the robot by hand, using joysticks and buttons that connect wirelessly to the Robot Brain.",
     "image": "images/electronics/controller-2nd-generation.svg"
   },
   {
@@ -2157,6 +2304,7 @@
     "category": "Electronics",
     "section": "Electronics + Control",
     "type": "Electronics",
+    "use": "The rechargeable battery powers the Robot Brain and everything connected to it. Charge it with the USB cable.",
     "image": "images/electronics/robot-battery-li-ion-2000-mah.svg"
   },
   {
@@ -2171,6 +2319,7 @@
     "category": "Electronics",
     "section": "Electronics + Control",
     "type": "Electronics",
+    "use": "The Smart Motor spins shafts to drive wheels, arms, and other mechanisms. It plugs into the Brain with a Smart Cable and can measure how far it has turned.",
     "image": "images/electronics/smart-motor.svg"
   },
   {
@@ -2185,6 +2334,7 @@
     "category": "Sensors",
     "section": "Sensors + Indicators",
     "type": "Sensors",
+    "use": "The Bumper Switch is a sensor that detects when it is pressed, so the robot can tell when it bumps into something.",
     "image": "images/sensors/bumper-switch.svg"
   },
   {
@@ -2199,6 +2349,7 @@
     "category": "Sensors",
     "section": "Sensors + Indicators",
     "type": "Sensors",
+    "use": "The Distance Sensor measures how far away an object is, so a robot can stop before hitting a wall or find game pieces.",
     "image": "images/sensors/distance-sensor.svg"
   },
   {
@@ -2213,6 +2364,7 @@
     "category": "Sensors",
     "section": "Sensors + Indicators",
     "type": "Sensors",
+    "use": "The Optical Sensor detects color, brightness, and whether an object is very close, so a robot can sort game pieces or follow lines.",
     "image": "images/sensors/optical-sensor.svg"
   },
   {
@@ -2227,6 +2379,7 @@
     "category": "Sensors",
     "section": "Sensors + Indicators",
     "type": "Sensors",
+    "use": "The Touch LED is a button that detects a touch and can light up in different colors, used for starting programs or showing the robot's status.",
     "image": "images/sensors/touch-led.svg"
   },
   {
@@ -2241,6 +2394,7 @@
     "category": "Pins & Standoffs",
     "section": "Tools",
     "type": "Tools",
+    "use": "The pin tool removes connector pins and pries apart parts that are snapped tightly together, without damaging the parts or your fingers.",
     "image": "images/pins-standoffs/pin-tool.svg"
   },
   {
@@ -2255,6 +2409,7 @@
     "category": "Linear Motion",
     "section": "Linear Motion",
     "type": "Linear Motion Beams",
+    "use": "A linear motion beam is the track for linear motion: brackets slide along it, and a rack gear drives the motion. This one is 5 pitch long.",
     "image": "images/linear-motion/1x5-linear-motion-beam.png"
   },
   {
@@ -2269,6 +2424,7 @@
     "category": "Linear Motion",
     "section": "Linear Motion",
     "type": "Linear Motion Beams",
+    "use": "A linear motion beam is the track for linear motion: brackets slide along it, and a rack gear drives the motion. This one is 6 pitch long.",
     "image": "images/linear-motion/1x6-linear-motion-beam.png"
   },
   {
@@ -2283,6 +2439,7 @@
     "category": "Linear Motion",
     "section": "Linear Motion",
     "type": "Linear Motion Beams",
+    "use": "A linear motion beam is the track for linear motion: brackets slide along it, and a rack gear drives the motion. This one is 8 pitch long.",
     "image": "images/linear-motion/1x8-linear-motion-beam.png"
   },
   {
@@ -2297,6 +2454,7 @@
     "category": "Linear Motion",
     "section": "Linear Motion",
     "type": "Linear Motion Rack Gears",
+    "use": "A rack gear for the linear motion system: a gear turning against it pushes it in a straight line to make lifts, grabbers, and pushers.",
     "image": "images/linear-motion/1x6-linear-motion-rack-gear.png"
   },
   {
@@ -2311,6 +2469,7 @@
     "category": "Linear Motion",
     "section": "Linear Motion",
     "type": "Linear Motion Rack Gears",
+    "use": "A rack gear with snap pins on the ends, so several can join end to end into one long rack of any length.",
     "image": "images/linear-motion/1x6-continuous-linear-motion-rack-gear.png"
   },
   {
@@ -2325,6 +2484,7 @@
     "category": "Linear Motion",
     "section": "Linear Motion",
     "type": "Linear Motion Rack Gears",
+    "use": "A long rack gear for the linear motion system, for long straight movements such as a tall lift.",
     "image": "images/linear-motion/1x20-linear-motion-rack-gear.png"
   },
   {
@@ -2339,6 +2499,7 @@
     "category": "Linear Motion",
     "section": "Linear Motion",
     "type": "Linear Motion Brackets",
+    "use": "A linear motion bracket slides along a linear motion beam. The side-mount version attaches to the side of a part to carry it along the track.",
     "image": "images/linear-motion/2x-pitch-linear-motion-bracket-side-mount.png"
   },
   {
@@ -2353,6 +2514,7 @@
     "category": "Linear Motion",
     "section": "Linear Motion",
     "type": "Linear Motion Brackets",
+    "use": "A linear motion bracket slides along a linear motion beam. The snap-mount version snaps onto a part to carry it along the track.",
     "image": "images/linear-motion/1x-pitch-linear-motion-bracket-snap-mount.png"
   }
 ]

@@ -149,13 +149,15 @@ A part record:
   "category": "Gears",
   "section": "Gears + Shafts",
   "type": "Spur Gears",
+  "use": "A 36-tooth gear transfers rotation from one shaft to another. …",
   "image": "images/gears/36-tooth-gear.svg"
 }
 ```
 
 - `extraLocations` (optional): more bins holding the same part. Search, cards, the poster, the RETURN TO block, the mini map, and bin views all use every bin. Leave it out for single-bin parts.
 - `binLabel` should be identical for every part sharing a location (the bin view uses the first one). A part in several bins uses one label for all of them.
-- `section` is from the original storage plan and no longer matches the Oct 2026 layout. It's shown in the part detail; ask Gavin before relying on it.
+- `use`: 1–3 student-friendly sentences on what the part does and how it connects, shown as **How it's used** in the part popup (replaced the Section line, Oct 2026). Drafted by Claude from general VEX knowledge (Shaft Bushing text is Gavin's); Gavin is reviewing — his wording wins.
+- `section` is from the original storage plan and no longer matches the Oct 2026 layout. It is no longer displayed; ask Gavin before relying on it.
 - `type` is the Part Finder subgroup within a category (e.g. 1x Beams, Idler Pins). A new type appears automatically; add it to that category's `types` in `categories.json` to control its order.
 - `storage` is the storage type (`Rolling - Small`, `Rolling - Medium`, `Akro-Mils Drawer`, `Vertical Hanger`, `Vertical Cable Hanger`, `External / …`, `Tool Storage`).
 - Empty `image` shows a generated placeholder tile.
@@ -172,7 +174,7 @@ A part record:
 
 - Large search box, part cards with images, category filters, responsive layout.
 - Search matches name, all part numbers, category, section, bin label, and location. Must handle: `36 tooth`, `228-3196-214`, `228-2500-214`, `corner connector`, `optical`, `B1-3`.
-- Part detail: name, image, quantity, all part numbers, category/section, storage type, bin label, and the most prominent element **RETURN TO → [LOCATION]**, plus a mini map with the bin highlighted.
+- Part detail: name, image, quantity, all part numbers, category, storage type, bin label, how it's used, and the most prominent element **RETURN TO → [LOCATION]**, plus a mini map with the bin highlighted.
 - Every bin on every map is clickable and shows that bin's contents.
 
 ---

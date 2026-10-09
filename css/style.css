@@ -111,6 +111,8 @@ button.big-location:hover { background:#0c5e94; }
 .fact { border:1px solid var(--border); border-radius:11px; padding:10px; background:#fbfcfd; }
 .fact small { display:block; color:#718291; margin-bottom:3px; }
 .fact b { word-break:break-word; }
+.fact.use { grid-column:1 / -1; background:#f2f8ee; border-color:#cfe3c2; }
+.fact.use p { margin:0; line-height:1.4; color:#1d2935; }
 .note { margin-top:10px; color:#607282; font-size:.9rem; }
 
 /* Bin contents view */
