@@ -13,16 +13,16 @@
 - **Parts in more than one bin**: `extraLocations` (e.g. 1x1 Connector Pin in B4-5 + B4-6). The site shows every bin, and the spreadsheet allows a part in several rows.
 - **Akro-Mils re-layout (Oct 9, 2026)** from Gavin's sheet: washers/spacers/collars/bushing in AK01–AK07, capped shafts AK17–AK20 and motor shafts AK21–AK24 (plastic + metal of the same length share a drawer — Gavin's choice), connector/idler pins AK26–AK31, standoffs AK33–AK42. Rubber Shaft Collar, 2x and 6x Standoff each use 2 drawers.
 - **Merged** the EES "Elastic Band Anchor Plate" (228-3616-157) into **Rubber Band Anchor** (same part, different color, per Gavin): qty 41, B3-8, VEX image.
+- **Live on GitHub Pages (Oct 9, 2026):** public repo `gavinsk/Vex-IQ-Storage-Organization` (Gavin kept this name) → **https://gavinsk.github.io/Vex-IQ-Storage-Organization/**. Publishing = commit + Sync in VS Code. Commits use his GitHub no-reply email (repo-local git config).
 - All 162 parts have images (see **Images** below)
 - Reference files moved into `docs/`
 
 **Next**
-1. **GitHub setup** — local repo created Oct 9, 2026 (branch `main`, first commit). Gavin chose a **public** repo **`gavinsk/vex-iq-parts`** → site at **https://gavinsk.github.io/vex-iq-parts/**. Remaining: Gavin publishes from VS Code ("Publish to GitHub"), then enables Pages (Settings → Pages → Deploy from a branch → `main` / root). Commits use his GitHub no-reply email (repo-local git config).
-2. **Printable bin labels** generated from `parts.json`
-3. **QR codes** for the cart / bins using the deep links
-4. **Overflow pass** — partly done: Gavin split 10 high-volume parts across 2 bins (`extraLocations`). Revisit only if he wants refill bins for other parts.
-5. **Akro-Mils capacity pass** — only if Gavin asks; he adjusts physical fit himself
-6. Optional: lightweight edit mode for locations. Options discussed: (A) site edit mode that saves via a repo-scoped GitHub token, (B) edit on site → download `parts.json` → commit, (C) local-only edit mode that saves to disk via Chrome's File System Access API. Recommendation was A for editing at the cart, C to keep review-before-publish. For now Gavin moves parts with the bin spreadsheet.
+1. **Printable bin labels** generated from `parts.json`
+2. **QR codes** for the cart / bins using the deep links
+3. **Overflow pass** — partly done: Gavin split 10 high-volume parts across 2 bins (`extraLocations`). Revisit only if he wants refill bins for other parts.
+4. **Akro-Mils capacity pass** — only if Gavin asks; he adjusts physical fit himself
+5. Optional: lightweight edit mode for locations. Options discussed: (A) site edit mode that saves via a repo-scoped GitHub token, (B) edit on site → download `parts.json` → commit, (C) local-only edit mode that saves to disk via Chrome's File System Access API. Recommendation was A for editing at the cart, C to keep review-before-publish. For now Gavin moves parts with the bin spreadsheet.
 
 **`docs/` is not on GitHub** (Gavin's choice, `.gitignore`d). It exists only on his Mac: saved VEX pages, EES PDFs, old workbook, image-source CSV. Never `git add -f` it.
 

@@ -59,6 +59,6 @@ The site loads JSON with `fetch`, so opening `index.html` by double-clicking won
 
 ## Publishing
 
-Live site: **https://gavinsk.github.io/vex-iq-parts/** (repository `gavinsk/vex-iq-parts`, GitHub Pages from `main`, root folder).
+Live site: **https://gavinsk.github.io/Vex-IQ-Storage-Organization/** (repository `gavinsk/Vex-IQ-Storage-Organization`, GitHub Pages from `main`, root folder).
 
 To publish a change: preview it locally, then in VS Code **Source Control** → write a message → **Commit** → **Sync Changes**. The live site updates about a minute later. All paths are relative, so nothing else needs changing.
