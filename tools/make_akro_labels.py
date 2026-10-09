@@ -53,7 +53,7 @@ def picture(contents):
 SHAFT_TYPES = {"Motor Shafts", "Capped Shafts"}
 SHAFT_KEEP = 3.2          # kept length = 3.2 x part height
 STANDOFF_END = 1.25       # each standoff end = 1.25 x part height
-GAP = 0.3                 # white gap between standoff ends, x part height
+GAP = 0.075               # white gap between standoff ends, x part height
 
 
 def zigzag(x, y, h, inward):
