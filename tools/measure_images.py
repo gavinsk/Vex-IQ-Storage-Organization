@@ -31,7 +31,7 @@ ESTIMATED_WIDTH = {
     "1x5 Linear Motion Beam": 180, "1x6 Linear Motion Beam": 216, "1x8 Linear Motion Beam": 288,
     "1x6 Linear Motion Rack Gear": 230, "1x6 Continuous Linear Motion Rack Gear": 216, "1x20 Linear Motion Rack Gear": 720,
     "2x Pitch Linear Motion Bracket (Side Mount)": 75, "1x Pitch Linear Motion Bracket (Snap Mount)": 45,
-    "0x3 Idler Pin": 52, "1x2 Idler Pin": 52, "0.5x Pitch Spacer": 40, "Shaft Bushing": 40,
+    "0x3 Idler Pin": 52, "1x2 Idler Pin": 52, "0.5x Pitch Spacer": 40, "Shaft Bushing": 55,
 }
 
 

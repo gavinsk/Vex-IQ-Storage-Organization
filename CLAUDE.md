@@ -18,7 +18,7 @@
 - Reference files moved into `docs/`
 
 **Next**
-1. **Bin labels** — Akro-Mils drawer labels done (`tools/make_akro_labels.py` → `labels/akro-mils-5195.pdf`, Avery 5195, one per filled drawer: number, label, picture; plastic+metal drawers show the metal part). Gavin only wants labels for the Akro-Mils drawers (small parts); re-run the script after drawer changes.
+1. **Bin labels** — Akro-Mils drawer labels done (`tools/make_akro_labels.py` → `labels/akro-mils-5195.pdf`, Avery 5195, one per filled drawer: number, label, picture; plastic+metal drawers show the metal part; motor and capped shafts get a zoomed close-up of the colored ring / cap with a zigzag break line, written to `labels/img/` — labels only, the website keeps full shafts). Gavin only wants labels for the Akro-Mils drawers (small parts); re-run the script after drawer changes.
 2. **QR codes** for the cart / bins using the deep links
 3. **Overflow pass** — partly done: Gavin split 10 high-volume parts across 2 bins (`extraLocations`). Revisit only if he wants refill bins for other parts.
 4. **Akro-Mils capacity pass** — only if Gavin asks; he adjusts physical fit himself
@@ -184,8 +184,9 @@ All 162 parts have images; provenance for each is in `images/manifest.json`.
 - **120 official VEX SVGs** from the VEX IQ Gen 2 parts catalog (https://www.vexrobotics.com/parts/228-7755) — individual SVGs or parts cropped out of VEX composite SVGs.
   - Composite crops were identified by **measured geometry** (hole count, length, gear/sprocket diameter, bend angle), then cross-checked against VEX's own "listed top-down" kit-page order. The image-source CSV's composite positions were often wrong — don't trust them.
   - Corner-connector naming is easy to swap: in VEX's composites, **1x2** connectors are 2 rows of pins with stacked holes; **2x1** connectors are single-row with holes extending outward.
-- **33 PNGs** extracted from the EES kit PDFs (`docs/ees-parts-lists/`, 228-7340 and 228-7341), matched to parts by table row. Low resolution (~100–220 px). Pulley pictures are scaled to fit their rows, so their sizes couldn't be cross-checked.
+- **32 PNGs** extracted from the EES kit PDFs (`docs/ees-parts-lists/`, 228-7340 and 228-7341), matched to parts by table row. Low resolution (~100–220 px). Pulley pictures are scaled to fit their rows, so their sizes couldn't be cross-checked.
 - **Cable Anchor**: VEX product render (WebP) supplied by Gavin.
+- **Shaft Bushing**: isometric line drawing converted from Gavin's DXF (`docs/Shaft Bushing Isometric.dxf`) to `images/shafts-rotation/shaft-bushing.svg`. Gavin can supply more DXFs; convert the same way (ezdxf in a scratch venv, flatten to polylines).
 - **Linear Motion Pack (8 parts, `images/linear-motion/`)**: 5 cropped from VEX Library Competition Kit diagrams (`docs/Linear Motion 1X Pictures_files/image12.png`, `docs/Gears Image with 1x Rack Gear.png`); the 1x20 rack, 1x6 rack, and 1x5 beam are cropped from the 228-7887 product photo (identified by group count and length). Replace with VEX SVGs if they become available.
 
 Rules:

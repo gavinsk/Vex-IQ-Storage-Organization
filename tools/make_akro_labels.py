@@ -6,6 +6,8 @@ Writes labels/akro-mils-5195.html and (with Google Chrome installed)
 labels/akro-mils-5195.pdf. One label per drawer that has parts, in drawer
 order, built from data/parts.json: drawer number, drawer label, and a picture.
 Drawers holding plastic + metal versions of a shaft show the metal one.
+Motor and capped shafts are shown as a close-up of their distinctive end (the
+colored ring or the cap) with a zigzag "break" line, drawn into labels/img/.
 Print the PDF at 100% / "Actual size" — not "Fit to page".
 """
 import html
@@ -42,13 +44,45 @@ def picture(contents):
     return (metal or contents)[0]
 
 
+# Close-ups: keep the left end of the shaft (where the colored ring / cap is),
+# the same zoom for every shaft, and cut it with a zigzag break line.
+CLOSEUP_TYPES = {"Motor Shafts", "Capped Shafts"}
+CLOSEUP_ASPECT = 3.2      # kept length = 3.2 x shaft height
+
+
+def closeup(part):
+    src = (ROOT / part["image"]).read_text()
+    root = re.search(r"<svg\b[^>]*>", src).group(0)
+    x, y, w, h = (float(v) for v in re.search(r'viewBox="([^"]+)"', root).group(1).replace(",", " ").split())
+    keep = CLOSEUP_ASPECT * h
+    if keep >= 0.85 * w:              # already short: nothing to cut
+        return part["image"]
+    inner = src[src.index(root) + len(root):src.rindex("</svg>")]
+    cut, amp, teeth = x + keep, 0.12 * h, 4
+    ys = [y + h * i / (teeth * 2) for i in range(teeth * 2 + 1)]
+    zig = [(cut - (amp if i % 2 else 0), yy) for i, yy in enumerate(ys)]
+    pts = lambda ps: " ".join(f"{a:.2f},{b:.2f}" for a, b in ps)
+    clip = [(x - 1, y - 1)] + [(zx, zy) for zx, zy in zig] + [(x - 1, y + h + 1)]
+    clip[1] = (zig[0][0], y - 1)
+    clip[-2] = (zig[-1][0], y + h + 1)
+    out = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{x:.2f} {y:.2f} {keep + 1:.2f} {h:.2f}">'
+           f'<clipPath id="keep"><polygon points="{pts(clip)}"/></clipPath>'
+           f'<g clip-path="url(#keep)">{inner}</g>'
+           f'<polyline points="{pts(zig)}" fill="none" stroke="#000" stroke-width="1" stroke-linejoin="round"/></svg>')
+    dest = ROOT / "labels" / "img" / Path(part["image"]).name
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(out)
+    return dest.relative_to(ROOT).as_posix()
+
+
 def label_html(drawer, contents, i):
     col, row = i % COLS, (i // COLS) % ROWS
     num = int(drawer[len(prefix):])
     text = contents[0]["binLabel"] or " + ".join(p["name"] for p in contents)
     main, _, sub = text.partition(" (")
     sub = f'<span class="sub">({html.escape(sub)}</span>' if sub else ""
-    img = picture(contents)["image"]
+    pic = picture(contents)
+    img = closeup(pic) if pic.get("type") in CLOSEUP_TYPES else pic["image"]
     return f"""
   <div class="label" style="left:{LEFT + col * PITCH_X:.4f}in;top:{TOP + row * PITCH_Y:.4f}in">
     <div class="pic"><img src="../{html.escape(img)}" alt=""></div>
