@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# Reference material stays on Gavin's Mac only (saved VEX pages, EES PDFs, old workbook).
+# The site doesn't use any of it; image provenance is recorded in images/manifest.json.
+docs/
+
+# Office lock files
+~$*

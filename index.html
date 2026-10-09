@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VEX IQ Parts Locator</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1>VEX IQ Parts Locator</h1>
+    <p>Find a part by picture, name, or VEX part number — then see exactly where it belongs.</p>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="toolbar-card">
+    <div class="search-row">
+      <input id="search" class="search" type="search" autocomplete="off" spellcheck="false"
+             placeholder="Search: 36 tooth gear, 228-3196-214, corner connector, B1-3..." autofocus>
+      <div class="count" id="count"></div>
+    </div>
+    <div class="view-tabs" role="tablist">
+      <button class="tab active" data-view="parts" role="tab">Parts</button>
+      <button class="tab" data-view="finder" role="tab">Part Finder</button>
+      <button class="tab" data-view="map" role="tab">Storage map</button>
+    </div>
+    <div class="filters" id="filters"></div>
+  </div>
+</div>
+
+<main>
+  <section id="partsView">
+    <div id="fuzzyNote" class="fuzzy-note" hidden></div>
+    <div id="grid" class="grid"></div>
+    <div id="empty" class="empty" hidden>No parts matched that search. Try fewer words, or a part number.</div>
+  </section>
+  <section id="finderView" hidden></section>
+  <section id="mapView" hidden>
+    <p class="map-help">Click any bin or drawer to see what's in it.</p>
+    <div id="storageMap"></div>
+  </section>
+  <div id="loadError" class="empty" hidden></div>
+</main>
+
+<dialog id="dialog">
+  <div class="modal-head">
+    <button class="back" id="backBtn" aria-label="Back" hidden>‹ Back</button>
+    <strong id="dialogTitle"></strong>
+    <button class="close" id="closeBtn" aria-label="Close">×</button>
+  </div>
+  <div id="dialogBody"></div>
+</dialog>
+
+<script src="js/app.js"></script>
+</body>
+</html>

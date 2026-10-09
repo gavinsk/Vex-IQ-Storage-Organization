@@ -1,0 +1,24 @@
+{
+  "cart": {
+    "name": "Rolling Cart",
+    "sides": [
+      { "id": "A", "name": "Side A", "purpose": "Structure & connections" },
+      { "id": "B", "name": "Side B", "purpose": "Motion, hardware & sensors" }
+    ],
+    "idFormat": "{side}{row}-{col}",
+    "binGroups": [
+      { "label": "Small bins", "firstRow": 1, "lastRow": 4, "cols": 8 },
+      { "label": "Medium bins", "firstRow": 5, "lastRow": 7, "cols": 5 }
+    ]
+  },
+  "akroMils": {
+    "name": "Akro-Mils Organizer",
+    "prefix": "AK",
+    "drawers": 64,
+    "cols": 8
+  },
+  "zones": [
+    { "prefix": "V", "name": "Vertical Hangers", "description": "Extra-long beams and cables" },
+    { "prefix": "E", "name": "External / Protected Storage", "description": "Brains, controllers, batteries, motors, tools" }
+  ]
+}

@@ -1,0 +1,1634 @@
+[
+  {
+    "name": "1x2 Beam",
+    "partNumbers": [
+      "228-2500-001"
+    ],
+    "image": "images/beams-plates/1x2-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #8 of 9 (identified by geometry: 2 pitch long)"
+  },
+  {
+    "name": "2x7 Beam",
+    "partNumbers": [
+      "228-2500-022"
+    ],
+    "image": "images/beams-plates/2x7-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-large-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #7 of 10 (identified by geometry: 7 pitch tall)"
+  },
+  {
+    "name": "2x8 Smooth Panel",
+    "partNumbers": [
+      "228-2500-524"
+    ],
+    "image": "images/beams-plates/2x8-smooth-panel.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/specialty-parts-2x8-smooth-panel.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "1x Wide, 1x1 Corner Connector",
+    "partNumbers": [
+      "228-2500-129"
+    ],
+    "image": "images/connectors/1x-wide-1x1-corner-connector.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/connectors-2x-wide-single-sided-single-row-corner-connector.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #5 of 5 (identified by geometry: 1-wide, 1-pitch body; confirmed by VEX kit page top-down listing)"
+  },
+  {
+    "name": "2x Wide, 2x2 Offset Corner Connector",
+    "partNumbers": [
+      "228-2500-136"
+    ],
+    "image": "images/connectors/2x-wide-2x2-offset-corner-connector.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/connectors-2x-wide-single-side-corner-connectors.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #2 of 6 (identified by geometry: 2.5-pitch body (offset); confirmed by VEX kit page top-down listing)"
+  },
+  {
+    "name": "2x Wide, 3x2 Corner Connector",
+    "partNumbers": [
+      "228-2500-137"
+    ],
+    "image": "images/connectors/2x-wide-3x2-corner-connector.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/connectors-2x-wide-single-side-corner-connectors.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #1 of 6 (identified by geometry: 3-pitch body; confirmed by VEX kit page top-down listing)"
+  },
+  {
+    "name": "2x Wide, 60 Degree Omni 1x2 Corner Connector",
+    "partNumbers": [
+      "228-2500-68"
+    ],
+    "image": "images/connectors/2x-wide-60-degree-omni-1x2-corner-connector.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/connectors-2x-wide-single-side-corner-connectors.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #6 of 6 (identified by geometry: angled 60-degree body; confirmed by VEX kit page top-down listing)"
+  },
+  {
+    "name": "90 Degree Standoff Connector",
+    "partNumbers": [
+      "228-2500-178"
+    ],
+    "image": "images/pins-standoffs/90-degree-standoff-connector.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/pins-and-standoffs-standoff-connectors.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #2 of 3 (identified by geometry: L-shaped)"
+  },
+  {
+    "name": "Double 2x Wide, 1x2 Corner Connector",
+    "partNumbers": [
+      "228-2500-271"
+    ],
+    "image": "images/connectors/double-2x-wide-1x2-corner-connector.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/connectors-double-triple-corner-connectors.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #3 of 6 (identified by geometry: pins both sides, 1-pitch body; confirmed by VEX kit page top-down listing)"
+  },
+  {
+    "name": "Double 2x Wide, 2x2 Corner Connector",
+    "partNumbers": [
+      "228-2500-220"
+    ],
+    "image": "images/connectors/double-2x-wide-2x2-corner-connector.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/connectors-double-triple-corner-connectors.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #2 of 6 (identified by geometry: pins both sides, 2-pitch body; confirmed by VEX kit page top-down listing)"
+  },
+  {
+    "name": "Double 2x Wide, 2x2 Double Offset Corner Connector",
+    "partNumbers": [
+      "228-2500-277"
+    ],
+    "image": "images/connectors/double-2x-wide-2x2-double-offset-corner-connector.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/connectors-double-triple-corner-connectors.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #1 of 6 (identified by geometry: pins both sides, 3-pitch body; confirmed by VEX kit page top-down listing)"
+  },
+  {
+    "name": "Triple 2x Wide, 2x2 Corner Connector",
+    "partNumbers": [
+      "228-2500-1253"
+    ],
+    "image": "images/connectors/triple-2x-wide-2x2-corner-connector.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/connectors-double-triple-corner-connectors.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #4 of 6 (identified by geometry: pins on three sides; confirmed by VEX kit page top-down listing)"
+  },
+  {
+    "name": "Medium Intake Flap",
+    "partNumbers": [
+      "228-2500-241"
+    ],
+    "image": "images/wheels-intake/medium-intake-flap.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/specialty-parts-intake-flaps.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #1 of 2 (identified by geometry: taller flap)"
+  },
+  {
+    "name": "Short Intake Flap",
+    "partNumbers": [
+      "228-2500-240"
+    ],
+    "image": "images/wheels-intake/short-intake-flap.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/specialty-parts-intake-flaps.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #2 of 2 (identified by geometry: shorter flap)"
+  },
+  {
+    "name": "Traction Link",
+    "partNumbers": [
+      "228-2500-239"
+    ],
+    "image": "images/wheels-intake/traction-link.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/specialty-parts-traction-link.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "1x Wide Spool",
+    "partNumbers": [
+      "228-2500-420"
+    ],
+    "image": "images/specialty/1x-wide-spool.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/specialty-parts-1x-wide-spool.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "24x Pitch Rope",
+    "partNumbers": [
+      "228-2500-438"
+    ],
+    "image": "images/specialty/24x-pitch-rope.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/specialty-parts-24x-pitch-rope.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "Rubber Band Anchor",
+    "partNumbers": [
+      "228-2500-157"
+    ],
+    "image": "images/specialty/rubber-band-anchor.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/specialty-parts-rubber-band-anchor.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "Silicone Rubber Band #32",
+    "partNumbers": [
+      "228-2500-468"
+    ],
+    "image": "images/specialty/silicone-rubber-band-32.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/specialty-parts-silicone-rubber-band.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "1x16 Beam",
+    "partNumbers": [
+      "228-2500-014"
+    ],
+    "image": "images/beams-plates/1x16-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #1 of 9 (identified by geometry: 16 pitch long (longest))"
+  },
+  {
+    "name": "3x3 Plate",
+    "partNumbers": [
+      "228-2500-031"
+    ],
+    "image": "images/beams-plates/3x3-plate.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-plates.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #2 of 3 (identified by geometry: 3x3 pitch)"
+  },
+  {
+    "name": "4x8 Plate",
+    "partNumbers": [
+      "228-2500-043"
+    ],
+    "image": "images/beams-plates/4x8-plate.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-plates.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #1 of 3 (identified by geometry: 4x8 pitch)"
+  },
+  {
+    "name": "Small Wheel Hub (44mm)",
+    "partNumbers": [
+      "228-2500-1208"
+    ],
+    "image": "images/wheels-intake/small-wheel-hub-44mm.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/wheels-wheel-hub.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "Tire (200 mm Travel)",
+    "partNumbers": [
+      "228-2500-209"
+    ],
+    "image": "images/wheels-intake/tire-200-mm-travel.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/wheels-200mm-travel-tire.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "2x Wide, 5x Pitch Diameter Balloon Tire (Racing Slick Tread)",
+    "partNumbers": [
+      "228-2500-1958"
+    ],
+    "image": "images/wheels-intake/2x-wide-5x-pitch-diameter-balloon-tire-racing-slick-tread.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/wheels-5x-pitch-diameter-balloon-tire.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "2x Wide, Ø48.5mm Diameter Hub",
+    "partNumbers": [
+      "228-2500-1953"
+    ],
+    "image": "images/wheels-intake/2x-wide-48-5mm-diameter-hub.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/wheels-2x-wide-48.5mm-diameter-hub.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "Omni Wheels",
+    "partNumbers": [
+      "228-2536-000"
+    ],
+    "image": "images/wheels-intake/omni-wheels.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/wheels-200mm-travel-omni-directional-wheel.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "1x1 Beam",
+    "partNumbers": [
+      "228-2500-154"
+    ],
+    "image": "images/beams-plates/1x1-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #9 of 9 (identified by geometry: 1 pitch long (smallest beam))"
+  },
+  {
+    "name": "1x5 Beam",
+    "partNumbers": [
+      "228-2500-004"
+    ],
+    "image": "images/beams-plates/1x5-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #6 of 9 (identified by geometry: 5 pitch long)"
+  },
+  {
+    "name": "1x3 Center Lock Beam",
+    "partNumbers": [
+      "228-2500-1141"
+    ],
+    "image": "images/beams-plates/1x3-center-lock-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-lock-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #1 of 2 (identified by geometry: 3 pitch, center square hole)"
+  },
+  {
+    "name": "1x4 Low-Profile End Lock Beam",
+    "partNumbers": [
+      "228-2500-1548"
+    ],
+    "image": "images/beams-plates/1x4-low-profile-end-lock-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-lock-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #2 of 2 (identified by geometry: 4 pitch, low-profile, square hole at end)"
+  },
+  {
+    "name": "2x2 Center Offset Round Lock Beam",
+    "partNumbers": [
+      "228-2500-1925"
+    ],
+    "image": "images/beams-plates/2x2-center-offset-round-lock-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/wheels-2x2-center-offset-round-lock-beam.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "24 Tooth Gear",
+    "partNumbers": [
+      "228-2500-227"
+    ],
+    "image": "images/gears/24-tooth-gear.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/gears-gears.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #4 of 4 (identified by geometry: diameter ratio 24/48)"
+  },
+  {
+    "name": "48 Tooth Gear",
+    "partNumbers": [
+      "228-2500-228"
+    ],
+    "image": "images/gears/48-tooth-gear.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/gears-gears.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #2 of 4 (identified by geometry: largest diameter)"
+  },
+  {
+    "name": "1x4 Crank Arm with 23 Tooth Gear",
+    "partNumbers": [
+      "228-2500-246"
+    ],
+    "image": "images/gears/1x4-crank-arm-with-23-tooth-gear.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/specialty-parts-1x4-crank-arm-with-23-tooth-gear.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "1x Pitch Plastic Motor Shaft",
+    "partNumbers": [
+      "228-2500-328"
+    ],
+    "image": "images/shafts-rotation/1x-pitch-plastic-motor-shaft.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/shafts-1x-pitch-plastic-motor-snap-shaft.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "2x Pitch Plastic Motor Shaft",
+    "partNumbers": [
+      "228-2500-078"
+    ],
+    "image": "images/shafts-rotation/2x-pitch-plastic-motor-shaft.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/shafts-pitch-plastic-motor-shafts.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #1 of 3 (identified by geometry: shortest)"
+  },
+  {
+    "name": "3x Pitch Plastic Motor Shaft",
+    "partNumbers": [
+      "228-2500-094"
+    ],
+    "image": "images/shafts-rotation/3x-pitch-plastic-motor-shaft.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/shafts-pitch-plastic-motor-shafts.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #2 of 3 (identified by geometry: middle)"
+  },
+  {
+    "name": "4x Pitch Plastic Motor Shaft",
+    "partNumbers": [
+      "228-2500-079"
+    ],
+    "image": "images/shafts-rotation/4x-pitch-plastic-motor-shaft.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/shafts-pitch-plastic-motor-shafts.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #3 of 3 (identified by geometry: longest)"
+  },
+  {
+    "name": "3x Pitch Capped Plastic Shaft",
+    "partNumbers": [
+      "228-2500-081"
+    ],
+    "image": "images/shafts-rotation/3x-pitch-capped-plastic-shaft.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/shafts-3x-pitch-capped-plastic-shaft.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "5x Pitch Capped Plastic Shaft",
+    "partNumbers": [
+      "228-2500-083"
+    ],
+    "image": "images/shafts-rotation/5x-pitch-capped-plastic-shaft.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/shafts-5x-pitch-capped-plastic-shaft.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "2x Pitch Capped Shaft",
+    "partNumbers": [
+      "228-2500-2219"
+    ],
+    "image": "images/shafts-rotation/2x-pitch-capped-shaft.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/shafts-2x-pitch-capped-shafts.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "3x Pitch Capped Shaft",
+    "partNumbers": [
+      "228-2500-2221"
+    ],
+    "image": "images/shafts-rotation/3x-pitch-capped-shaft.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/shafts-3x-pitch-capped-shaft.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "4x Pitch Capped Shaft",
+    "partNumbers": [
+      "228-2500-2223"
+    ],
+    "image": "images/shafts-rotation/4x-pitch-capped-shaft.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/shafts-4x-pitch-capped-shaft.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "5x Pitch Capped Shaft",
+    "partNumbers": [
+      "228-2500-2225"
+    ],
+    "image": "images/shafts-rotation/5x-pitch-capped-shaft.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/shafts-5x-pitch-capped-shaft.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "2x Pitch Motor Shaft",
+    "partNumbers": [
+      "228-2500-2234"
+    ],
+    "image": "images/shafts-rotation/2x-pitch-motor-shaft.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/shafts-pitch-motor-shafts.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #1 of 3 (identified by geometry: shortest)"
+  },
+  {
+    "name": "3x Pitch Motor Shaft",
+    "partNumbers": [
+      "228-2500-2236"
+    ],
+    "image": "images/shafts-rotation/3x-pitch-motor-shaft.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/shafts-pitch-motor-shafts.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #2 of 3 (identified by geometry: middle)"
+  },
+  {
+    "name": "4x Pitch Motor Shaft",
+    "partNumbers": [
+      "228-2500-2238"
+    ],
+    "image": "images/shafts-rotation/4x-pitch-motor-shaft.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/shafts-pitch-motor-shafts.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #3 of 3 (identified by geometry: longest)"
+  },
+  {
+    "name": "0x2 Connector Pin",
+    "partNumbers": [
+      "228-2500-086"
+    ],
+    "image": "images/pins-standoffs/0x2-connector-pin.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/pins-and-standoffs-0x2-connector-pin.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "0x3 Connector Pin",
+    "partNumbers": [
+      "228-2500-087"
+    ],
+    "image": "images/pins-standoffs/0x3-connector-pin.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/pins-and-standoffs-0x3-connector-pin.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "1x1 Idler Pin",
+    "partNumbers": [
+      "228-2500-073"
+    ],
+    "image": "images/pins-standoffs/1x1-idler-pin.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/pins-and-standoffs-1x1-idler-pin.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "0.25x Pitch Spacer",
+    "partNumbers": [
+      "228-2500-114"
+    ],
+    "image": "images/shafts-rotation/0-25x-pitch-spacer.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/shafts-0.25-pitch-shaft-spacer.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "0.25x Pitch Standoff",
+    "partNumbers": [
+      "228-2500-063"
+    ],
+    "image": "images/pins-standoffs/0-25x-pitch-standoff.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/pins-and-standoffs-0.25x-pitch-standoff.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "0.5x Pitch Standoff Extender",
+    "partNumbers": [
+      "228-2500-109"
+    ],
+    "image": "images/pins-standoffs/0-5x-pitch-standoff-extender.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/pins-and-standoffs-0.5x-pitch-standoff-extender.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "2x18 Beam",
+    "partNumbers": [
+      "228-2500-029"
+    ],
+    "image": "images/beams-plates/2x18-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-large-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #2 of 10 (identified by geometry: 18 pitch tall)"
+  },
+  {
+    "name": "200mm Cable",
+    "partNumbers": [
+      "228-2780-001"
+    ],
+    "image": "images/cables/200mm-cable.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/electronics-smart-cables.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #4 of 4 (identified by geometry: length ratio 2 (shortest))"
+  },
+  {
+    "name": "300mm Cable",
+    "partNumbers": [
+      "228-2780-002"
+    ],
+    "image": "images/cables/300mm-cable.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/electronics-smart-cables.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #3 of 4 (identified by geometry: length ratio 3)"
+  },
+  {
+    "name": "400mm Cable",
+    "partNumbers": [
+      "228-2780-003"
+    ],
+    "image": "images/cables/400mm-cable.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/electronics-smart-cables.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #2 of 4 (identified by geometry: length ratio 4)"
+  },
+  {
+    "name": "600mm Cable",
+    "partNumbers": [
+      "228-2780-004"
+    ],
+    "image": "images/cables/600mm-cable.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/electronics-smart-cables.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #1 of 4 (identified by geometry: longest (coiled))"
+  },
+  {
+    "name": "USB A-C Cable",
+    "partNumbers": [
+      "228-6961-002"
+    ],
+    "image": "images/cables/usb-a-c-cable.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/electronics-2m-usb-cable.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "Robot Brain (2nd generation)",
+    "partNumbers": [
+      "228-6480-000"
+    ],
+    "image": "images/electronics/robot-brain-2nd-generation.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/electronics-robot-brain.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "Controller (2nd Generation)",
+    "partNumbers": [
+      "228-6470-000"
+    ],
+    "image": "images/electronics/controller-2nd-generation.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/electronics-controller.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "Robot Battery (Li-Ion, 2000 mAh)",
+    "partNumbers": [
+      "228-7045-000"
+    ],
+    "image": "images/electronics/robot-battery-li-ion-2000-mah.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/electronics-robot-battery.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "Smart Motor",
+    "partNumbers": [
+      "228-2560-000"
+    ],
+    "image": "images/electronics/smart-motor.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/electronics-smart-motor.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "Bumper Switch",
+    "partNumbers": [
+      "228-2677-000"
+    ],
+    "image": "images/sensors/bumper-switch.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/electronics-bumper-sensor.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "Distance Sensor",
+    "partNumbers": [
+      "228-7106-000"
+    ],
+    "image": "images/sensors/distance-sensor.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/electronics-distance-sensor.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "Optical Sensor",
+    "partNumbers": [
+      "228-7082-000"
+    ],
+    "image": "images/sensors/optical-sensor.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/electronics-optical-sensor.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "Touch LED",
+    "partNumbers": [
+      "228-3010-000"
+    ],
+    "image": "images/sensors/touch-led.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/electronics-touch-led.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "Pin Tool",
+    "partNumbers": [
+      "228-4035-000"
+    ],
+    "image": "images/pins-standoffs/pin-tool.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/specialty-parts-pin-tool.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "1x12 Beam",
+    "partNumbers": [
+      "228-2500-011",
+      "228-3616-011"
+    ],
+    "image": "images/beams-plates/1x12-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #2 of 9 (identified by geometry: 12 pitch long)"
+  },
+  {
+    "name": "1x10 Beam",
+    "partNumbers": [
+      "228-2500-009",
+      "228-3616-009"
+    ],
+    "image": "images/beams-plates/1x10-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #3 of 9 (identified by geometry: 10 pitch long)"
+  },
+  {
+    "name": "1x8 Beam",
+    "partNumbers": [
+      "228-2500-007",
+      "228-3616-007"
+    ],
+    "image": "images/beams-plates/1x8-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #4 of 9 (identified by geometry: 8 pitch long)"
+  },
+  {
+    "name": "1x6 Beam",
+    "partNumbers": [
+      "228-2500-005",
+      "228-3616-005"
+    ],
+    "image": "images/beams-plates/1x6-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #5 of 9 (identified by geometry: 6 pitch long)"
+  },
+  {
+    "name": "1x4 Beam",
+    "partNumbers": [
+      "228-2500-003",
+      "228-3616-003"
+    ],
+    "image": "images/beams-plates/1x4-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #7 of 9 (identified by geometry: 4 pitch long)"
+  },
+  {
+    "name": "2x20 Beam",
+    "partNumbers": [
+      "228-2500-030",
+      "228-3616-030"
+    ],
+    "image": "images/beams-plates/2x20-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-large-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #1 of 10 (identified by geometry: 20 pitch tall)"
+  },
+  {
+    "name": "2x16 Beam",
+    "partNumbers": [
+      "228-2500-028",
+      "228-3616-028"
+    ],
+    "image": "images/beams-plates/2x16-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-large-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #3 of 10 (identified by geometry: 16 pitch tall)"
+  },
+  {
+    "name": "2x12 Beam",
+    "partNumbers": [
+      "228-2500-026",
+      "228-3616-026"
+    ],
+    "image": "images/beams-plates/2x12-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-large-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #4 of 10 (identified by geometry: 12 pitch tall)"
+  },
+  {
+    "name": "2x10 Beam",
+    "partNumbers": [
+      "228-2500-025",
+      "228-3616-025"
+    ],
+    "image": "images/beams-plates/2x10-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-large-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #5 of 10 (identified by geometry: 10 pitch tall)"
+  },
+  {
+    "name": "2x8 Beam",
+    "partNumbers": [
+      "228-2500-023",
+      "228-3616-023"
+    ],
+    "image": "images/beams-plates/2x8-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-large-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #6 of 10 (identified by geometry: 8 pitch tall)"
+  },
+  {
+    "name": "2x6 Beam",
+    "partNumbers": [
+      "228-2500-021",
+      "228-3616-021"
+    ],
+    "image": "images/beams-plates/2x6-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-large-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #8 of 10 (identified by geometry: 6 pitch tall)"
+  },
+  {
+    "name": "2x4 Beam",
+    "partNumbers": [
+      "228-2500-019",
+      "228-3616-019"
+    ],
+    "image": "images/beams-plates/2x4-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-large-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #9 of 10 (identified by geometry: 4 pitch tall)"
+  },
+  {
+    "name": "2x2 Beam",
+    "partNumbers": [
+      "228-2500-017",
+      "228-3616-017"
+    ],
+    "image": "images/beams-plates/2x2-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-large-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #10 of 10 (identified by geometry: 2 pitch tall (smallest))"
+  },
+  {
+    "name": "4x4 Plate",
+    "partNumbers": [
+      "228-2500-040",
+      "228-3616-040"
+    ],
+    "image": "images/beams-plates/4x4-plate.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-plates.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #3 of 3 (identified by geometry: 4x4 pitch)"
+  },
+  {
+    "name": "2x Wide, 2x2 Corner Connector",
+    "partNumbers": [
+      "228-2500-134",
+      "228-3201-134"
+    ],
+    "image": "images/connectors/2x-wide-2x2-corner-connector.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/connectors-2x-wide-single-side-corner-connectors.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #3 of 6 (identified by geometry: 2-pitch body; confirmed by VEX kit page top-down listing)"
+  },
+  {
+    "name": "2x Wide, 1x1 Offset Corner Connector",
+    "partNumbers": [
+      "228-2500-133",
+      "228-3201-133"
+    ],
+    "image": "images/connectors/2x-wide-1x1-offset-corner-connector.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/connectors-2x-wide-single-sided-single-row-corner-connector.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #3 of 5 (identified by geometry: 2 pins, 1 hole, offset; confirmed by VEX kit page top-down listing)"
+  },
+  {
+    "name": "1x Wide, 1x1 Offset Corner Connector",
+    "partNumbers": [
+      "228-2500-130",
+      "228-3201-130"
+    ],
+    "image": "images/connectors/1x-wide-1x1-offset-corner-connector.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/connectors-2x-wide-single-sided-single-row-corner-connector.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #4 of 5 (identified by geometry: 1 pin, 1 hole, offset; confirmed by VEX kit page top-down listing)"
+  },
+  {
+    "name": "12 Tooth Gear",
+    "partNumbers": [
+      "228-2500-213",
+      "228-3196-213"
+    ],
+    "image": "images/gears/12-tooth-gear.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/gears-gears.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #1 of 4 (identified by geometry: smallest diameter)"
+  },
+  {
+    "name": "36 Tooth Gear",
+    "partNumbers": [
+      "228-2500-214",
+      "228-3196-214"
+    ],
+    "image": "images/gears/36-tooth-gear.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/gears-gears.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #3 of 4 (identified by geometry: diameter ratio 36/48)"
+  },
+  {
+    "name": "Mini Standoff Connector",
+    "partNumbers": [
+      "228-2500-170",
+      "228-3616-170"
+    ],
+    "image": "images/pins-standoffs/mini-standoff-connector.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/pins-and-standoffs-standoff-connectors.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #1 of 3 (identified by geometry: small block, standoff slot only)"
+  },
+  {
+    "name": "End Standoff Connector",
+    "partNumbers": [
+      "228-2500-172",
+      "228-3616-172"
+    ],
+    "image": "images/pins-standoffs/end-standoff-connector.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/pins-and-standoffs-standoff-connectors.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #3 of 3 (identified by geometry: standoff slot plus pin hole at end)"
+  },
+  {
+    "name": "3x5 Right Angle Beam",
+    "partNumbers": [
+      "228-2500-150",
+      "228-3616-150"
+    ],
+    "image": "images/beams-plates/3x5-right-angle-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-angle-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #1 of 3 (identified by geometry: L shape, 5 holes x 3 holes)"
+  },
+  {
+    "name": "3x4 Tee Beam",
+    "partNumbers": [
+      "228-2500-144",
+      "228-3616-144"
+    ],
+    "image": "images/beams-plates/3x4-tee-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-angle-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #2 of 3 (identified by geometry: T shape, 4 across x 3 down)"
+  },
+  {
+    "name": "4x4 Offset Right Angle Beam",
+    "partNumbers": [
+      "228-2500-151",
+      "228-3616-151"
+    ],
+    "image": "images/beams-plates/4x4-offset-right-angle-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-angle-beams.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #3 of 3 (identified by geometry: offset L, 4x4 pitch)"
+  },
+  {
+    "name": "6x Pitch Standoff",
+    "partNumbers": [
+      "228-2500-072",
+      "228-3201-072"
+    ],
+    "image": "images/pins-standoffs/6x-pitch-standoff.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/pins-and-standoffs-pitch-standoffs.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #1 of 5 (identified by geometry: longest)"
+  },
+  {
+    "name": "4x Pitch Standoff",
+    "partNumbers": [
+      "228-2500-070",
+      "228-3201-070"
+    ],
+    "image": "images/pins-standoffs/4x-pitch-standoff.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/pins-and-standoffs-pitch-standoffs.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #2 of 5 (identified by geometry: length ratio)"
+  },
+  {
+    "name": "2x Pitch Standoff",
+    "partNumbers": [
+      "228-2500-067",
+      "228-3201-067"
+    ],
+    "image": "images/pins-standoffs/2x-pitch-standoff.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/pins-and-standoffs-pitch-standoffs.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #3 of 5 (identified by geometry: length ratio)"
+  },
+  {
+    "name": "1x Pitch Standoff",
+    "partNumbers": [
+      "228-2500-065",
+      "228-3201-065"
+    ],
+    "image": "images/pins-standoffs/1x-pitch-standoff.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/pins-and-standoffs-pitch-standoffs.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #4 of 5 (identified by geometry: length ratio)"
+  },
+  {
+    "name": "0.5x Pitch Standoff",
+    "partNumbers": [
+      "228-2500-064",
+      "228-3201-064"
+    ],
+    "image": "images/pins-standoffs/0-5x-pitch-standoff.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/pins-and-standoffs-pitch-standoffs.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #5 of 5 (identified by geometry: shortest)"
+  },
+  {
+    "name": "24 Tooth Sprocket",
+    "partNumbers": [
+      "228-2500-235",
+      "228-3450-235"
+    ],
+    "image": "images/sprockets-chain/24-tooth-sprocket.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/sprockets-and-chain-sprockets.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #1 of 3 (identified by geometry: largest; diameters 8:16:24)"
+  },
+  {
+    "name": "16 Tooth Sprocket",
+    "partNumbers": [
+      "228-2500-233",
+      "228-3450-233"
+    ],
+    "image": "images/sprockets-chain/16-tooth-sprocket.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/sprockets-and-chain-sprockets.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #2 of 3 (identified by geometry: middle; diameters 8:16:24)"
+  },
+  {
+    "name": "8 Tooth Sprocket",
+    "partNumbers": [
+      "228-2500-232",
+      "228-3450-232"
+    ],
+    "image": "images/sprockets-chain/8-tooth-sprocket.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/sprockets-and-chain-sprockets.svg?ver=1635529898064",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #3 of 3 (identified by geometry: smallest; 8 teeth counted)"
+  },
+  {
+    "name": "0x2 Idler Pin",
+    "partNumbers": [
+      "228-2500-084",
+      "228-3944-084"
+    ],
+    "image": "images/pins-standoffs/0x2-idler-pin.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/pins-and-standoffs-0x2-idler-pin.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "1x1 Connector Pin",
+    "partNumbers": [
+      "228-2500-060",
+      "228-3196-060"
+    ],
+    "image": "images/pins-standoffs/1x1-connector-pin.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/pins-and-standoffs-1x1-connector-pin.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "1x2 Connector Pin",
+    "partNumbers": [
+      "228-2500-061",
+      "228-3196-061"
+    ],
+    "image": "images/pins-standoffs/1x2-connector-pin.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/pins-and-standoffs-1x2-connector-pin.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "2x2 Connector Pin",
+    "partNumbers": [
+      "228-2500-062",
+      "228-3196-062"
+    ],
+    "image": "images/pins-standoffs/2x2-connector-pin.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/pins-and-standoffs-2x2-connector-pin.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "4x Pitch Shaft",
+    "partNumbers": [
+      "228-2500-120"
+    ],
+    "image": "images/shafts-rotation/4x-pitch-shaft.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/shafts-4x-pitch-shaft.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "6x Pitch Shaft",
+    "partNumbers": [
+      "228-2500-122"
+    ],
+    "image": "images/shafts-rotation/6x-pitch-shaft.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/shafts-6x-pitch-shaft.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "Rubber Shaft Collar",
+    "partNumbers": [
+      "228-2500-143"
+    ],
+    "image": "images/shafts-rotation/rubber-shaft-collar.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/shafts-rubber-shaft-collar.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "Washer",
+    "partNumbers": [
+      "228-2500-112",
+      "228-3201-112"
+    ],
+    "image": "images/shafts-rotation/washer.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/shafts-washer.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "Chain Link",
+    "partNumbers": [
+      "228-2500-230",
+      "228-3616-230"
+    ],
+    "image": "images/sprockets-chain/chain-link.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/sprockets-and-chain-chain-link.svg?ver=1635529898064",
+    "sourceType": "exact VEX SVG"
+  },
+  {
+    "name": "2x3 Right Angle Beam",
+    "partNumbers": [
+      "228-2500-145",
+      "228-3616-145"
+    ],
+    "image": "images/beams-plates/2x3-right-angle-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-angle-beams-2.svg",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #1 of 4 (identified by geometry: L shape, 3 holes x 2 holes)"
+  },
+  {
+    "name": "3x3 30 Degree Angle Beam",
+    "partNumbers": [
+      "228-2500-147",
+      "228-3616-147"
+    ],
+    "image": "images/beams-plates/3x3-30-degree-angle-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-angle-beams-2.svg",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #2 of 4 (identified by geometry: bend measured ~30 degrees)"
+  },
+  {
+    "name": "3x3 45 Degree Angle Beam",
+    "partNumbers": [
+      "228-2500-148",
+      "228-3616-148"
+    ],
+    "image": "images/beams-plates/3x3-45-degree-angle-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-angle-beams-2.svg",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #3 of 4 (identified by geometry: bend measured ~46 degrees)"
+  },
+  {
+    "name": "3x3 60 Degree Angle Beam",
+    "partNumbers": [
+      "228-2500-149",
+      "228-3616-149"
+    ],
+    "image": "images/beams-plates/3x3-60-degree-angle-beam.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/beams-and-plates-angle-beams-2.svg",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #4 of 4 (identified by geometry: bend measured ~56-60 degrees (sharpest))"
+  },
+  {
+    "name": "2x Wide, 1x2 Offset Corner Connector",
+    "partNumbers": [
+      "228-2500-135",
+      "228-3201-135"
+    ],
+    "image": "images/connectors/2x-wide-1x2-offset-corner-connector.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/connectors-2x-wide-single-side-corner-connectors.svg",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #4 of 6 (identified by geometry: 1.5-pitch body, 2 rows of pins; confirmed by VEX kit page top-down listing)"
+  },
+  {
+    "name": "2x Wide, 1x2 Corner Connector",
+    "partNumbers": [
+      "228-2500-128",
+      "228-3201-128"
+    ],
+    "image": "images/connectors/2x-wide-1x2-corner-connector.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/connectors-2x-wide-single-side-corner-connectors.svg",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #5 of 6 (identified by geometry: 1-pitch body, 2 rows of pins; confirmed by VEX kit page top-down listing)"
+  },
+  {
+    "name": "2x Wide, 2x1 Offset Corner Connector",
+    "partNumbers": [
+      "228-2500-131",
+      "228-3201-131"
+    ],
+    "image": "images/connectors/2x-wide-2x1-offset-corner-connector.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/connectors-2x-wide-single-sided-single-row-corner-connector.svg",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #1 of 5 (identified by geometry: single row, 2 holes, offset; confirmed by VEX kit page top-down listing)"
+  },
+  {
+    "name": "2x Wide, 2x1 Corner Connector",
+    "partNumbers": [
+      "228-2500-132",
+      "228-3201-132"
+    ],
+    "image": "images/connectors/2x-wide-2x1-corner-connector.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/connectors-2x-wide-single-sided-single-row-corner-connector.svg",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #2 of 5 (identified by geometry: single row, 2 holes; confirmed by VEX kit page top-down listing)"
+  },
+  {
+    "name": "Large Chassis Corner Connector",
+    "partNumbers": [
+      "228-2500-126",
+      "228-3201-126"
+    ],
+    "image": "images/connectors/large-chassis-corner-connector.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/connectors-double-triple-corner-connectors.svg",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #5 of 6 (identified by geometry: larger L-shaped chassis connector; confirmed by VEX kit page top-down listing)"
+  },
+  {
+    "name": "Small Chassis Corner Connector",
+    "partNumbers": [
+      "228-2500-127",
+      "228-3201-127"
+    ],
+    "image": "images/connectors/small-chassis-corner-connector.svg",
+    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/connectors-double-triple-corner-connectors.svg",
+    "sourceType": "official VEX composite SVG",
+    "crop": "part #6 of 6 (identified by geometry: smaller chassis connector; confirmed by VEX kit page top-down listing)"
+  },
+  {
+    "name": "60 Tooth Gear",
+    "partNumbers": [
+      "228-3196-215"
+    ],
+    "image": "images/gears/60-tooth-gear.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 1 (row 228-3196-215)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "Rack Gear",
+    "partNumbers": [
+      "228-3196-216"
+    ],
+    "image": "images/gears/rack-gear.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 1 (row 228-3196-216)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "Linear Slide Bracket",
+    "partNumbers": [
+      "228-3196-217"
+    ],
+    "image": "images/specialty/linear-slide-bracket.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 1 (row 228-3196-217)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "36 Tooth Crown Gear",
+    "partNumbers": [
+      "228-3196-218"
+    ],
+    "image": "images/gears/36-tooth-crown-gear.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 1 (row 228-3196-218)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "Worm Gear",
+    "partNumbers": [
+      "228-3196-219"
+    ],
+    "image": "images/gears/worm-gear.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 1 (row 228-3196-219)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "Worm Bracket",
+    "partNumbers": [
+      "228-3196-220"
+    ],
+    "image": "images/gears/worm-bracket.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 1 (row 228-3196-220)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "2x Pitch Shaft",
+    "partNumbers": [
+      "228-2500-117"
+    ],
+    "image": "images/shafts-rotation/2x-pitch-shaft.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 1 (row 228-2500-117)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "8x Pitch Shaft",
+    "partNumbers": [
+      "228-2500-124"
+    ],
+    "image": "images/shafts-rotation/8x-pitch-shaft.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 2 (row 228-2500-124)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "1x3 Beam",
+    "partNumbers": [
+      "228-3616-002"
+    ],
+    "image": "images/beams-plates/1x3-beam.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 2 (row 228-3616-002)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "4x12 Plate",
+    "partNumbers": [
+      "228-3616-045"
+    ],
+    "image": "images/beams-plates/4x12-plate.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 3 (row 228-3616-045)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "10mm Pulley",
+    "partNumbers": [
+      "228-3196-163"
+    ],
+    "image": "images/pulleys-belts/10mm-pulley.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 3 (row 228-3196-163)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row); pulley pictures are scaled to fit, so size could not be cross-checked"
+  },
+  {
+    "name": "40mm Pulley",
+    "partNumbers": [
+      "228-3196-166"
+    ],
+    "image": "images/pulleys-belts/40mm-pulley.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 3 (row 228-3196-166)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row); pulley pictures are scaled to fit, so size could not be cross-checked"
+  },
+  {
+    "name": "20mm Pulley",
+    "partNumbers": [
+      "228-3196-164"
+    ],
+    "image": "images/pulleys-belts/20mm-pulley.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 3 (row 228-3196-164)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row); pulley pictures are scaled to fit, so size could not be cross-checked"
+  },
+  {
+    "name": "30mm Pulley",
+    "partNumbers": [
+      "228-3196-165"
+    ],
+    "image": "images/pulleys-belts/30mm-pulley.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 3 (row 228-3196-165)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row); pulley pictures are scaled to fit, so size could not be cross-checked"
+  },
+  {
+    "name": "20mm Pulley Tire Add-On",
+    "partNumbers": [
+      "228-3447-207"
+    ],
+    "image": "images/pulleys-belts/20mm-pulley-tire-add-on.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 3 (row 228-3447-207)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "Belt (2mm thick x 30mm dia)",
+    "partNumbers": [
+      "228-3447-221"
+    ],
+    "image": "images/pulleys-belts/belt-2mm-thick-x-30mm-dia.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 3 (row 228-3447-221)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "Belt (2mm thick x 40mm dia)",
+    "partNumbers": [
+      "228-3447-222"
+    ],
+    "image": "images/pulleys-belts/belt-2mm-thick-x-40mm-dia.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 3 (row 228-3447-222)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "Belt (2mm thick x 50mm dia)",
+    "partNumbers": [
+      "228-3447-223"
+    ],
+    "image": "images/pulleys-belts/belt-2mm-thick-x-50mm-dia.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 3 (row 228-3447-223)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "Belt (2mm thick x 60mm dia)",
+    "partNumbers": [
+      "228-3447-224"
+    ],
+    "image": "images/pulleys-belts/belt-2mm-thick-x-60mm-dia.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 3 (row 228-3447-224)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "Shaft Bushing",
+    "partNumbers": [
+      "228-3201-125"
+    ],
+    "image": "images/shafts-rotation/shaft-bushing.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 4 (row 228-3201-125)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "0.5x Pitch Spacer",
+    "partNumbers": [
+      "228-3201-114"
+    ],
+    "image": "images/shafts-rotation/0-5x-pitch-spacer.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 4 (row 228-3201-114)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "2x2 Lock Plate",
+    "partNumbers": [
+      "228-3201-140"
+    ],
+    "image": "images/beams-plates/2x2-lock-plate.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 5 (row 228-3201-140)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "1x3 Center Lock Plate",
+    "partNumbers": [
+      "228-3201-141"
+    ],
+    "image": "images/beams-plates/1x3-center-lock-plate.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 5 (row 228-3201-141)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "Elastic Band Anchor Plate",
+    "partNumbers": [
+      "228-3616-157"
+    ],
+    "image": "images/beams-plates/elastic-band-anchor-plate.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Kit_228-7340.pdf page 5 (row 228-3616-157)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "1x2 Idler Pin",
+    "partNumbers": [
+      "228-3944-098"
+    ],
+    "image": "images/pins-standoffs/1x2-idler-pin.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Supplemental_Kit_228-7341.pdf page 1 (row 228-3944-098)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "32 Tooth Sprocket",
+    "partNumbers": [
+      "228-3450-236"
+    ],
+    "image": "images/sprockets-chain/32-tooth-sprocket.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Supplemental_Kit_228-7341.pdf page 1 (row 228-3450-236)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "40 Tooth Sprocket",
+    "partNumbers": [
+      "228-3450-237"
+    ],
+    "image": "images/sprockets-chain/40-tooth-sprocket.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Supplemental_Kit_228-7341.pdf page 1 (row 228-3450-237)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "South Pole Magnetic Beam",
+    "partNumbers": [
+      "228-3167-010"
+    ],
+    "image": "images/beams-plates/south-pole-magnetic-beam.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Supplemental_Kit_228-7341.pdf page 1 (row 228-3167-010)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "North Pole Magnetic Beam",
+    "partNumbers": [
+      "228-3167-020"
+    ],
+    "image": "images/beams-plates/north-pole-magnetic-beam.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Supplemental_Kit_228-7341.pdf page 1 (row 228-3167-020)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "0x3 Idler Pin",
+    "partNumbers": [
+      "228-3944-097"
+    ],
+    "image": "images/pins-standoffs/0x3-idler-pin.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Supplemental_Kit_228-7341.pdf page 1 (row 228-3944-097)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "3x3 Plus Gusset Beam",
+    "partNumbers": [
+      "228-3616-156"
+    ],
+    "image": "images/beams-plates/3x3-plus-gusset-beam.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Supplemental_Kit_228-7341.pdf page 2 (row 228-3616-156)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "XL Turntable Outer Housing",
+    "partNumbers": [
+      "228-3616-199"
+    ],
+    "image": "images/specialty/xl-turntable-outer-housing.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Supplemental_Kit_228-7341.pdf page 2 (row 228-3616-199)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "XL Turntable Plain Bushing",
+    "partNumbers": [
+      "228-3944-200"
+    ],
+    "image": "images/shafts-rotation/xl-turntable-plain-bushing.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Supplemental_Kit_228-7341.pdf page 2 (row 228-3944-200)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "XL Turntable 36 Tooth Ring Gear Bushing",
+    "partNumbers": [
+      "228-3944-202"
+    ],
+    "image": "images/gears/xl-turntable-36-tooth-ring-gear-bushing.png",
+    "source": "docs/ees-parts-lists/EES_VEX_IQ_Supplemental_Kit_228-7341.pdf page 2 (row 228-3944-202)",
+    "sourceType": "EES kit PDF picture",
+    "note": "matched by table row (part number in same row)"
+  },
+  {
+    "name": "Cable Anchor",
+    "partNumbers": [
+      "228-2500-158"
+    ],
+    "image": "images/cables/cable-anchor.webp",
+    "source": "VEX product render for SKU 228-6519 (Smart Cable Anchor 20 pack), added by Gavin",
+    "sourceType": "official VEX product page photo"
+  },
+  {
+    "name": "1x5 Linear Motion Beam",
+    "partNumbers": [
+      "228-2500-1456"
+    ],
+    "image": "images/linear-motion/1x5-linear-motion-beam.png",
+    "source": "docs/Linear Motion Pack - VEX Robotics_files/228_7887_linear_motion_pack_together_10062022.jpg (VEX product photo, Linear Motion Pack 228-7887)",
+    "sourceType": "official VEX product photo",
+    "crop": "photo crop: shortest gray beam, group of 10, 5 holes"
+  },
+  {
+    "name": "1x6 Linear Motion Beam",
+    "partNumbers": [
+      "228-2500-1457"
+    ],
+    "image": "images/linear-motion/1x6-linear-motion-beam.png",
+    "source": "docs/Linear Motion 1X Pictures_files/image12.png (VEX Library 'Understanding the VEX IQ (2nd gen) Competition Kit', Linear Motion diagram)",
+    "sourceType": "official VEX Library diagram (PNG)",
+    "crop": "diagram crop, labeled '1x6 Linear Motion Beam'"
+  },
+  {
+    "name": "1x8 Linear Motion Beam",
+    "partNumbers": [
+      "228-2500-1459"
+    ],
+    "image": "images/linear-motion/1x8-linear-motion-beam.png",
+    "source": "docs/Linear Motion 1X Pictures_files/image12.png (VEX Library 'Understanding the VEX IQ (2nd gen) Competition Kit', Linear Motion diagram)",
+    "sourceType": "official VEX Library diagram (PNG)",
+    "crop": "diagram crop, labeled '1x8 Linear Motion Beam'"
+  },
+  {
+    "name": "1x6 Linear Motion Rack Gear",
+    "partNumbers": [
+      "228-2500-1472"
+    ],
+    "image": "images/linear-motion/1x6-linear-motion-rack-gear.png",
+    "source": "docs/Linear Motion Pack - VEX Robotics_files/228_7887_linear_motion_pack_together_10062022.jpg (VEX product photo, Linear Motion Pack 228-7887)",
+    "sourceType": "official VEX product photo",
+    "crop": "photo crop: short blue rack with holed rounded ends, group of 4"
+  },
+  {
+    "name": "1x6 Continuous Linear Motion Rack Gear",
+    "partNumbers": [
+      "228-2500-1473"
+    ],
+    "image": "images/linear-motion/1x6-continuous-linear-motion-rack-gear.png",
+    "source": "docs/Gears Image with 1x Rack Gear.png (VEX Library Competition Kit Gears diagram)",
+    "sourceType": "official VEX Library diagram (PNG)",
+    "crop": "diagram crop, labeled '1x6 Continuous Linear Motion Rack Gear' (snap pins on ends)"
+  },
+  {
+    "name": "1x20 Linear Motion Rack Gear",
+    "partNumbers": [
+      "228-2500-1454"
+    ],
+    "image": "images/linear-motion/1x20-linear-motion-rack-gear.png",
+    "source": "docs/Linear Motion Pack - VEX Robotics_files/228_7887_linear_motion_pack_together_10062022.jpg (VEX product photo, Linear Motion Pack 228-7887)",
+    "sourceType": "official VEX product photo",
+    "crop": "photo crop: long blue rack, group of 2"
+  },
+  {
+    "name": "2x Pitch Linear Motion Bracket (Side Mount)",
+    "partNumbers": [
+      "228-2500-1469"
+    ],
+    "image": "images/linear-motion/2x-pitch-linear-motion-bracket-side-mount.png",
+    "source": "docs/Linear Motion 1X Pictures_files/image12.png (VEX Library 'Understanding the VEX IQ (2nd gen) Competition Kit', Linear Motion diagram)",
+    "sourceType": "official VEX Library diagram (PNG)",
+    "crop": "diagram crop, labeled '2x Pitch Linear Motion Bracket'"
+  },
+  {
+    "name": "1x Pitch Linear Motion Bracket (Snap Mount)",
+    "partNumbers": [
+      "228-2500-1470"
+    ],
+    "image": "images/linear-motion/1x-pitch-linear-motion-bracket-snap-mount.png",
+    "source": "docs/Linear Motion 1X Pictures_files/image12.png (VEX Library 'Understanding the VEX IQ (2nd gen) Competition Kit', Linear Motion diagram)",
+    "sourceType": "official VEX Library diagram (PNG)",
+    "crop": "diagram crop, labeled '1x Pitch Linear Motion Bracket (Snap)'"
+  }
+]
