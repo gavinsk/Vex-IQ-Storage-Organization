@@ -33,7 +33,7 @@ ESTIMATED_WIDTH = {
     "2x Pitch Linear Motion Bracket (Side Mount)": 75, "1x Pitch Linear Motion Bracket (Snap Mount)": 45,
     "0x3 Idler Pin": 52, "1x2 Idler Pin": 52, "0.5x Pitch Spacer": 40, "Shaft Bushing": 55,
     # Isometric drawings converted from Gavin's DXFs (no VEX scale)
-    "Rubber Shaft Collar": 40,
+    "Rubber Shaft Collar": 40, "0.5x Pitch Standoff Extender": 50,
 }
 
 

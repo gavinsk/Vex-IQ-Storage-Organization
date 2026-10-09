@@ -181,12 +181,12 @@ A part record:
 
 All 162 parts have images; provenance for each is in `images/manifest.json`.
 
-- **119 official VEX SVGs** from the VEX IQ Gen 2 parts catalog (https://www.vexrobotics.com/parts/228-7755) — individual SVGs or parts cropped out of VEX composite SVGs.
+- **118 official VEX SVGs** from the VEX IQ Gen 2 parts catalog (https://www.vexrobotics.com/parts/228-7755) — individual SVGs or parts cropped out of VEX composite SVGs.
   - Composite crops were identified by **measured geometry** (hole count, length, gear/sprocket diameter, bend angle), then cross-checked against VEX's own "listed top-down" kit-page order. The image-source CSV's composite positions were often wrong — don't trust them.
   - Corner-connector naming is easy to swap: in VEX's composites, **1x2** connectors are 2 rows of pins with stacked holes; **2x1** connectors are single-row with holes extending outward.
 - **32 PNGs** extracted from the EES kit PDFs (`docs/ees-parts-lists/`, 228-7340 and 228-7341), matched to parts by table row. Low resolution (~100–220 px). Pulley pictures are scaled to fit their rows, so their sizes couldn't be cross-checked.
 - **Cable Anchor**: VEX product render (WebP) supplied by Gavin.
-- **Gavin's DXF drawings** (isometric line art, preferred over VEX/EES pictures for these parts at his request): Shaft Bushing, Rubber Shaft Collar. Convert new ones with `tools/dxf_to_svg.py` (needs ezdxf in a scratch venv), add the part to `ESTIMATED_WIDTH` in `tools/measure_images.py`, update `images/manifest.json`.
+- **Gavin's DXF drawings** (isometric line art, preferred over VEX/EES pictures for these parts at his request): Shaft Bushing, Rubber Shaft Collar, 0.5x Pitch Standoff Extender. Convert new ones with `tools/dxf_to_svg.py` (needs ezdxf in a scratch venv), add the part to `ESTIMATED_WIDTH` in `tools/measure_images.py`, update `images/manifest.json`.
 - **Linear Motion Pack (8 parts, `images/linear-motion/`)**: 5 cropped from VEX Library Competition Kit diagrams (`docs/Linear Motion 1X Pictures_files/image12.png`, `docs/Gears Image with 1x Rack Gear.png`); the 1x20 rack, 1x6 rack, and 1x5 beam are cropped from the 228-7887 product photo (identified by group count and length). Replace with VEX SVGs if they become available.
 
 Rules:

@@ -512,8 +512,9 @@
       "228-2500-109"
     ],
     "image": "images/pins-standoffs/0-5x-pitch-standoff-extender.svg",
-    "source": "https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/pins-and-standoffs-0.5x-pitch-standoff-extender.svg?ver=1635529898064",
-    "sourceType": "exact VEX SVG"
+    "source": "docs/standoff extender.dxf (isometric drawing supplied by Gavin, Oct 2026), converted with tools/dxf_to_svg.py",
+    "sourceType": "Gavin's CAD drawing (DXF → SVG)",
+    "note": "Replaced the VEX SVG (https://content.vexrobotics.com/resources/parts-posters/iqgen2/education-kit/pins-and-standoffs-0.5x-pitch-standoff-extender.svg?ver=1635529898064) at Gavin's request: the isometric view shows the shape better."
   },
   {
     "name": "2x18 Beam",
