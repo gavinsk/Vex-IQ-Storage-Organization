@@ -18,7 +18,7 @@
 - Reference files moved into `docs/`
 
 **Next**
-1. **Bin labels** — Akro-Mils drawer labels done (`tools/make_akro_labels.py` → `labels/akro-mils-5195.pdf`, Avery 5195, one per filled drawer: number, label, picture; plastic+metal drawers show the metal part; motor and capped shafts get a zoomed close-up of the colored ring / cap with a zigzag break line, written to `labels/img/` — labels only, the website keeps full shafts). Gavin only wants labels for the Akro-Mils drawers (small parts); re-run the script after drawer changes.
+1. **Bin labels** — Akro-Mils drawer labels done (`tools/make_akro_labels.py` → `labels/akro-mils-5195.pdf`, Avery 5195, one per filled drawer: number, label, picture; plastic+metal drawers show the metal part; motor and capped shafts get a zoomed close-up of the colored ring / cap with a zigzag break line; motor-shaft drawers show metal and plastic stacked; 2x/4x/6x standoffs show both snap ends with break lines and a small gap (ends matter, not length). Close-ups go to `labels/img/` — labels only, the website keeps full parts). Gavin only wants labels for the Akro-Mils drawers (small parts); re-run the script after drawer changes.
 2. **QR codes** for the cart / bins using the deep links
 3. **Overflow pass** — partly done: Gavin split 10 high-volume parts across 2 bins (`extraLocations`). Revisit only if he wants refill bins for other parts.
 4. **Akro-Mils capacity pass** — only if Gavin asks; he adjusts physical fit himself
