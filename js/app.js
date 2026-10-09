@@ -96,6 +96,12 @@ function describeLocation(loc) {
   }
 }
 
+// "AK07" -> "drawer 7 (AK07)", matching the printed drawer labels; other bins unchanged.
+function placeName(loc) {
+  const p = parseLocation(loc);
+  return p.zone === "akro" ? `drawer ${p.num} (${loc})` : loc;
+}
+
 function binLabel(loc) {
   const parts = state.bins.get(loc);
   return parts ? parts[0].binLabel || parts.map(p => p.name).join(" + ") : "Empty / reserve";
@@ -257,6 +263,19 @@ function runSearch(raw, pool) {
     if (inBin.length) return { results: inBin, mode: "location", location: locationsOf(inBin[0]).find(l => locKey(l) === key) };
   }
 
+  // Akro-Mils drawer by its printed label number: "7", "#7", "drawer 7" -> AK07.
+  // A bare number could also mean a part ("24" tooth gear), so the drawer comes first, then other matches.
+  const dm = /^(drawer|drw)?\s*#?\s*(\d{1,2})$/i.exec(q);
+  if (dm && +dm[2] >= 1 && +dm[2] <= state.layout.akroMils.drawers) {
+    const id = akroId(+dm[2]);
+    const inDrawer = pool.filter(p => p._locs.includes(locKey(id)));
+    if (inDrawer.length) {
+      if (dm[1]) return { results: inDrawer, mode: "location", location: id };
+      const others = wordSearch(q, pool).results.filter(p => !inDrawer.includes(p));
+      return { results: [...inDrawer, ...others], mode: "drawer", location: id };
+    }
+  }
+
   // Part number, full or partial, with or without dashes
   if (/^[\d\s-]+$/.test(q) && compact(q).length >= 3) {
     const c = compact(q);
@@ -267,7 +286,10 @@ function runSearch(raw, pool) {
     if (hits.length) return { results: hits.map(x => x.p), mode: "partNumber" };
   }
 
-  // Word search
+  return wordSearch(q, pool);
+}
+
+function wordSearch(q, pool) {
   let words = tokenize(q, true);
   if (!words.length) words = tokenize(q);
   const scored = pool.map(p => {
@@ -300,9 +322,10 @@ function renderCards() {
   const { results, mode, location } = runSearch(search.value, pool);
 
   const note = $("fuzzyNote");
-  note.hidden = !(mode === "closest" || mode === "location");
+  note.hidden = !(mode === "closest" || mode === "location" || mode === "drawer");
   if (mode === "closest") note.textContent = "No exact match — showing the closest matches.";
-  if (mode === "location") note.innerHTML = `Showing everything in <b>${esc(location)}</b>. <button class="location" data-bin="${esc(location)}">Open bin view</button>`;
+  if (mode === "location") note.innerHTML = `Showing everything in <b>${esc(placeName(location))}</b>. <button class="location" data-bin="${esc(location)}">Open bin view</button>`;
+  if (mode === "drawer") note.innerHTML = `Everything in <b>${esc(placeName(location))}</b> is shown first, then other matches for “${esc(search.value.trim())}”. <button class="location" data-bin="${esc(location)}">Open drawer</button>`;
 
   $("count").textContent = `${results.length} part${results.length === 1 ? "" : "s"}`;
   $("empty").hidden = results.length > 0;
@@ -514,7 +537,7 @@ function renderPart(p) {
 function renderBin(loc) {
   const parts = state.bins.get(loc) || [];
   const desc = describeLocation(loc);
-  $("dialogTitle").textContent = `Bin ${loc}`;
+  $("dialogTitle").textContent = parseLocation(loc).zone === "akro" ? `Drawer ${parseLocation(loc).num} (${loc})` : `Bin ${loc}`;
   $("dialogBody").innerHTML = `
     <div class="bin-view detail-like">
       <div class="big-location">

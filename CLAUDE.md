@@ -5,6 +5,7 @@
 **Done**
 - Site split into static files: `index.html`, `css/style.css`, `js/app.js`, `data/parts.json`, `data/storage-layout.json`
 - Forgiving search (typos, plurals, word order, "36 tooth" = "36T", part numbers with or without dashes, bin IDs)
+- Drawer-number search: "7", "#7", "drawer 7" find Akro-Mils drawer AK07 (the printed labels show plain numbers). A bare number lists the drawer first, then other matches ("24" → drawer 24, then 24T gear); "drawer N" shows only the drawer. Drawer popups are titled "Drawer 7 (AK07)"
 - Bin views: clicking any bin or location badge lists everything in that bin; **Storage map** tab shows the whole cart, Akro-Mils drawers, and other zones
 - **Part Finder** tab, copied from VEX's "Explore the VEX IQ (2nd gen) Kit Contents" poster: boxed category panels in a masonry grid, every part drawn at true relative size and grouped by `type`; hover shows name + bin, click opens the part. A panel title opens that category as a list of cards. Panel order, width (`span`, of 4 columns), and type order live in `data/categories.json`; image sizes in `images/sizes.json`
 - Deep links: `#bin=B1-3`, `#q=36 tooth`, `#view=map`, `#finder`, `#finder=Gears` (intended for QR codes / labels)
