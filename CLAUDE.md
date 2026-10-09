@@ -18,7 +18,7 @@
 - Reference files moved into `docs/`
 
 **Next**
-1. **Printable bin labels** generated from `parts.json`
+1. **Bin labels** — Akro-Mils drawer labels done (`tools/make_akro_labels.py` → `labels/akro-mils-5195.pdf`, Avery 5195, one per filled drawer: number, label, picture; plastic+metal drawers show the metal part). Gavin only wants labels for the Akro-Mils drawers (small parts); re-run the script after drawer changes.
 2. **QR codes** for the cart / bins using the deep links
 3. **Overflow pass** — partly done: Gavin split 10 high-volume parts across 2 bins (`extraLocations`). Revisit only if he wants refill bins for other parts.
 4. **Akro-Mils capacity pass** — only if Gavin asks; he adjusts physical fit himself
@@ -130,6 +130,7 @@ images/sizes.json       true-scale image sizes for the poster (regenerate: pytho
 images/<category>/      part images (.svg, .png, one .webp)
 images/manifest.json    where every image came from and how it was identified
 tools/                  bin-assignments.xlsx (Excel editing sheet) + make/apply scripts
+labels/                 printable Akro-Mils drawer labels (generated; Avery 5195)
 docs/                   LOCAL ONLY (.gitignore): storage workbook, EES parts-list PDFs, saved VEX pages, image-source CSV, archived prototype
 README.md               how to preview, edit, and publish
 ```

@@ -33,6 +33,9 @@ SVG or PNG both work; SVGs scale cleanly. `images/manifest.json` records where e
 `data/categories.json` sets the order of the poster panels, how wide each is (`span`, out of 4 columns), and the order of groups.
 After adding or changing an image, run `python3 tools/measure_images.py` so the poster draws it at the right size.
 
+**Akro-Mils drawer labels:** `python3 tools/make_akro_labels.py` rebuilds `labels/akro-mils-5195.pdf` (Avery 5195) from `parts.json`.
+Print it at **100% / Actual size** (not "Fit to page"). Test on plain paper first and hold it against a label sheet to check alignment.
+
 ## Location IDs
 
 | Format | Meaning |
