@@ -15,6 +15,7 @@
 - **Akro-Mils re-layout (Oct 9, 2026)** from Gavin's sheet: washers/spacers/collars/bushing in AK01–AK07, capped shafts AK17–AK20 and motor shafts AK21–AK24 (plastic + metal of the same length share a drawer — Gavin's choice), connector/idler pins AK26–AK31, standoffs AK33–AK42. Rubber Shaft Collar, 2x and 6x Standoff each use 2 drawers.
 - **Merged** the EES "Elastic Band Anchor Plate" (228-3616-157) into **Rubber Band Anchor** (same part, different color, per Gavin): qty 41, B3-8, VEX image.
 - **Live on GitHub Pages (Oct 9, 2026):** public repo `gavinsk/Vex-IQ-Storage-Organization` (Gavin kept this name) → **https://gavinsk.github.io/Vex-IQ-Storage-Organization/**. Publishing = commit + Sync in VS Code. Commits use his GitHub no-reply email (repo-local git config).
+- **"Works with" links** in the part popup: clickable thumbnails of related parts (rack gear ↔ slide bracket, pulleys ↔ belts, hub ↔ tire, motor shafts ↔ Smart Motor…), defined as groups in `data/related.json` (`{note, parts:[…]}` = all linked to each other; `{note, a:[…], b:[…]}` = every a ↔ every b). Links are always two-way; unknown names log a console warning. Drafted by Claude for Gavin's review.
 - All 162 parts have images (see **Images** below)
 - Reference files moved into `docs/`
 
@@ -127,6 +128,7 @@ js/app.js               search, cards, bin views, storage map, deep links
 data/parts.json         source of truth (162 parts)
 data/storage-layout.json  physical geometry only (cart rows/cols, Akro-Mils count, zones)
 data/categories.json    Part Finder: panel order, panel width (span), order of types
+data/related.json       "Works with" groups of parts that go together (by part name)
 images/sizes.json       true-scale image sizes for the poster (regenerate: python3 tools/measure_images.py)
 images/<category>/      part images (.svg, .png, one .webp)
 images/manifest.json    where every image came from and how it was identified
@@ -175,7 +177,7 @@ A part record:
 
 - Large search box, part cards with images, category filters, responsive layout.
 - Search matches name, all part numbers, category, section, bin label, and location. Must handle: `36 tooth`, `228-3196-214`, `228-2500-214`, `corner connector`, `optical`, `B1-3`.
-- Part detail: name, image, quantity, all part numbers, category, storage type, bin label, how it's used, and the most prominent element **RETURN TO → [LOCATION]**, plus a mini map with the bin highlighted.
+- Part detail: name, image, quantity, all part numbers, category, storage type, bin label, how it's used, works-with links, and the most prominent element **RETURN TO → [LOCATION]**, plus a mini map with the bin highlighted.
 - Every bin on every map is clickable and shows that bin's contents.
 
 ---

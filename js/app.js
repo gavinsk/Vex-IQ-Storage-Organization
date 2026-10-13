@@ -10,6 +10,7 @@ const state = {
   layout: null,
   categories: [],       // from categories.json
   sizes: {},            // image path -> [width, height] in VEX drawing units (images/sizes.json)
+  related: new Map(),   // part -> Map(related part -> note), from data/related.json (always both directions)
   finderCat: null,      // category open in the Part Finder (null = all categories)
   bins: new Map(),      // bin ID -> [parts]  (a part with extraLocations is listed in each of its bins)
   category: "All",
@@ -495,6 +496,39 @@ function renderDialog(view) {
   dlg.scrollTop = 0;
 }
 
+// "Works with" links. Each group in related.json is either {parts: [...]} (all linked to each other)
+// or {a: [...], b: [...]} (every a linked to every b). Links always go both ways.
+function buildRelated(groups) {
+  const byName = new Map(state.parts.map(p => [p.name, p]));
+  const link = (x, y, note) => {
+    const a = byName.get(x), b = byName.get(y);
+    if (!a || !b) { console.warn("related.json: unknown part", a ? y : x); return; }
+    if (a === b) return;
+    if (!state.related.has(a)) state.related.set(a, new Map());
+    if (!state.related.get(a).has(b)) state.related.get(a).set(b, note || "");
+  };
+  for (const g of groups) {
+    const pairs = g.parts ? g.parts.flatMap(x => g.parts.map(y => [x, y]))
+                          : (g.a || []).flatMap(x => (g.b || []).map(y => [x, y]));
+    for (const [x, y] of pairs) { link(x, y, g.note); link(y, x, g.note); }
+  }
+}
+
+function worksWith(p) {
+  const rel = state.related.get(p);
+  if (!rel || !rel.size) return "";
+  return `
+    <div class="works-with">
+      <small>Works with</small>
+      <div class="ww-list">${[...rel].map(([q, note]) => `
+        <button class="ww-item" data-part="${state.parts.indexOf(q)}" title="${esc(note)}">
+          <span class="thumb">${partImage(q, "tiny")}</span>
+          <span class="ww-text"><b>${esc(q.name)}</b><small>${esc(locationsOf(q).join(" + "))}${note ? " · " + esc(note) : ""}</small></span>
+        </button>`).join("")}
+      </div>
+    </div>`;
+}
+
 // RETURN TO block: one big button, or (for parts split across bins) one button per bin.
 function returnTo(p) {
   const locs = locationsOf(p);
@@ -529,6 +563,7 @@ function renderPart(p) {
           <div class="fact"><small>VEX part number(s)</small><b>${esc(p.partNumbers.join(", ") || "—")}</b></div>
           ${p.use ? `<div class="fact use"><small>How it's used</small><p>${esc(p.use)}</p></div>` : ""}
         </div>
+        ${worksWith(p)}
         ${miniMap(locationsOf(p))}
       </div>
     </div>`;
@@ -616,17 +651,19 @@ const FRESH = { cache: "no-cache" };
 
 async function init() {
   try {
-    const [parts, layout, categories, sizes] = await Promise.all([
+    const [parts, layout, categories, sizes, related] = await Promise.all([
       fetch("data/parts.json", FRESH).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }),
       fetch("data/storage-layout.json", FRESH).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }),
       // Optional: without it the finder still works, with categories in alphabetical order.
       fetch("data/categories.json", FRESH).then(r => r.ok ? r.json() : []).catch(() => []),
       fetch("images/sizes.json", FRESH).then(r => r.ok ? r.json() : {}).catch(() => ({})),
+      fetch("data/related.json", FRESH).then(r => r.ok ? r.json() : []).catch(() => []),
     ]);
     state.parts = parts;
     state.layout = layout;
     state.categories = categories;
     state.sizes = sizes;
+    buildRelated(related);
   } catch (err) {
     $("partsView").hidden = true;
     const box = $("loadError");
