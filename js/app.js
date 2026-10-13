@@ -611,14 +611,17 @@ function handleHash() {
   if (params.get("bin")) showDialog({ type: "bin", loc: params.get("bin").toUpperCase() });
 }
 
+// Always check for newer data so updates show up right away (the browser still reuses its copy if nothing changed).
+const FRESH = { cache: "no-cache" };
+
 async function init() {
   try {
     const [parts, layout, categories, sizes] = await Promise.all([
-      fetch("data/parts.json").then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }),
-      fetch("data/storage-layout.json").then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }),
+      fetch("data/parts.json", FRESH).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }),
+      fetch("data/storage-layout.json", FRESH).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }),
       // Optional: without it the finder still works, with categories in alphabetical order.
-      fetch("data/categories.json").then(r => r.ok ? r.json() : []).catch(() => []),
-      fetch("images/sizes.json").then(r => r.ok ? r.json() : {}).catch(() => ({})),
+      fetch("data/categories.json", FRESH).then(r => r.ok ? r.json() : []).catch(() => []),
+      fetch("images/sizes.json", FRESH).then(r => r.ok ? r.json() : {}).catch(() => ({})),
     ]);
     state.parts = parts;
     state.layout = layout;
