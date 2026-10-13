@@ -1212,9 +1212,9 @@
     "storage": "Rolling - Medium",
     "binLabel": "Rack Gear + Linear Slide Bracket",
     "quantity": 16,
-    "category": "Specialty",
+    "category": "Linear Motion",
     "section": "Gears + Linear Motion",
-    "type": "Linear Motion",
+    "type": "Linear Motion Brackets",
     "use": "A linear slide bracket rides along a beam so a part can slide back and forth in a straight line, often driven by a rack gear.",
     "image": "images/specialty/linear-slide-bracket.png"
   },
@@ -1227,9 +1227,9 @@
     "storage": "Rolling - Medium",
     "binLabel": "Rack Gear + Linear Slide Bracket",
     "quantity": 32,
-    "category": "Gears",
+    "category": "Linear Motion",
     "section": "Gears + Linear Motion",
-    "type": "Worm & Rack Gears",
+    "type": "Linear Motion Rack Gears",
     "use": "A rack gear is a straight row of teeth. A gear turning against it pushes it in a straight line, turning rotation into sliding motion (for lifts, grabbers, and pushers).",
     "image": "images/gears/rack-gear.png"
   },
@@ -1462,7 +1462,7 @@
     "quantity": 24,
     "category": "Gears",
     "section": "Gears + Shafts",
-    "type": "Worm & Rack Gears",
+    "type": "Worm Gears",
     "use": "The worm bracket holds a worm gear in the right spot next to the gear it drives, so the two mesh correctly.",
     "image": "images/gears/worm-bracket.png"
   },
@@ -1477,7 +1477,7 @@
     "quantity": 8,
     "category": "Gears",
     "section": "Gears + Shafts",
-    "type": "Worm & Rack Gears",
+    "type": "Worm Gears",
     "use": "A worm gear is a screw-shaped gear that drives a regular gear very slowly with a lot of strength. It also holds its position when the motor stops, which is great for lifts and arms.",
     "image": "images/gears/worm-gear.png"
   },
