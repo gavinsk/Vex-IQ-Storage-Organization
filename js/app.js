@@ -706,12 +706,13 @@ function renderBom() {
         To open it on another computer or next class, use <b>Save link</b> and keep the link somewhere safe (like Google Classroom).</p>
       <div class="bom-bar">
         <label>Project name <input id="bomTitle" type="text" maxlength="80" placeholder="e.g. Claw Bot – Ava & Sam" value="${esc(list ? list.title : "")}"></label>
-        ${list ? `<span class="bom-saved">✓ Saved on this computer</span>` : ""}
+        ${list && list.title.trim() ? `<span class="bom-saved">✓ Saved on this computer</span>` : ""}
         ${bom.lists.length > 1 ? `<label>Saved on this computer
-          <select id="bomPick">${bom.lists.map(l => `<option value="${esc(l.id)}" ${l === list ? "selected" : ""}>${esc(l.title || "(no name yet)")}</option>`).join("")}</select></label>` : ""}
+          <select id="bomPick">${bom.lists.map(l => `<option value="${esc(l.id)}" ${l === list ? "selected" : ""}>${esc(l.title || "New list (no name yet)")}</option>`).join("")}</select></label>` : ""}
         <button class="bom-btn subtle" data-bom-action="new">+ Start another list</button>
         ${list ? `<button class="bom-btn subtle" data-bom-action="delete">Delete list</button>` : ""}
       </div>
+      ${!list || !list.title.trim() ? `<p class="bom-hint">👆 Type a project name to start this list.${bom.lists.length > 1 ? " Your other lists are in the <b>Saved on this computer</b> menu." : ""}</p>` : ""}
     </div>
     <div class="bom-layout">
       <div class="bom-picker">
@@ -761,9 +762,9 @@ async function copyText(text) {
 async function bomAction(action) {
   const list = bom.current;
   if (action === "new") {
-    const title = prompt("Name for the new list (for example: Claw Bot – Ava & Sam):", "");
-    if (title === null || !title.trim()) return;
-    bomNew(title.trim()); renderBom(); return;
+    // Reuse the current list if it's still blank; otherwise start a fresh one. Either way, go to the name box.
+    if (!list || list.title.trim() || Object.keys(list.items).length) bomNew();
+    renderBom(); $("bomTitle").focus(); return;
   }
   if (!list) return;
   if (action === "delete") {
@@ -814,6 +815,9 @@ document.addEventListener("input", e => {
   if (e.target.id === "bomTitle") {
     if (!bom.current) bomNew();
     bom.current.title = e.target.value; bomSave();
+    const hint = document.querySelector(".bom-hint"); if (hint && e.target.value.trim()) hint.remove();
+    if (e.target.value.trim() && !document.querySelector(".bom-saved"))
+      e.target.closest("label").insertAdjacentHTML("afterend", `<span class="bom-saved">✓ Saved on this computer</span>`);
     const h = document.querySelector(".bom-sheet h3"); if (h) h.textContent = e.target.value || "Your list";
   }
 });
