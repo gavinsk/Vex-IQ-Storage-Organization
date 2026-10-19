@@ -621,6 +621,8 @@ function bomLoad() {
 
 function bomSave() {
   if (bom.current) bom.current.updated = Date.now();
+  // Drop empty, nameless lists (other than the one being edited) so the picker stays clean.
+  bom.lists = bom.lists.filter(l => l === bom.current || l.title.trim() || Object.keys(l.items).length);
   try {
     localStorage.setItem(BOM_KEY, JSON.stringify(bom.lists));
     if (bom.current) localStorage.setItem(BOM_CURRENT, bom.current.id);
@@ -704,9 +706,10 @@ function renderBom() {
         To open it on another computer or next class, use <b>Save link</b> and keep the link somewhere safe (like Google Classroom).</p>
       <div class="bom-bar">
         <label>Project name <input id="bomTitle" type="text" maxlength="80" placeholder="e.g. Claw Bot – Ava & Sam" value="${esc(list ? list.title : "")}"></label>
+        ${list ? `<span class="bom-saved">✓ Saved on this computer</span>` : ""}
         ${bom.lists.length > 1 ? `<label>Saved on this computer
-          <select id="bomPick">${bom.lists.map(l => `<option value="${esc(l.id)}" ${l === list ? "selected" : ""}>${esc(l.title || "Untitled project")}</option>`).join("")}</select></label>` : ""}
-        <button class="bom-btn" data-bom-action="new">+ New list</button>
+          <select id="bomPick">${bom.lists.map(l => `<option value="${esc(l.id)}" ${l === list ? "selected" : ""}>${esc(l.title || "(no name yet)")}</option>`).join("")}</select></label>` : ""}
+        <button class="bom-btn subtle" data-bom-action="new">+ Start another list</button>
         ${list ? `<button class="bom-btn subtle" data-bom-action="delete">Delete list</button>` : ""}
       </div>
     </div>
@@ -757,7 +760,11 @@ async function copyText(text) {
 
 async function bomAction(action) {
   const list = bom.current;
-  if (action === "new") { bomNew(); renderBom(); $("bomTitle").focus(); return; }
+  if (action === "new") {
+    const title = prompt("Name for the new list (for example: Claw Bot – Ava & Sam):", "");
+    if (title === null || !title.trim()) return;
+    bomNew(title.trim()); renderBom(); return;
+  }
   if (!list) return;
   if (action === "delete") {
     if (!confirm(`Delete "${list.title || "Untitled project"}" from this computer? (Saved links still work.)`)) return;
