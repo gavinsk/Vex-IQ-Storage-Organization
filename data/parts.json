@@ -179,6 +179,7 @@
     "section": "Structure",
     "type": "2x Beams",
     "use": "A 2x2 beam is a small square block of four holes used to join two beams side by side, add a mounting point, or build compact brackets. Connect it with connector pins.",
+    "scarce": true,
     "image": "images/beams-plates/2x2-beam.svg"
   },
   {
@@ -270,7 +271,6 @@
     "section": "Structure",
     "type": "Plates & Panels",
     "use": "The smooth panel is a flat piece with a smooth surface, used for walls, scoops, ramps, and guides where game pieces need to slide without catching on holes.",
-    "scarce": true,
     "image": "images/beams-plates/2x8-smooth-panel.svg"
   },
   {
@@ -1369,6 +1369,7 @@
     "section": "Locking Structure",
     "type": "Lock Beams & Plates",
     "use": "The 2x2 Center Offset Round Lock Beam locks onto a shaft. Lock pieces have square holes that grip a shaft, so the beam turns together with the shaft instead of spinning freely on it. Use them to attach arms, levers, and claws to a motor-driven shaft.",
+    "scarce": true,
     "image": "images/beams-plates/2x2-center-offset-round-lock-beam.svg"
   },
   {
