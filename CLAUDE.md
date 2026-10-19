@@ -16,6 +16,7 @@
 - **Merged** the EES "Elastic Band Anchor Plate" (228-3616-157) into **Rubber Band Anchor** (same part, different color, per Gavin): qty 41, B3-8, VEX image.
 - **Live on GitHub Pages (Oct 9, 2026):** public repo `gavinsk/Vex-IQ-Storage-Organization` (Gavin kept this name) → **https://gavinsk.github.io/Vex-IQ-Storage-Organization/**. Publishing = commit + Sync in VS Code. Commits use his GitHub no-reply email (repo-local git config).
 - **"Works with" links** in the part popup: clickable thumbnails of related parts (rack gear ↔ slide bracket, pulleys ↔ belts, hub ↔ tire, motor shafts ↔ Smart Motor…), defined as groups in `data/related.json` (`{note, parts:[…]}` = all linked to each other; `{note, a:[…], b:[…]}` = every a ↔ every b). Links are always two-way; unknown names log a console warning. Drafted by Claude for Gavin's review.
+- **Build List tab** (bill of materials for scarce parts): teams pick quantities of parts marked `"scarce": true` (34, chosen by Claude, Gavin edits), named by project. Saved per browser in `localStorage` (several lists per MacBook, picker) and reopenable anywhere via **Save link** (`#bom=` base64url JSON of `{t: title, i: [[firstPartNumber, qty]…]}`; reopening an older link asks before replacing a same-named list). Warns when a list needs more than the room has; Copy list / Print (print shows only the list). Popup of a scarce part has "+ Add to build list". No class-wide view of other teams' lists (would need option B: a Google Sheet via Apps Script — Gavin chose to start without it).
 - All 162 parts have images (see **Images** below)
 - Reference files moved into `docs/`
 
@@ -153,6 +154,7 @@ A part record:
   "section": "Gears + Shafts",
   "type": "Spur Gears",
   "use": "A 36-tooth gear transfers rotation from one shaft to another. …",
+  "scarce": true,
   "image": "images/gears/36-tooth-gear.svg"
 }
 ```
@@ -160,6 +162,7 @@ A part record:
 - `extraLocations` (optional): more bins holding the same part. Search, cards, the poster, the RETURN TO block, the mini map, and bin views all use every bin. Leave it out for single-bin parts.
 - `binLabel` should be identical for every part sharing a location (the bin view uses the first one). A part in several bins uses one label for all of them.
 - `use`: 1–3 student-friendly sentences on what the part does and how it connects, shown as **How it's used** in the part popup (replaced the Section line, Oct 2026). Drafted by Claude (Shaft Bushing text is Gavin's); **Gavin reviewed and approved all 162 (Oct 9, 2026)**. Write new parts' descriptions in the same style; Gavin's wording wins on any edit.
+- `scarce` (optional, `true`): the part appears in the Build List tab. Add or remove it to change what students can plan with. Build-list links key parts by their **first** part number, so don't reorder `partNumbers` on scarce parts.
 - `section` is from the original storage plan and no longer matches the Oct 2026 layout. It is no longer displayed; ask Gavin before relying on it.
 - `type` is the Part Finder subgroup within a category (e.g. 1x Beams, Idler Pins). A new type appears automatically; add it to that category's `types` in `categories.json` to control its order.
 - `storage` is the storage type (`Rolling - Small`, `Rolling - Medium`, `Akro-Mils Drawer`, `Vertical Hanger`, `Vertical Cable Hanger`, `External / …`, `Tool Storage`).

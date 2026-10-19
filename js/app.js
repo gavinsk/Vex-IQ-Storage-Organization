@@ -467,9 +467,11 @@ function setView(view) {
   $("partsView").hidden = view !== "parts";
   $("mapView").hidden = view !== "map";
   $("finderView").hidden = view !== "finder";
+  $("bomView").hidden = view !== "bom";
   $("filters").hidden = view !== "parts";
   $("count").hidden = view !== "parts";
   if (view === "map") renderMap();
+  if (view === "bom") renderBom();
   if (view === "finder") renderFinder();
   // Leaving the finder: drop its hash so a reload doesn't jump back into it.
   else if (location.hash.includes("finder")) history.replaceState(null, "", location.pathname + location.search);
@@ -563,6 +565,8 @@ function renderPart(p) {
           <div class="fact"><small>VEX part number(s)</small><b>${esc(p.partNumbers.join(", ") || "—")}</b></div>
           ${p.use ? `<div class="fact use"><small>How it's used</small><p>${esc(p.use)}</p></div>` : ""}
         </div>
+        ${p.scarce ? `<button class="bom-add" data-bom-add="${esc(partKey(p))}">${bom.current && bom.current.items[partKey(p)]
+            ? `✓ In your build list (${bom.current.items[partKey(p)]})` : "+ Add to build list"}</button>` : ""}
         ${worksWith(p)}
         ${miniMap(locationsOf(p))}
       </div>
@@ -594,10 +598,224 @@ function renderBin(loc) {
     </div>`;
 }
 
+
+// ---------------------------------------------------------------------------
+// Build List (bill of materials for scarce parts)
+//
+// Lists are saved in this browser (localStorage) and can be reopened anywhere with a
+// "save link" that carries the whole list in the URL (#bom=...). No server involved.
+// Parts are keyed by their first part number so links survive reordering parts.json.
+
+const BOM_KEY = "vexBuildLists", BOM_CURRENT = "vexBuildListCurrent";
+const bom = { lists: [], current: null };
+
+const partKey = p => p.partNumbers[0];
+const partByKey = key => state.parts.find(p => partKey(p) === key);
+
+function bomLoad() {
+  try { bom.lists = JSON.parse(localStorage.getItem(BOM_KEY)) || []; } catch { bom.lists = []; }
+  let cur = null;
+  try { cur = localStorage.getItem(BOM_CURRENT); } catch {}
+  bom.current = bom.lists.find(l => l.id === cur) || bom.lists[0] || null;
+}
+
+function bomSave() {
+  if (bom.current) bom.current.updated = Date.now();
+  try {
+    localStorage.setItem(BOM_KEY, JSON.stringify(bom.lists));
+    if (bom.current) localStorage.setItem(BOM_CURRENT, bom.current.id);
+  } catch {}
+}
+
+function bomNew(title = "") {
+  const list = { id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), title, items: {}, updated: Date.now() };
+  bom.lists.unshift(list);
+  bom.current = list;
+  bomSave();
+  return list;
+}
+
+function bomSet(key, qty) {
+  if (!bom.current) bomNew();
+  qty = Math.max(0, Math.min(999, Math.round(+qty || 0)));
+  if (qty) bom.current.items[key] = qty; else delete bom.current.items[key];
+  bomSave();
+}
+
+// Share link: base64url(JSON {t: title, i: [[key, qty], ...]})
+function bomEncode(list) {
+  const json = JSON.stringify({ t: list.title, i: Object.entries(list.items) });
+  return btoa(unescape(encodeURIComponent(json))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+
+function bomDecode(code) {
+  const b64 = code.replace(/-/g, "+").replace(/_/g, "/");
+  const data = JSON.parse(decodeURIComponent(escape(atob(b64))));
+  const items = {};
+  for (const [key, qty] of data.i || []) if (partByKey(key) && +qty > 0) items[key] = Math.round(+qty);
+  return { title: String(data.t || ""), items };
+}
+
+function bomLink(list) {
+  return location.origin + location.pathname + "#bom=" + bomEncode(list);
+}
+
+// Opening a saved link: reuse the same-named list on this computer (asking before replacing it), or add it.
+function bomImport(code) {
+  let data;
+  try { data = bomDecode(code); } catch { alert("That build-list link looks incomplete. Try copying it again."); return; }
+  const same = bom.lists.find(l => l.title.trim().toLowerCase() === data.title.trim().toLowerCase());
+  if (same && JSON.stringify(same.items) === JSON.stringify(data.items)) { bom.current = same; }
+  else if (same && confirm(`Replace the list "${same.title || "Untitled"}" saved on this computer with the version from this link?`)) {
+    same.items = data.items; bom.current = same;
+  } else {
+    const list = bomNew(data.title); list.items = data.items;
+  }
+  bomSave();
+}
+
+function bomRows(list) {
+  return Object.entries(list.items).map(([key, qty]) => ({ p: partByKey(key), qty })).filter(r => r.p)
+    .sort((a, b) => a.p.category.localeCompare(b.p.category) || bySize(a.p, b.p));
+}
+
+function stepper(p, qty) {
+  const key = esc(partKey(p));
+  return `<span class="stepper">
+      <button data-bom-step="${key}" data-delta="-1" aria-label="One fewer">−</button>
+      <input data-bom-qty="${key}" type="number" min="0" max="999" value="${qty || 0}" aria-label="How many ${esc(p.name)}">
+      <button data-bom-step="${key}" data-delta="1" aria-label="One more">+</button>
+    </span>`;
+}
+
+function renderBom() {
+  const box = $("bomView");
+  const list = bom.current;
+  const items = list ? list.items : {};
+  const scarce = state.parts.filter(p => p.scarce);
+  const cats = finderCategories().map(c => c.name).filter(c => scarce.some(p => p.category === c));
+  const rows = list ? bomRows(list) : [];
+  const total = rows.reduce((n, r) => n + r.qty, 0);
+
+  box.innerHTML = `
+    <div class="bom-head">
+      <h2 class="finder-title">Build List</h2>
+      <p class="finder-help">Plan the scarce parts your project needs. Your list saves on this computer automatically.
+        To open it on another computer or next class, use <b>Save link</b> and keep the link somewhere safe (like Google Classroom).</p>
+      <div class="bom-bar">
+        <label>Project name <input id="bomTitle" type="text" maxlength="80" placeholder="e.g. Claw Bot – Ava & Sam" value="${esc(list ? list.title : "")}"></label>
+        ${bom.lists.length > 1 ? `<label>Saved on this computer
+          <select id="bomPick">${bom.lists.map(l => `<option value="${esc(l.id)}" ${l === list ? "selected" : ""}>${esc(l.title || "Untitled project")}</option>`).join("")}</select></label>` : ""}
+        <button class="bom-btn" data-bom-action="new">+ New list</button>
+        ${list ? `<button class="bom-btn subtle" data-bom-action="delete">Delete list</button>` : ""}
+      </div>
+    </div>
+    <div class="bom-layout">
+      <div class="bom-picker">
+        ${cats.map(c => `<section class="type-group"><h3>${esc(c)}</h3><div class="bom-grid">
+          ${scarce.filter(p => p.category === c).sort(bySize).map(p => `
+            <div class="bom-part ${items[partKey(p)] ? "chosen" : ""}">
+              <button class="thumb" data-part="${state.parts.indexOf(p)}" title="Details">${partImage(p, "tiny")}</button>
+              <div class="bom-info"><b>${esc(p.name)}</b><small>${Number(p.quantity).toLocaleString()} in the room · <span class="nowrap">${esc(locationsOf(p).join(" + "))}</span></small></div>
+              ${stepper(p, items[partKey(p)])}
+            </div>`).join("")}
+        </div></section>`).join("")}
+      </div>
+      <aside class="bom-sheet">
+        <h3>${esc(list && list.title ? list.title : "Your list")}</h3>
+        ${rows.length ? `
+          <table><thead><tr><th>Part</th><th>Bin</th><th class="n">Need</th></tr></thead><tbody>
+          ${rows.map(r => `<tr class="${r.qty > r.p.quantity ? "over" : ""}">
+              <td>${esc(r.p.name)}${r.qty > r.p.quantity ? `<small>Only ${r.p.quantity} in the room</small>` : ""}</td>
+              <td>${esc(locationsOf(r.p).join(" + "))}</td><td class="n">${r.qty}</td></tr>`).join("")}
+          </tbody><tfoot><tr><td colspan="2">${rows.length} kind${rows.length === 1 ? "" : "s"} of part</td><td class="n">${total}</td></tr></tfoot></table>
+          <div class="bom-actions">
+            <button class="bom-btn" data-bom-action="link">Save link</button>
+            <button class="bom-btn subtle" data-bom-action="copy">Copy list</button>
+            <button class="bom-btn subtle" data-bom-action="print">Print</button>
+          </div>
+          <div id="bomLinkBox" class="bom-link" hidden></div>
+          <p class="note">If you change the list later, save a new link — a link keeps the list as it was when you saved it.</p>`
+        : `<p class="note">No parts yet. Use the + buttons to add the scarce parts your build needs.</p>`}
+      </aside>
+    </div>`;
+}
+
+function bomText(list) {
+  const rows = bomRows(list);
+  return [`Build List: ${list.title || "Untitled project"}`, ...rows.map(r => `${r.qty} × ${r.p.name} (${locationsOf(r.p).join(" + ")})`),
+          "", "Open this list: " + bomLink(list)].join("\n");
+}
+
+// Copy to the clipboard; gives up after a second so the page never hangs waiting on a permission prompt.
+async function copyText(text) {
+  try {
+    await Promise.race([navigator.clipboard.writeText(text), new Promise((_, no) => setTimeout(no, 1000))]);
+    return true;
+  } catch { return false; }
+}
+
+async function bomAction(action) {
+  const list = bom.current;
+  if (action === "new") { bomNew(); renderBom(); $("bomTitle").focus(); return; }
+  if (!list) return;
+  if (action === "delete") {
+    if (!confirm(`Delete "${list.title || "Untitled project"}" from this computer? (Saved links still work.)`)) return;
+    bom.lists = bom.lists.filter(l => l !== list); bom.current = bom.lists[0] || null; bomSave(); renderBom(); return;
+  }
+  if (action === "print") { window.print(); return; }
+  if (action === "copy") { const ok = await copyText(bomText(list)); flash(ok ? "List copied — paste it into your assignment." : "Couldn't copy automatically."); return; }
+  if (action === "link") {
+    const url = bomLink(list), boxEl = $("bomLinkBox");
+    const show = msg => { boxEl.hidden = false; boxEl.innerHTML = `${msg}<input type="text" readonly value="${esc(url)}" onclick="this.select()">`; };
+    show("Copy this link and keep it somewhere you'll find it next class:");
+    if (await copyText(url)) show("<b>Link copied.</b> Paste it somewhere you'll find it next class (like Google Classroom).");
+  }
+}
+
+function flash(msg) {
+  let el = $("toast");
+  if (!el) { el = document.createElement("div"); el.id = "toast"; document.body.appendChild(el); }
+  el.textContent = msg; el.className = "show";
+  clearTimeout(flash.t); flash.t = setTimeout(() => (el.className = ""), 2500);
+}
+
+// Build List events (stepper buttons, typed quantities, title, list picker, action buttons, popup "add" button)
+document.addEventListener("click", e => {
+  const step = e.target.closest("[data-bom-step]");
+  if (step) {
+    const key = step.dataset.bomStep, cur = (bom.current && bom.current.items[key]) || 0;
+    bomSet(key, cur + +step.dataset.delta); renderBom(); return;
+  }
+  const act = e.target.closest("[data-bom-action]");
+  if (act) { bomAction(act.dataset.bomAction); return; }
+  const add = e.target.closest("[data-bom-add]");
+  if (add) {
+    const key = add.dataset.bomAdd;
+    bomSet(key, ((bom.current && bom.current.items[key]) || 0) + 1);
+    add.textContent = `✓ In your build list (${bom.current.items[key]})`;
+    if (state.view === "bom") renderBom();
+  }
+}, true);
+
+document.addEventListener("change", e => {
+  if (e.target.matches("[data-bom-qty]")) { bomSet(e.target.dataset.bomQty, e.target.value); renderBom(); }
+  if (e.target.id === "bomPick") { bom.current = bom.lists.find(l => l.id === e.target.value) || bom.current; bomSave(); renderBom(); }
+});
+
+document.addEventListener("input", e => {
+  if (e.target.id === "bomTitle") {
+    if (!bom.current) bomNew();
+    bom.current.title = e.target.value; bomSave();
+    const h = document.querySelector(".bom-sheet h3"); if (h) h.textContent = e.target.value || "Your list";
+  }
+});
+
 // ---------------------------------------------------------------------------
 // Events
 
 document.addEventListener("click", e => {
+  if (e.target.closest("[data-bom-step], [data-bom-action], [data-bom-add]")) return;
   const bin = e.target.closest("[data-bin]");
   if (bin) { e.stopPropagation(); if (bin.dataset.bin) showDialog({ type: "bin", loc: bin.dataset.bin }); return; }
   const finder = e.target.closest("[data-finder]");
@@ -641,7 +859,12 @@ function handleHash() {
   const params = new URLSearchParams(location.hash.slice(1));
   if (params.has("finder")) { showFinder(params.get("finder")); return; }
   if (!location.hash && state.view === "finder") setView("parts");
-  if (params.get("view")) setView(params.get("view") === "map" ? "map" : "parts");
+  if (params.get("bom")) {
+    bomImport(params.get("bom"));
+    history.replaceState(null, "", location.pathname + location.search + "#view=bom");
+    setView("bom"); return;
+  }
+  if (params.get("view")) setView(["map", "bom"].includes(params.get("view")) ? params.get("view") : "parts");
   if (params.get("q")) { search.value = params.get("q"); renderCards(); }
   if (params.get("bin")) showDialog({ type: "bin", loc: params.get("bin").toUpperCase() });
 }
@@ -681,6 +904,7 @@ async function init() {
     }
   }
   validate();
+  bomLoad();
   renderFilters();
   renderCards();
   handleHash();
