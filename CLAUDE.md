@@ -16,7 +16,7 @@
 - **Merged** the EES "Elastic Band Anchor Plate" (228-3616-157) into **Rubber Band Anchor** (same part, different color, per Gavin): qty 41, B3-8, VEX image.
 - **Live on GitHub Pages (Oct 9, 2026):** public repo `gavinsk/Vex-IQ-Storage-Organization` (Gavin kept this name) → **https://gavinsk.github.io/Vex-IQ-Storage-Organization/**. Publishing = commit + Sync in VS Code. Commits use his GitHub no-reply email (repo-local git config).
 - **"Works with" links** in the part popup: clickable thumbnails of related parts (rack gear ↔ slide bracket, pulleys ↔ belts, hub ↔ tire, motor shafts ↔ Smart Motor…), defined as groups in `data/related.json` (`{note, parts:[…]}` = all linked to each other; `{note, a:[…], b:[…]}` = every a ↔ every b). Links are always two-way; unknown names log a console warning. Drafted by Claude for Gavin's review.
-- **Build List tab** (bill of materials for scarce parts): teams pick quantities of parts marked `"scarce": true` (60; **Gavin's rule, Oct 19 2026:** all gears incl. every rack gear but no rack/linear brackets, all sprockets, all pulleys (not the tire add-on), all beams and plates 3+ long (incl. lock beams, linear motion beams) plus the 2x2 Beam and 2x2 Round Lock Beam, lock plates, angle/tee/gusset beams; smooth panel, magnetic beams, 1x1/1x2 beams and worm bracket excluded), named by project. Saved per browser in `localStorage` (several lists per MacBook, picker) and reopenable anywhere via **Save link** (`#bom=` base64url JSON of `{t: title, i: [[firstPartNumber, qty]…]}`; reopening an older link asks before replacing a same-named list). Warns when a list needs more than the room has; Copy list / Print (print shows only the list). Popup of a scarce part has "+ Add to build list". No class-wide view of other teams' lists (would need option B: a Google Sheet via Apps Script — Gavin chose to start without it).
+- **Build List tab** (bill of materials + cost): teams count the parts marked `"buildList": true` (84 — Gavin's rule, Oct 19 2026: all gears incl. every rack gear but no rack/linear brackets, all sprockets, all pulleys (not the tire add-on), all beams and plates 3+ long (incl. lock beams, linear motion beams) plus the 2x2 Beam and 2x2 Round Lock Beam, lock plates, angle/tee/gusset beams, **all standoffs, all shafts (metal, motor, capped, plastic)**; smooth panel, magnetic beams, 1x1/1x2 beams, worm bracket excluded) **plus groups** from `data/build-list-groups.json` that count similar parts as one item (**"Corner Connector (any type)"** = all 17 corner connectors, $0.15 = average of the sheet's corner-connector prices). Each item shows price each, line cost, and total; **cost appears only on the Build List** (Gavin's rule). Prices: `cost` in parts.json from Gavin's EES price sheet (Google Sheet "ees_231_VEX_IQ_Price_Sheet (1)", id 1RPG5iW6fS58hwIXDCvRVARt7sMVQi7Auy6WLu5guSJg); parts not on the sheet have estimated prices following its size pattern and `"costEstimate": true` (shown with *). Lists are named by project, saved per browser in `localStorage` (several per MacBook, picker) and reopenable anywhere via **Save link** (`#bom=` base64url JSON of `{t: title, i: [[key, qty]…]}`, key = first part number, or `g:<group id>`; reopening an older link asks before replacing a same-named list). Warns when a list needs more than the room has; Copy list / Print (print shows only the list, with costs). A Build List part's popup has "+ Add to build list" (group members add to their group). No class-wide view of other teams' lists (would need a Google Sheet via Apps Script — Gavin chose to start without it).
 - All 162 parts have images (see **Images** below)
 - Reference files moved into `docs/`
 
@@ -32,6 +32,7 @@
 **Open questions for Gavin**
 - **1x3 Beam (A3-4, qty 8):** listed only in the 4 PLTW EES VEX IQ Kits (228-7340, 2 each). Gavin hasn't found any yet. If he can't, lower the quantity or remove the part.
 - **EES Rack Gear / Linear Slide Bracket (B2-6) vs. Linear Motion Pack parts (B7-1/B7-2):** kept separate (the EES rack looks like an older design). Merge only if Gavin confirms they're identical.
+- **Price sheet part-number mismatch:** the EES price sheet lists the Worm Bracket as 228-2500-220, but parts.json has 228-2500-220 on the Double 2x Wide, 2x2 Corner Connector. Not used (neither is priced individually), but check a physical part before trusting either.
 - **Poster sizes:** the 42 PNG/WebP images use estimated real-world widths (`ESTIMATED_WIDTH` in `tools/measure_images.py`). Adjust any that look wrong next to their neighbors.
 
 **Regenerating derived files after data changes**
@@ -130,6 +131,7 @@ data/parts.json         source of truth (162 parts)
 data/storage-layout.json  physical geometry only (cart rows/cols, Akro-Mils count, zones)
 data/categories.json    Part Finder: panel order, panel width (span), order of types
 data/related.json       "Works with" groups of parts that go together (by part name)
+data/build-list-groups.json  Build List items that count several similar parts as one (e.g. corner connectors), with a price
 images/sizes.json       true-scale image sizes for the poster (regenerate: python3 tools/measure_images.py)
 images/<category>/      part images (.svg, .png, one .webp)
 images/manifest.json    where every image came from and how it was identified
@@ -154,7 +156,8 @@ A part record:
   "section": "Gears + Shafts",
   "type": "Spur Gears",
   "use": "A 36-tooth gear transfers rotation from one shaft to another. …",
-  "scarce": true,
+  "buildList": true,
+  "cost": 0.85,
   "image": "images/gears/36-tooth-gear.svg"
 }
 ```
@@ -162,7 +165,7 @@ A part record:
 - `extraLocations` (optional): more bins holding the same part. Search, cards, the poster, the RETURN TO block, the mini map, and bin views all use every bin. Leave it out for single-bin parts.
 - `binLabel` should be identical for every part sharing a location (the bin view uses the first one). A part in several bins uses one label for all of them.
 - `use`: 1–3 student-friendly sentences on what the part does and how it connects, shown as **How it's used** in the part popup (replaced the Section line, Oct 2026). Drafted by Claude (Shaft Bushing text is Gavin's); **Gavin reviewed and approved all 162 (Oct 9, 2026)**. Write new parts' descriptions in the same style; Gavin's wording wins on any edit.
-- `scarce` (optional, `true`): the part appears in the Build List tab. Add or remove it to change what students can plan with. Build-list links key parts by their **first** part number, so don't reorder `partNumbers` on scarce parts.
+- `buildList` (optional, `true`): the part appears in the Build List tab. `cost` is its price per piece (Build List only); `costEstimate: true` marks an estimate. Build-list links key parts by their **first** part number, so don't reorder `partNumbers` on Build List parts. Parts in a `data/build-list-groups.json` group (matched by `category` or a `parts` name list) are counted as the group instead.
 - `section` is from the original storage plan and no longer matches the Oct 2026 layout. It is no longer displayed; ask Gavin before relying on it.
 - `type` is the Part Finder subgroup within a category (e.g. 1x Beams, Idler Pins). A new type appears automatically; add it to that category's `types` in `categories.json` to control its order.
 - `storage` is the storage type (`Rolling - Small`, `Rolling - Medium`, `Akro-Mils Drawer`, `Vertical Hanger`, `Vertical Cable Hanger`, `External / …`, `Tool Storage`).

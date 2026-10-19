@@ -565,8 +565,8 @@ function renderPart(p) {
           <div class="fact"><small>VEX part number(s)</small><b>${esc(p.partNumbers.join(", ") || "—")}</b></div>
           ${p.use ? `<div class="fact use"><small>How it's used</small><p>${esc(p.use)}</p></div>` : ""}
         </div>
-        ${p.scarce ? `<button class="bom-add" data-bom-add="${esc(partKey(p))}">${bom.current && bom.current.items[partKey(p)]
-            ? `✓ In your build list (${bom.current.items[partKey(p)]})` : "+ Add to build list"}</button>` : ""}
+        ${(it => it ? `<button class="bom-add" data-bom-add="${esc(it.key)}">${bom.current && bom.current.items[it.key]
+            ? `✓ In your build list (${bom.current.items[it.key]})` : it.members ? `+ Add to build list (as “${esc(it.name)}”)` : "+ Add to build list"}</button>` : "")(itemForPart(p))}
         ${worksWith(p)}
         ${miniMap(locationsOf(p))}
       </div>
@@ -600,17 +600,40 @@ function renderBin(loc) {
 
 
 // ---------------------------------------------------------------------------
-// Build List (bill of materials for scarce parts)
+// Build List (bill of materials + cost for the parts teams have to plan around)
 //
 // Lists are saved in this browser (localStorage) and can be reopened anywhere with a
 // "save link" that carries the whole list in the URL (#bom=...). No server involved.
 // Parts are keyed by their first part number so links survive reordering parts.json.
 
 const BOM_KEY = "vexBuildLists", BOM_CURRENT = "vexBuildListCurrent";
-const bom = { lists: [], current: null };
+const bom = { lists: [], current: null, groups: [], catalog: null };
 
 const partKey = p => p.partNumbers[0];
-const partByKey = key => state.parts.find(p => partKey(p) === key);
+
+// Catalog of Build List items: every part marked "buildList", except that parts in a group
+// (data/build-list-groups.json, e.g. all corner connectors) are counted together as one item.
+function bomCatalog() {
+  if (bom.catalog) return bom.catalog;
+  const items = [], grouped = new Set();
+  for (const g of bom.groups) {
+    const members = state.parts.filter(p => g.category ? p.category === g.category : (g.parts || []).includes(p.name));
+    if (!members.length) continue;
+    members.forEach(m => grouped.add(m));
+    items.push({ key: "g:" + g.id, name: g.name, part: members[0], category: members[0].category, members, note: g.note || "",
+      quantity: members.reduce((n, m) => n + m.quantity, 0), cost: g.cost, est: !!g.costEstimate,
+      locs: [...new Set(members.flatMap(locationsOf))].sort((a, b) => a.localeCompare(b, undefined, { numeric: true })) });
+  }
+  for (const p of state.parts) if (p.buildList && !grouped.has(p))
+    items.push({ key: partKey(p), name: p.name, part: p, category: p.category, quantity: p.quantity,
+      cost: p.cost, est: !!p.costEstimate, locs: locationsOf(p) });
+  return (bom.catalog = items);
+}
+const itemByKey = key => bomCatalog().find(i => i.key === key);
+const itemForPart = p => bomCatalog().find(i => i.part === p || (i.members && i.members.includes(p)));
+const binText = item => item.locs.length > 3 ? `${item.locs[0]} – ${item.locs[item.locs.length - 1]} (${item.locs.length} bins)` : item.locs.join(" + ");
+const money = n => "$" + (+n || 0).toFixed(2);
+const price = item => item.cost == null ? "—" : money(item.cost) + (item.est ? "*" : "");
 
 function bomLoad() {
   try { bom.lists = JSON.parse(localStorage.getItem(BOM_KEY)) || []; } catch { bom.lists = []; }
@@ -654,7 +677,7 @@ function bomDecode(code) {
   const b64 = code.replace(/-/g, "+").replace(/_/g, "/");
   const data = JSON.parse(decodeURIComponent(escape(atob(b64))));
   const items = {};
-  for (const [key, qty] of data.i || []) if (partByKey(key) && +qty > 0) items[key] = Math.round(+qty);
+  for (const [key, qty] of data.i || []) if (itemByKey(key) && +qty > 0) items[key] = Math.round(+qty);
   return { title: String(data.t || ""), items };
 }
 
@@ -677,12 +700,13 @@ function bomImport(code) {
 }
 
 function bomRows(list) {
-  return Object.entries(list.items).map(([key, qty]) => ({ p: partByKey(key), qty })).filter(r => r.p)
-    .sort((a, b) => a.p.category.localeCompare(b.p.category) || bySize(a.p, b.p));
+  return Object.entries(list.items).map(([key, qty]) => ({ item: itemByKey(key), qty })).filter(r => r.item)
+    .map(r => ({ ...r, line: (r.item.cost || 0) * r.qty }))
+    .sort((a, b) => a.item.category.localeCompare(b.item.category) || bySize(a.item, b.item));
 }
 
-function stepper(p, qty) {
-  const key = esc(partKey(p));
+function stepper(item, qty) {
+  const key = esc(item.key), p = item;
   return `<span class="stepper">
       <button data-bom-step="${key}" data-delta="-1" aria-label="One fewer">−</button>
       <input data-bom-qty="${key}" type="number" min="0" max="999" value="${qty || 0}" aria-label="How many ${esc(p.name)}">
@@ -694,15 +718,17 @@ function renderBom() {
   const box = $("bomView");
   const list = bom.current;
   const items = list ? list.items : {};
-  const scarce = state.parts.filter(p => p.scarce);
-  const cats = finderCategories().map(c => c.name).filter(c => scarce.some(p => p.category === c));
+  const catalog = bomCatalog();
+  const cats = finderCategories().map(c => c.name).filter(c => catalog.some(i => i.category === c));
   const rows = list ? bomRows(list) : [];
   const total = rows.reduce((n, r) => n + r.qty, 0);
+  const totalCost = rows.reduce((n, r) => n + r.line, 0);
+  const anyEst = rows.some(r => r.item.est);
 
   box.innerHTML = `
     <div class="bom-head">
       <h2 class="finder-title">Build List</h2>
-      <p class="finder-help">Plan the scarce parts your project needs. Your list saves on this computer automatically.
+      <p class="finder-help">Plan the parts your project needs and see what they cost. Your list saves on this computer automatically.
         To open it on another computer or next class, use <b>Save link</b> and keep the link somewhere safe (like Google Classroom).</p>
       <div class="bom-bar">
         <label>Project name <input id="bomTitle" type="text" maxlength="80" placeholder="e.g. Claw Bot – Ava & Sam" value="${esc(list ? list.title : "")}"></label>
@@ -717,22 +743,23 @@ function renderBom() {
     <div class="bom-layout">
       <div class="bom-picker">
         ${cats.map(c => `<section class="type-group"><h3>${esc(c)}</h3><div class="bom-grid">
-          ${scarce.filter(p => p.category === c).sort(bySize).map(p => `
-            <div class="bom-part ${items[partKey(p)] ? "chosen" : ""}">
-              <button class="thumb" data-part="${state.parts.indexOf(p)}" title="Details">${partImage(p, "tiny")}</button>
-              <div class="bom-info"><b>${esc(p.name)}</b><small>${Number(p.quantity).toLocaleString()} in the room · <span class="nowrap">${esc(locationsOf(p).join(" + "))}</span></small></div>
-              ${stepper(p, items[partKey(p)])}
+          ${catalog.filter(i => i.category === c).sort((a, b) => !!b.members - !!a.members || bySize(a, b)).map(i => `
+            <div class="bom-part ${items[i.key] ? "chosen" : ""}" ${i.note ? `title="${esc(i.note)}"` : ""}>
+              <button class="thumb" data-part="${state.parts.indexOf(i.part)}" title="Details">${partImage(i.part, "tiny")}</button>
+              <div class="bom-info"><b>${esc(i.name)}</b><small><span class="bom-price">${price(i)} each</span> · ${Number(i.quantity).toLocaleString()} in the room · <span class="nowrap">${esc(binText(i))}</span></small></div>
+              ${stepper(i, items[i.key])}
             </div>`).join("")}
         </div></section>`).join("")}
       </div>
       <aside class="bom-sheet">
         <h3>${esc(list && list.title ? list.title : "Your list")}</h3>
         ${rows.length ? `
-          <table><thead><tr><th>Part</th><th>Bin</th><th class="n">Need</th></tr></thead><tbody>
-          ${rows.map(r => `<tr class="${r.qty > r.p.quantity ? "over" : ""}">
-              <td>${esc(r.p.name)}${r.qty > r.p.quantity ? `<small>Only ${r.p.quantity} in the room</small>` : ""}</td>
-              <td>${esc(locationsOf(r.p).join(" + "))}</td><td class="n">${r.qty}</td></tr>`).join("")}
-          </tbody><tfoot><tr><td colspan="2">${rows.length} kind${rows.length === 1 ? "" : "s"} of part</td><td class="n">${total}</td></tr></tfoot></table>
+          <table><thead><tr><th>Part</th><th class="n">Need</th><th class="n">Each</th><th class="n">Cost</th></tr></thead><tbody>
+          ${rows.map(r => `<tr class="${r.qty > r.item.quantity ? "over" : ""}">
+              <td>${esc(r.item.name)}<span class="bin-note">${esc(binText(r.item))}</span>${r.qty > r.item.quantity ? `<small>Only ${r.item.quantity} in the room</small>` : ""}</td>
+              <td class="n">${r.qty}</td><td class="n each">${price(r.item)}</td><td class="n">${money(r.line)}</td></tr>`).join("")}
+          </tbody><tfoot><tr><td>${rows.length} kind${rows.length === 1 ? "" : "s"} of part</td><td class="n">${total}</td><td></td><td class="n">${money(totalCost)}</td></tr></tfoot></table>
+          ${anyEst ? `<p class="note est-note">* Estimated price (not on the EES price sheet).</p>` : ""}
           <div class="bom-actions">
             <button class="bom-btn" data-bom-action="link">Save link</button>
             <button class="bom-btn subtle" data-bom-action="copy">Copy list</button>
@@ -740,14 +767,18 @@ function renderBom() {
           </div>
           <div id="bomLinkBox" class="bom-link" hidden></div>
           <p class="note">If you change the list later, save a new link — a link keeps the list as it was when you saved it.</p>`
-        : `<p class="note">No parts yet. Use the + buttons to add the scarce parts your build needs.</p>`}
+        : `<p class="note">No parts yet. Use the + buttons to add the parts your build needs.</p>`}
       </aside>
     </div>`;
 }
 
 function bomText(list) {
   const rows = bomRows(list);
-  return [`Build List: ${list.title || "Untitled project"}`, ...rows.map(r => `${r.qty} × ${r.p.name} (${locationsOf(r.p).join(" + ")})`),
+  const totalCost = rows.reduce((n, r) => n + r.line, 0);
+  return [`Build List: ${list.title || "Untitled project"}`,
+          ...rows.map(r => `${r.qty} × ${r.item.name} (${binText(r.item)}) — ${price(r.item)} each = ${money(r.line)}`),
+          `Total: ${rows.reduce((n, r) => n + r.qty, 0)} parts, ${money(totalCost)}`,
+          ...(rows.some(r => r.item.est) ? ["* estimated price"] : []),
           "", "Open this list: " + bomLink(list)].join("\n");
 }
 
@@ -885,19 +916,21 @@ const FRESH = { cache: "no-cache" };
 
 async function init() {
   try {
-    const [parts, layout, categories, sizes, related] = await Promise.all([
+    const [parts, layout, categories, sizes, related, bomGroups] = await Promise.all([
       fetch("data/parts.json", FRESH).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }),
       fetch("data/storage-layout.json", FRESH).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }),
       // Optional: without it the finder still works, with categories in alphabetical order.
       fetch("data/categories.json", FRESH).then(r => r.ok ? r.json() : []).catch(() => []),
       fetch("images/sizes.json", FRESH).then(r => r.ok ? r.json() : {}).catch(() => ({})),
       fetch("data/related.json", FRESH).then(r => r.ok ? r.json() : []).catch(() => []),
+      fetch("data/build-list-groups.json", FRESH).then(r => r.ok ? r.json() : []).catch(() => []),
     ]);
     state.parts = parts;
     state.layout = layout;
     state.categories = categories;
     state.sizes = sizes;
     buildRelated(related);
+    bom.groups = bomGroups;
   } catch (err) {
     $("partsView").hidden = true;
     const box = $("loadError");

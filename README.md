@@ -33,7 +33,7 @@ SVG or PNG both work; SVGs scale cleanly. `images/manifest.json` records where e
 `data/categories.json` sets the order of the poster panels, how wide each is (`span`, out of 4 columns), and the order of groups.
 After adding or changing an image, run `python3 tools/measure_images.py` so the poster draws it at the right size.
 
-**Build List parts:** a part shows up in the Build List tab when its record has `"scarce": true`. Add or delete that line to change the list.
+**Build List parts and prices:** a part shows up in the Build List tab when its record has `"buildList": true`; `"cost"` is its price each (shown only on the Build List) and `"costEstimate": true` marks an estimated price (shown with *). `data/build-list-groups.json` counts similar parts as one item (all corner connectors = "Corner Connector (any type)") with one price.
 
 **Works with links:** `data/related.json` lists groups of parts that go together, by exact part name. `{"note": "Wheel", "parts": ["Small Wheel Hub (44mm)", "Tire (200 mm Travel)"]}` links them to each other; `{"a": [...], "b": [...]}` links every *a* part to every *b* part. Links show both ways.
 

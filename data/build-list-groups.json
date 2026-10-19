@@ -1,0 +1,9 @@
+[
+  {
+    "id": "corner-connectors",
+    "name": "Corner Connector (any type)",
+    "category": "Connectors",
+    "cost": 0.15,
+    "note": "One count for every corner connector, since they're all about the same size. $0.15 is the average of the price sheet's corner connectors."
+  }
+]
